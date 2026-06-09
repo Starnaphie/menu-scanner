@@ -1,0 +1,754 @@
+{
+  "cases": [
+    {
+      "image": "images/1FT-Main-Jan25.jpg",
+      "expected_is_menu": true,
+      "expected_first_item": "The Classic",
+      "predicted_is_menu": true,
+      "predicted_first_name": "THE CLASSIC",
+      "outcome": "TP",
+      "scoreable": true,
+      "first_item_match": true,
+      "notes": "",
+      "usage": {
+        "input_tokens": 37138,
+        "output_tokens": 2098
+      }
+    },
+    {
+      "image": "images/258s.jpg",
+      "expected_is_menu": true,
+      "expected_first_item": null,
+      "predicted_is_menu": true,
+      "predicted_first_name": "Lambchops Vercure",
+      "outcome": "FP",
+      "scoreable": false,
+      "first_item_match": false,
+      "notes": "illegible",
+      "usage": {
+        "input_tokens": 8803,
+        "output_tokens": 630
+      }
+    },
+    {
+      "image": "images/348s (1).jpg",
+      "expected_is_menu": true,
+      "expected_first_item": "Beef Goulash",
+      "predicted_is_menu": true,
+      "predicted_first_name": "Chicken Cordon Bleu",
+      "outcome": "TP",
+      "scoreable": true,
+      "first_item_match": false,
+      "notes": "",
+      "usage": {
+        "input_tokens": 8803,
+        "output_tokens": 1416
+      }
+    },
+    {
+      "image": "images/348s (2).jpg",
+      "expected_is_menu": true,
+      "expected_first_item": "Burratina",
+      "predicted_is_menu": true,
+      "predicted_first_name": "BURRATINA",
+      "outcome": "TP",
+      "scoreable": true,
+      "first_item_match": true,
+      "notes": "",
+      "usage": {
+        "input_tokens": 8803,
+        "output_tokens": 1152
+      }
+    },
+    {
+      "image": "images/348s (3).jpg",
+      "expected_is_menu": true,
+      "expected_first_item": "Gnocchi Pomodoro",
+      "predicted_is_menu": true,
+      "predicted_first_name": "GNOCCHI POMODORO",
+      "outcome": "TP",
+      "scoreable": true,
+      "first_item_match": true,
+      "notes": "",
+      "usage": {
+        "input_tokens": 8803,
+        "output_tokens": 1183
+      }
+    },
+    {
+      "image": "images/348s.jpg",
+      "expected_is_menu": true,
+      "expected_first_item": null,
+      "predicted_is_menu": true,
+      "predicted_first_name": "Nachos",
+      "outcome": "FP",
+      "scoreable": false,
+      "first_item_match": false,
+      "notes": "illegible",
+      "usage": {
+        "input_tokens": 8803,
+        "output_tokens": 985
+      }
+    },
+    {
+      "image": "images/IMG_0489-768x1024.jpeg",
+      "expected_is_menu": true,
+      "expected_first_item": "Mezze Salsiccia",
+      "predicted_is_menu": true,
+      "predicted_first_name": "MEZZE SALSICCIA",
+      "outcome": "TP",
+      "scoreable": true,
+      "first_item_match": true,
+      "notes": "",
+      "usage": {
+        "input_tokens": 25804,
+        "output_tokens": 1632
+      }
+    },
+    {
+      "image": "images/Italy-In-Town_fb0ca7ed76341a639aa07d6815b57763.jpg",
+      "expected_is_menu": true,
+      "expected_first_item": "Tomato Basil Soup",
+      "predicted_is_menu": true,
+      "predicted_first_name": "TOMATO BASIL SOUP",
+      "outcome": "TP",
+      "scoreable": true,
+      "first_item_match": true,
+      "notes": "",
+      "usage": {
+        "input_tokens": 25804,
+        "output_tokens": 2546
+      }
+    },
+    {
+      "image": "images/Menu_of_Fatto_a_Mano_Pizzeria,_North_Laine_(desserts).jpg",
+      "expected_is_menu": true,
+      "expected_first_item": "Fatto Tiramisu",
+      "predicted_is_menu": true,
+      "predicted_first_name": "FATTO TIRAMISU",
+      "outcome": "TP",
+      "scoreable": true,
+      "first_item_match": true,
+      "notes": "",
+      "usage": {
+        "input_tokens": 8803,
+        "output_tokens": 926
+      }
+    },
+    {
+      "image": "images/cr=t_0%,l_0%,w_100%,h_100% (1).webp",
+      "expected_is_menu": true,
+      "expected_first_item": "Yogurt Bowl",
+      "predicted_is_menu": true,
+      "predicted_first_name": "Yogurt Bowl",
+      "outcome": "TP",
+      "scoreable": true,
+      "first_item_match": true,
+      "notes": "",
+      "usage": {
+        "input_tokens": 37138,
+        "output_tokens": 2611
+      }
+    },
+    {
+      "image": "images/cr=t_0%,l_0%,w_100%,h_100%.webp",
+      "expected_is_menu": true,
+      "expected_first_item": "Ham & Cheese Omelette",
+      "predicted_is_menu": true,
+      "predicted_first_name": "Ham & Cheese Omelette",
+      "outcome": "TP",
+      "scoreable": true,
+      "first_item_match": true,
+      "notes": "",
+      "usage": {
+        "input_tokens": 25804,
+        "output_tokens": 2481
+      }
+    },
+    {
+      "image": "images/download (1).webp",
+      "expected_is_menu": true,
+      "expected_first_item": "Gyro Platter",
+      "predicted_is_menu": true,
+      "predicted_first_name": "Greek Platter",
+      "outcome": "TP",
+      "scoreable": true,
+      "first_item_match": false,
+      "notes": "",
+      "usage": {
+        "input_tokens": 8803,
+        "output_tokens": 870
+      }
+    },
+    {
+      "image": "images/download.webp",
+      "expected_is_menu": true,
+      "expected_first_item": null,
+      "predicted_is_menu": true,
+      "predicted_first_name": "Garlic Knots",
+      "outcome": "FP",
+      "scoreable": false,
+      "first_item_match": false,
+      "notes": "illegible",
+      "usage": {
+        "input_tokens": 8803,
+        "output_tokens": 975
+      }
+    },
+    {
+      "image": "images/i-found-out-an-old-italian-restaurant-near-me-had-a-v0-tbdv6as6j3yc1.webp",
+      "expected_is_menu": true,
+      "expected_first_item": "Crispy brussel sprouts",
+      "predicted_is_menu": true,
+      "predicted_first_name": "Crispy brussel sprouts",
+      "outcome": "TP",
+      "scoreable": true,
+      "first_item_match": true,
+      "notes": "",
+      "usage": {
+        "input_tokens": 25804,
+        "output_tokens": 1907
+      }
+    },
+    {
+      "image": "images/image10.jpg",
+      "expected_is_menu": false,
+      "expected_first_item": null,
+      "predicted_is_menu": false,
+      "predicted_first_name": "",
+      "outcome": "TN",
+      "scoreable": false,
+      "first_item_match": false,
+      "notes": "",
+      "usage": {
+        "input_tokens": 8803,
+        "output_tokens": 1
+      }
+    },
+    {
+      "image": "images/image11.jpg",
+      "expected_is_menu": false,
+      "expected_first_item": null,
+      "predicted_is_menu": false,
+      "predicted_first_name": "",
+      "outcome": "TN",
+      "scoreable": false,
+      "first_item_match": false,
+      "notes": "",
+      "usage": {
+        "input_tokens": 8803,
+        "output_tokens": 1
+      }
+    },
+    {
+      "image": "images/image12.jpg",
+      "expected_is_menu": false,
+      "expected_first_item": null,
+      "predicted_is_menu": false,
+      "predicted_first_name": "",
+      "outcome": "TN",
+      "scoreable": false,
+      "first_item_match": false,
+      "notes": "",
+      "usage": {
+        "input_tokens": 8803,
+        "output_tokens": 1
+      }
+    },
+    {
+      "image": "images/image13.jpg",
+      "expected_is_menu": false,
+      "expected_first_item": null,
+      "predicted_is_menu": false,
+      "predicted_first_name": "",
+      "outcome": "TN",
+      "scoreable": false,
+      "first_item_match": false,
+      "notes": "",
+      "usage": {
+        "input_tokens": 8803,
+        "output_tokens": 1
+      }
+    },
+    {
+      "image": "images/image15.jpg",
+      "expected_is_menu": false,
+      "expected_first_item": null,
+      "predicted_is_menu": false,
+      "predicted_first_name": "",
+      "outcome": "TN",
+      "scoreable": false,
+      "first_item_match": false,
+      "notes": "",
+      "usage": {
+        "input_tokens": 8803,
+        "output_tokens": 1
+      }
+    },
+    {
+      "image": "images/image25.jpg",
+      "expected_is_menu": false,
+      "expected_first_item": null,
+      "predicted_is_menu": false,
+      "predicted_first_name": "",
+      "outcome": "TN",
+      "scoreable": false,
+      "first_item_match": false,
+      "notes": "",
+      "usage": {
+        "input_tokens": 8803,
+        "output_tokens": 1
+      }
+    },
+    {
+      "image": "images/image26.jpg",
+      "expected_is_menu": false,
+      "expected_first_item": null,
+      "predicted_is_menu": false,
+      "predicted_first_name": "",
+      "outcome": "TN",
+      "scoreable": false,
+      "first_item_match": false,
+      "notes": "",
+      "usage": {
+        "input_tokens": 8803,
+        "output_tokens": 1
+      }
+    },
+    {
+      "image": "images/image27.jpg",
+      "expected_is_menu": false,
+      "expected_first_item": null,
+      "predicted_is_menu": false,
+      "predicted_first_name": "",
+      "outcome": "TN",
+      "scoreable": false,
+      "first_item_match": false,
+      "notes": "",
+      "usage": {
+        "input_tokens": 8803,
+        "output_tokens": 1
+      }
+    },
+    {
+      "image": "images/image30.jpg",
+      "expected_is_menu": false,
+      "expected_first_item": null,
+      "predicted_is_menu": false,
+      "predicted_first_name": "",
+      "outcome": "TN",
+      "scoreable": false,
+      "first_item_match": false,
+      "notes": "",
+      "usage": {
+        "input_tokens": 8803,
+        "output_tokens": 1
+      }
+    },
+    {
+      "image": "images/image32.jpg",
+      "expected_is_menu": false,
+      "expected_first_item": null,
+      "predicted_is_menu": false,
+      "predicted_first_name": "",
+      "outcome": "TN",
+      "scoreable": false,
+      "first_item_match": false,
+      "notes": "",
+      "usage": {
+        "input_tokens": 8803,
+        "output_tokens": 1
+      }
+    },
+    {
+      "image": "images/image33.jpg",
+      "expected_is_menu": false,
+      "expected_first_item": null,
+      "predicted_is_menu": false,
+      "predicted_first_name": "",
+      "outcome": "TN",
+      "scoreable": false,
+      "first_item_match": false,
+      "notes": "",
+      "usage": {
+        "input_tokens": 8803,
+        "output_tokens": 1
+      }
+    },
+    {
+      "image": "images/image35.jpg",
+      "expected_is_menu": false,
+      "expected_first_item": null,
+      "predicted_is_menu": false,
+      "predicted_first_name": "",
+      "outcome": "TN",
+      "scoreable": false,
+      "first_item_match": false,
+      "notes": "",
+      "usage": {
+        "input_tokens": 8803,
+        "output_tokens": 7
+      }
+    },
+    {
+      "image": "images/image37.jpg",
+      "expected_is_menu": false,
+      "expected_first_item": null,
+      "predicted_is_menu": false,
+      "predicted_first_name": "",
+      "outcome": "TN",
+      "scoreable": false,
+      "first_item_match": false,
+      "notes": "",
+      "usage": {
+        "input_tokens": 8803,
+        "output_tokens": 1
+      }
+    },
+    {
+      "image": "images/image43.jpg",
+      "expected_is_menu": false,
+      "expected_first_item": null,
+      "predicted_is_menu": false,
+      "predicted_first_name": "",
+      "outcome": "TN",
+      "scoreable": false,
+      "first_item_match": false,
+      "notes": "",
+      "usage": {
+        "input_tokens": 8803,
+        "output_tokens": 1
+      }
+    },
+    {
+      "image": "images/image44.jpg",
+      "expected_is_menu": false,
+      "expected_first_item": null,
+      "predicted_is_menu": false,
+      "predicted_first_name": "",
+      "outcome": "TN",
+      "scoreable": false,
+      "first_item_match": false,
+      "notes": "",
+      "usage": {
+        "input_tokens": 8803,
+        "output_tokens": 1
+      }
+    },
+    {
+      "image": "images/image45.jpg",
+      "expected_is_menu": false,
+      "expected_first_item": null,
+      "predicted_is_menu": false,
+      "predicted_first_name": "",
+      "outcome": "TN",
+      "scoreable": false,
+      "first_item_match": false,
+      "notes": "",
+      "usage": {
+        "input_tokens": 8803,
+        "output_tokens": 1
+      }
+    },
+    {
+      "image": "images/image49.jpg",
+      "expected_is_menu": false,
+      "expected_first_item": null,
+      "predicted_is_menu": false,
+      "predicted_first_name": "",
+      "outcome": "TN",
+      "scoreable": false,
+      "first_item_match": false,
+      "notes": "",
+      "usage": {
+        "input_tokens": 8803,
+        "output_tokens": 1
+      }
+    },
+    {
+      "image": "images/image52.jpg",
+      "expected_is_menu": false,
+      "expected_first_item": null,
+      "predicted_is_menu": false,
+      "predicted_first_name": "",
+      "outcome": "TN",
+      "scoreable": false,
+      "first_item_match": false,
+      "notes": "",
+      "usage": {
+        "input_tokens": 8803,
+        "output_tokens": 1
+      }
+    },
+    {
+      "image": "images/image55.jpg",
+      "expected_is_menu": false,
+      "expected_first_item": null,
+      "predicted_is_menu": false,
+      "predicted_first_name": "",
+      "outcome": "TN",
+      "scoreable": false,
+      "first_item_match": false,
+      "notes": "",
+      "usage": {
+        "input_tokens": 8803,
+        "output_tokens": 1
+      }
+    },
+    {
+      "image": "images/image57.jpg",
+      "expected_is_menu": false,
+      "expected_first_item": null,
+      "predicted_is_menu": false,
+      "predicted_first_name": "",
+      "outcome": "TN",
+      "scoreable": false,
+      "first_item_match": false,
+      "notes": "",
+      "usage": {
+        "input_tokens": 8803,
+        "output_tokens": 1
+      }
+    },
+    {
+      "image": "images/image59.jpg",
+      "expected_is_menu": false,
+      "expected_first_item": null,
+      "predicted_is_menu": false,
+      "predicted_first_name": "",
+      "outcome": "TN",
+      "scoreable": false,
+      "first_item_match": false,
+      "notes": "",
+      "usage": {
+        "input_tokens": 8803,
+        "output_tokens": 1
+      }
+    },
+    {
+      "image": "images/image60.jpg",
+      "expected_is_menu": false,
+      "expected_first_item": null,
+      "predicted_is_menu": false,
+      "predicted_first_name": "",
+      "outcome": "TN",
+      "scoreable": false,
+      "first_item_match": false,
+      "notes": "",
+      "usage": {
+        "input_tokens": 8803,
+        "output_tokens": 1
+      }
+    },
+    {
+      "image": "images/image61.jpg",
+      "expected_is_menu": false,
+      "expected_first_item": null,
+      "predicted_is_menu": false,
+      "predicted_first_name": "",
+      "outcome": "TN",
+      "scoreable": false,
+      "first_item_match": false,
+      "notes": "",
+      "usage": {
+        "input_tokens": 8803,
+        "output_tokens": 1
+      }
+    },
+    {
+      "image": "images/image62.jpg",
+      "expected_is_menu": false,
+      "expected_first_item": null,
+      "predicted_is_menu": false,
+      "predicted_first_name": "",
+      "outcome": "TN",
+      "scoreable": false,
+      "first_item_match": false,
+      "notes": "",
+      "usage": {
+        "input_tokens": 8803,
+        "output_tokens": 1
+      }
+    },
+    {
+      "image": "images/image7.jpg",
+      "expected_is_menu": false,
+      "expected_first_item": null,
+      "predicted_is_menu": false,
+      "predicted_first_name": "",
+      "outcome": "TN",
+      "scoreable": false,
+      "first_item_match": false,
+      "notes": "",
+      "usage": {
+        "input_tokens": 8803,
+        "output_tokens": 1
+      }
+    },
+    {
+      "image": "images/images (1).jpeg",
+      "expected_is_menu": true,
+      "expected_first_item": null,
+      "predicted_is_menu": true,
+      "predicted_first_name": "Eggplant Parmesan",
+      "outcome": "FP",
+      "scoreable": false,
+      "first_item_match": false,
+      "notes": "illegible",
+      "usage": {
+        "input_tokens": 8803,
+        "output_tokens": 813
+      }
+    },
+    {
+      "image": "images/images (2).jpeg",
+      "expected_is_menu": true,
+      "expected_first_item": null,
+      "predicted_is_menu": true,
+      "predicted_first_name": "Bruschetta",
+      "outcome": "FP",
+      "scoreable": false,
+      "first_item_match": false,
+      "notes": "illegible",
+      "usage": {
+        "input_tokens": 8803,
+        "output_tokens": 747
+      }
+    },
+    {
+      "image": "images/images.jpeg",
+      "expected_is_menu": true,
+      "expected_first_item": null,
+      "predicted_is_menu": false,
+      "predicted_first_name": "",
+      "outcome": "TP",
+      "scoreable": false,
+      "first_item_match": false,
+      "notes": "illegible",
+      "usage": {
+        "input_tokens": 8803,
+        "output_tokens": 1
+      }
+    },
+    {
+      "image": "images/l (1).jpg",
+      "expected_is_menu": true,
+      "expected_first_item": null,
+      "predicted_is_menu": true,
+      "predicted_first_name": "Eggplant Parmesan",
+      "outcome": "FP",
+      "scoreable": false,
+      "first_item_match": false,
+      "notes": "illegible",
+      "usage": {
+        "input_tokens": 8803,
+        "output_tokens": 339
+      }
+    },
+    {
+      "image": "images/l.jpg",
+      "expected_is_menu": true,
+      "expected_first_item": "Bruschetta",
+      "predicted_is_menu": true,
+      "predicted_first_name": "Goat Cheese Bruschetta",
+      "outcome": "TP",
+      "scoreable": true,
+      "first_item_match": true,
+      "notes": "",
+      "usage": {
+        "input_tokens": 8803,
+        "output_tokens": 1049
+      }
+    },
+    {
+      "image": "images/menu-2-scaled.png",
+      "expected_is_menu": true,
+      "expected_first_item": "Cheese",
+      "predicted_is_menu": true,
+      "predicted_first_name": "CHEESE",
+      "outcome": "TP",
+      "scoreable": true,
+      "first_item_match": true,
+      "notes": "",
+      "usage": {
+        "input_tokens": 25804,
+        "output_tokens": 2631
+      }
+    },
+    {
+      "image": "images/photo1jpg.jpg",
+      "expected_is_menu": true,
+      "expected_first_item": "Mozzarella Sticks",
+      "predicted_is_menu": true,
+      "predicted_first_name": "Mozzarella Sticks",
+      "outcome": "TP",
+      "scoreable": true,
+      "first_item_match": true,
+      "notes": "",
+      "usage": {
+        "input_tokens": 25804,
+        "output_tokens": 1266
+      }
+    },
+    {
+      "image": "images/spring+menu+2026+jpeg.webp",
+      "expected_is_menu": true,
+      "expected_first_item": "Italian Salad",
+      "predicted_is_menu": true,
+      "predicted_first_name": "ITALIAN SALAD",
+      "outcome": "TP",
+      "scoreable": true,
+      "first_item_match": true,
+      "notes": "",
+      "usage": {
+        "input_tokens": 37138,
+        "output_tokens": 2963
+      }
+    },
+    {
+      "image": "images/the-menu.jpg",
+      "expected_is_menu": true,
+      "expected_first_item": "Cheese Steak Supreme",
+      "predicted_is_menu": true,
+      "predicted_first_name": "Cheese Steak Supreme",
+      "outcome": "TP",
+      "scoreable": true,
+      "first_item_match": true,
+      "notes": "",
+      "usage": {
+        "input_tokens": 14470,
+        "output_tokens": 1129
+      }
+    },
+    {
+      "image": "images/Cesarina-Main-Menu-Front-WEB-11.25.25.webp",
+      "expected_is_menu": true,
+      "expected_first_item": "Speck, Radicchio e Taleggio Fuso",
+      "predicted_is_menu": true,
+      "predicted_first_name": "SPECK, RADICCHIO e TALEGGIO FUSO",
+      "outcome": "TP",
+      "scoreable": true,
+      "first_item_match": true,
+      "notes": "",
+      "usage": {
+        "input_tokens": 37138,
+        "output_tokens": 1944
+      }
+    },
+    {
+      "image": "images/DateNight2024-1-1.png",
+      "expected_is_menu": true,
+      "expected_first_item": "Pork Belly with Crispy Polenta",
+      "predicted_is_menu": true,
+      "predicted_first_name": "PORK BELLY WITH CRISPY POLENTA",
+      "outcome": "TP",
+      "scoreable": true,
+      "first_item_match": true,
+      "notes": "",
+      "usage": {
+        "input_tokens": 25804,
+        "output_tokens": 1008
+      }
+    }
+  ]
+}

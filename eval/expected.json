@@ -1,0 +1,254 @@
+{
+  "cases": [
+    {
+      "image": "images/1FT-Main-Jan25.jpg",
+      "is_menu": true,
+      "first_item": "The Classic"
+    },
+    {
+      "image": "images/258s.jpg",
+      "is_menu": true,
+      "first_item": null
+    },
+    {
+      "image": "images/348s (1).jpg",
+      "is_menu": true,
+      "first_item": "Beef Goulash"
+    },
+    {
+      "image": "images/348s (2).jpg",
+      "is_menu": true,
+      "first_item": "Burratina"
+    },
+    {
+      "image": "images/348s (3).jpg",
+      "is_menu": true,
+      "first_item": "Gnocchi Pomodoro"
+    },
+    {
+      "image": "images/348s.jpg",
+      "is_menu": true,
+      "first_item": null
+    },
+    {
+      "image": "images/IMG_0489-768x1024.jpeg",
+      "is_menu": true,
+      "first_item": "Mezze Salsiccia"
+    },
+    {
+      "image": "images/Italy-In-Town_fb0ca7ed76341a639aa07d6815b57763.jpg",
+      "is_menu": true,
+      "first_item": "Tomato Basil Soup"
+    },
+    {
+      "image": "images/Menu_of_Fatto_a_Mano_Pizzeria,_North_Laine_(desserts).jpg",
+      "is_menu": true,
+      "first_item": "Fatto Tiramisu"
+    },
+    {
+      "image": "images/cr=t_0%,l_0%,w_100%,h_100% (1).webp",
+      "is_menu": true,
+      "first_item": "Yogurt Bowl"
+    },
+    {
+      "image": "images/cr=t_0%,l_0%,w_100%,h_100%.webp",
+      "is_menu": true,
+      "first_item": "Ham & Cheese Omelette"
+    },
+    {
+      "image": "images/download (1).webp",
+      "is_menu": true,
+      "first_item": "Gyro Platter"
+    },
+    {
+      "image": "images/download.webp",
+      "is_menu": true,
+      "first_item": null
+    },
+    {
+      "image": "images/i-found-out-an-old-italian-restaurant-near-me-had-a-v0-tbdv6as6j3yc1.webp",
+      "is_menu": true,
+      "first_item": "Crispy brussel sprouts"
+    },
+    {
+      "image": "images/image10.jpg",
+      "is_menu": false,
+      "first_item": null
+    },
+    {
+      "image": "images/image11.jpg",
+      "is_menu": false,
+      "first_item": null
+    },
+    {
+      "image": "images/image12.jpg",
+      "is_menu": false,
+      "first_item": null
+    },
+    {
+      "image": "images/image13.jpg",
+      "is_menu": false,
+      "first_item": null
+    },
+    {
+      "image": "images/image15.jpg",
+      "is_menu": false,
+      "first_item": null
+    },
+    {
+      "image": "images/image25.jpg",
+      "is_menu": false,
+      "first_item": null
+    },
+    {
+      "image": "images/image26.jpg",
+      "is_menu": false,
+      "first_item": null
+    },
+    {
+      "image": "images/image27.jpg",
+      "is_menu": false,
+      "first_item": null
+    },
+    {
+      "image": "images/image30.jpg",
+      "is_menu": false,
+      "first_item": null
+    },
+    {
+      "image": "images/image32.jpg",
+      "is_menu": false,
+      "first_item": null
+    },
+    {
+      "image": "images/image33.jpg",
+      "is_menu": false,
+      "first_item": null
+    },
+    {
+      "image": "images/image35.jpg",
+      "is_menu": false,
+      "first_item": null
+    },
+    {
+      "image": "images/image37.jpg",
+      "is_menu": false,
+      "first_item": null
+    },
+    {
+      "image": "images/image43.jpg",
+      "is_menu": false,
+      "first_item": null
+    },
+    {
+      "image": "images/image44.jpg",
+      "is_menu": false,
+      "first_item": null
+    },
+    {
+      "image": "images/image45.jpg",
+      "is_menu": false,
+      "first_item": null
+    },
+    {
+      "image": "images/image49.jpg",
+      "is_menu": false,
+      "first_item": null
+    },
+    {
+      "image": "images/image52.jpg",
+      "is_menu": false,
+      "first_item": null
+    },
+    {
+      "image": "images/image55.jpg",
+      "is_menu": false,
+      "first_item": null
+    },
+    {
+      "image": "images/image57.jpg",
+      "is_menu": false,
+      "first_item": null
+    },
+    {
+      "image": "images/image59.jpg",
+      "is_menu": false,
+      "first_item": null
+    },
+    {
+      "image": "images/image60.jpg",
+      "is_menu": false,
+      "first_item": null
+    },
+    {
+      "image": "images/image61.jpg",
+      "is_menu": false,
+      "first_item": null
+    },
+    {
+      "image": "images/image62.jpg",
+      "is_menu": false,
+      "first_item": null
+    },
+    {
+      "image": "images/image7.jpg",
+      "is_menu": false,
+      "first_item": null
+    },
+    {
+      "image": "images/images (1).jpeg",
+      "is_menu": true,
+      "first_item": null
+    },
+    {
+      "image": "images/images (2).jpeg",
+      "is_menu": true,
+      "first_item": null
+    },
+    {
+      "image": "images/images.jpeg",
+      "is_menu": true,
+      "first_item": null
+    },
+    {
+      "image": "images/l (1).jpg",
+      "is_menu": true,
+      "first_item": null
+    },
+    {
+      "image": "images/l.jpg",
+      "is_menu": true,
+      "first_item": "Bruschetta"
+    },
+    {
+      "image": "images/menu-2-scaled.png",
+      "is_menu": true,
+      "first_item": "Cheese"
+    },
+    {
+      "image": "images/photo1jpg.jpg",
+      "is_menu": true,
+      "first_item": "Mozzarella Sticks"
+    },
+    {
+      "image": "images/spring+menu+2026+jpeg.webp",
+      "is_menu": true,
+      "first_item": "Italian Salad"
+    },
+    {
+      "image": "images/the-menu.jpg",
+      "is_menu": true,
+      "first_item": "Cheese Steak Supreme"
+    },
+    {
+      "image": "images/Cesarina-Main-Menu-Front-WEB-11.25.25.webp",
+      "is_menu": true,
+      "first_item": "Speck, Radicchio e Taleggio Fuso"
+    },
+    {
+      "image": "images/DateNight2024-1-1.png",
+      "is_menu": true,
+      "first_item": "Pork Belly with Crispy Polenta"
+    }
+  ]
+}

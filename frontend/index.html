@@ -1,0 +1,2110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu Scanner</title>
+  <style>
+    /* ── Reset & base ─────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:        #1a1a18;
+      --ink-2:      #4a4a44;
+      --ink-3:      #8a8a82;
+      --paper:      #faf9f6;
+      --paper-2:    #f2f0eb;
+      --paper-3:    #e8e5de;
+      --rule:       #dedad2;
+      --accent:     #c84b31;     /* editorial red */
+      --accent-dk:  #a33a22;
+      --amber:      #b45309;
+      --amber-bg:   #fef3c7;
+      --amber-bd:   #fbbf24;
+      --green:      #166534;
+      --green-bg:   #dcfce7;
+      --green-bd:   #86efac;
+      --blue:       #1e40af;
+      --blue-bg:    #dbeafe;
+      --blue-bd:    #93c5fd;
+      --radius:     6px;
+      --shadow:     0 1px 3px rgba(0,0,0,.07), 0 4px 16px rgba(0,0,0,.06);
+    }
+
+    html { font-size: 16px; }
+
+    body {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      background: var(--paper);
+      color: var(--ink);
+      min-height: 100vh;
+      padding: 3rem 1rem 5rem;
+    }
+
+    /* ── Layout ───────────────────────────────────────────────────── */
+    .page {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    /* ── Masthead ─────────────────────────────────────────────────── */
+    .masthead {
+      text-align: center;
+      border-top: 3px solid var(--ink);
+      border-bottom: 1px solid var(--ink);
+      padding: 1.25rem 0 1rem;
+      margin-bottom: 2.5rem;
+    }
+    .masthead-kicker {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: .4rem;
+    }
+    .masthead h1 {
+      font-size: clamp(2rem, 6vw, 3.2rem);
+      font-weight: 400;
+      letter-spacing: -.02em;
+      line-height: 1;
+    }
+    .masthead-sub {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: .82rem;
+      color: var(--ink-2);
+      margin-top: .5rem;
+    }
+
+    /* ── Upload zone ──────────────────────────────────────────────── */
+    .upload-section { margin-bottom: 1.5rem; }
+
+    .drop-zone {
+      position: relative;
+      border: 1.5px dashed var(--paper-3);
+      border-radius: var(--radius);
+      background: var(--paper-2);
+      padding: 2.5rem 1.5rem;
+      margin-bottom: 1.25rem;
+      text-align: center;
+      cursor: pointer;
+      transition: border-color .18s, background .18s;
+      user-select: none;
+    }
+    .drop-zone:hover,
+    .drop-zone.drag-over {
+      border-color: var(--accent);
+      background: #fdf6f4;
+    }
+    .drop-zone input[type=file] {
+      position: absolute; inset: 0; opacity: 0; cursor: pointer; width: 100%; height: 100%;
+    }
+    .drop-icon {
+      width: 40px; height: 40px;
+      margin: 0 auto .75rem;
+      color: var(--ink-3);
+    }
+    .drop-title {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: .9rem;
+      font-weight: 600;
+      color: var(--ink-2);
+    }
+    .drop-hint {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: .75rem;
+      color: var(--ink-3);
+      margin-top: .3rem;
+    }
+
+    /* ── Preview ──────────────────────────────────────────────────── */
+    .preview-wrap {
+      position: relative;
+      display: none;
+      margin-bottom: 1.25rem;
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--paper-3);
+      max-height: 320px;
+    }
+    .preview-wrap img {
+      display: block;
+      width: 100%;
+      max-height: 320px;
+      object-fit: contain;
+    }
+    .preview-clear {
+      position: absolute;
+      top: .5rem; right: .5rem;
+      width: 26px; height: 26px;
+      background: rgba(26,26,24,.7);
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      font-size: .85rem;
+      line-height: 26px;
+      text-align: center;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .preview-clear:hover { background: var(--accent); }
+
+    /* ── Dietary restrictions input ──────────────────────────────── */
+    .dietary-section {
+      display: none;
+      margin-bottom: 1rem;
+    }
+    .dietary-section.visible { display: block; }
+    .dietary-label {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: .78rem;
+      font-weight: 600;
+      color: var(--ink-2);
+      margin-bottom: .35rem;
+      display: block;
+    }
+    .dietary-input {
+      width: 100%;
+      padding: .5rem .65rem;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: .84rem;
+      border: 1px solid var(--rule);
+      border-radius: var(--radius);
+      background: #fff;
+      color: var(--ink);
+      outline: none;
+      transition: border-color .18s;
+    }
+    .dietary-input:focus { border-color: var(--amber-bd); }
+    .dietary-input::placeholder { color: var(--ink-3); }
+    .dietary-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .3rem;
+      margin-top: .4rem;
+    }
+    .dietary-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: .25rem;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      padding: .18rem .5rem;
+      border-radius: 999px;
+      background: var(--amber-bg);
+      color: var(--amber);
+      border: 1px solid var(--amber-bd);
+    }
+    .dietary-tag button {
+      background: none;
+      border: none;
+      color: var(--amber);
+      font-size: .8rem;
+      cursor: pointer;
+      padding: 0;
+      line-height: 1;
+      opacity: .7;
+    }
+    .dietary-tag button:hover { opacity: 1; }
+    .dietary-clear-all {
+      display: none;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: .72rem;
+      color: var(--ink-3);
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      margin-top: .3rem;
+      text-decoration: underline;
+    }
+    .dietary-clear-all:hover { color: var(--ink-2); }
+    .dietary-clear-all.visible { display: inline; }
+    .dietary-limit-msg {
+      display: none;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: .72rem;
+      color: var(--accent);
+      margin-top: .3rem;
+      margin-left: .25rem;
+    }
+    .dietary-limit-msg.visible { display: inline; }
+
+    /* ── Scan button ──────────────────────────────────────────────── */
+    .scan-btn {
+      display: none;
+      width: 100%;
+      padding: .85rem 1rem;
+      background: var(--ink);
+      color: var(--paper);
+      border: none;
+      border-radius: var(--radius);
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: .88rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background .18s;
+    }
+    .scan-btn:hover:not(:disabled) { background: var(--accent); }
+    .scan-btn:disabled { opacity: .45; cursor: not-allowed; }
+
+    /* ── Loader ───────────────────────────────────────────────────── */
+    .loader {
+      display: none;
+      align-items: center;
+      gap: .75rem;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: .82rem;
+      color: var(--ink-2);
+      margin-top: 1rem;
+    }
+    .loader.visible { display: flex; }
+    .spinner {
+      width: 18px; height: 18px;
+      border: 2px solid var(--rule);
+      border-top-color: var(--ink);
+      border-radius: 50%;
+      animation: spin .7s linear infinite;
+      flex-shrink: 0;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ── Error banner ─────────────────────────────────────────────── */
+    .error-banner {
+      display: none;
+      background: #fef2f2;
+      border: 1px solid #fca5a5;
+      color: #991b1b;
+      border-radius: var(--radius);
+      padding: .75rem 1rem;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: .84rem;
+      margin-top: 1rem;
+    }
+    .error-banner.visible { display: block; }
+
+    /* ── Results section ──────────────────────────────────────────── */
+    .results-header {
+      display: none;
+      align-items: baseline;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--ink);
+      padding-bottom: .4rem;
+      margin-bottom: 1.25rem;
+    }
+    .results-header.visible { display: flex; }
+    .results-title {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--ink-2);
+    }
+    .results-count {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: .7rem;
+      color: var(--ink-3);
+    }
+
+    /* ── Item card ────────────────────────────────────────────────── */
+    .item-card {
+      padding: 1.1rem 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .item-card:last-child { border-bottom: none; }
+
+    .item-top {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: .3rem;
+    }
+    .item-name {
+      font-size: 1.05rem;
+      font-weight: 400;
+      letter-spacing: -.01em;
+    }
+
+    .item-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .3rem;
+      margin-bottom: .45rem;
+    }
+
+    .badge {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      padding: .15rem .5rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+    }
+    .badge-amber  { background: var(--amber-bg);  color: var(--amber); border-color: var(--amber-bd); }
+    .badge-green  { background: var(--green-bg);  color: var(--green); border-color: var(--green-bd); }
+    .badge-blue   { background: var(--blue-bg);   color: var(--blue);  border-color: var(--blue-bd); }
+
+    .item-desc {
+      font-size: .9rem;
+      color: var(--ink-2);
+      line-height: 1.55;
+      margin-bottom: .55rem;
+    }
+
+    /* ── Ingredients row ──────────────────────────────────────────── */
+    .item-meta {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: .78rem;
+      color: var(--ink-3);
+      line-height: 1.5;
+    }
+    .item-meta strong {
+      color: var(--ink-2);
+      font-weight: 600;
+    }
+
+    /* ── Obscure notes (expandable) ───────────────────────────────── */
+    .obscure-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: .25rem;
+      background: none;
+      border: none;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: .75rem;
+      font-weight: 600;
+      color: var(--accent);
+      cursor: pointer;
+      padding: 0;
+      margin-top: .4rem;
+      text-decoration: underline;
+      text-decoration-style: dotted;
+      text-underline-offset: 2px;
+    }
+    .obscure-toggle .arr { transition: transform .18s; display: inline-block; }
+    .obscure-toggle[aria-expanded="true"] .arr { transform: rotate(90deg); }
+
+    .obscure-list {
+      display: none;
+      margin-top: .45rem;
+      padding: .6rem .75rem;
+      background: var(--paper-2);
+      border-left: 2px solid var(--accent);
+      border-radius: 0 var(--radius) var(--radius) 0;
+    }
+    .obscure-list.open { display: block; }
+    .obscure-list li {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: .78rem;
+      color: var(--ink-2);
+      list-style: none;
+      padding: .2rem 0;
+      line-height: 1.45;
+    }
+    .obscure-list li + li { border-top: 1px solid var(--rule); }
+
+    /* ── Card entrance animation ─────────────────────────────────── */
+    @keyframes cardIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .item-card {
+      animation: cardIn .32s cubic-bezier(.22,.68,0,1.1) both;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .item-card { animation: none; }
+    }
+
+    /* ── Empty state ──────────────────────────────────────────────── */
+    .empty-state {
+      text-align: center;
+      padding: 2.5rem 1rem;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: .85rem;
+      color: var(--ink-3);
+    }
+
+    /* ── Edit button ──────────────────────────────────────────────── */
+    .edit-btn {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: .75rem;
+      color: var(--ink-3);
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      margin-left: auto;
+      flex-shrink: 0;
+    }
+    .edit-btn:hover {
+      text-decoration: underline;
+      color: var(--accent);
+    }
+
+    /* ── Star review button ────────────────────────────────────── */
+    .star-btn {
+      font-size: .9rem;
+      color: var(--ink-3);
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+    .star-btn:hover { color: var(--amber); }
+    .star-btn.has-review { color: var(--amber); }
+
+    /* ── Review modal ──────────────────────────────────────────── */
+    #reviewModal {
+      position: fixed; inset: 0;
+      display: none;
+      align-items: center; justify-content: center;
+      background: rgba(0,0,0,.45);
+      z-index: 2000;
+    }
+    .review-box {
+      background: var(--paper);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 1.5rem 1.75rem;
+      max-width: 420px;
+      width: 90%;
+    }
+    .review-item-name {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: .82rem;
+      font-weight: 600;
+      color: var(--ink-2);
+      margin-bottom: .75rem;
+    }
+    .review-stars {
+      display: flex;
+      gap: .25rem;
+      margin-bottom: .75rem;
+    }
+    .review-stars span {
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--rule);
+      transition: color .12s;
+      user-select: none;
+    }
+    .review-stars span.filled { color: var(--amber); }
+    .review-stars span:hover,
+    .review-stars span.hover { color: var(--amber); }
+    .review-textarea {
+      width: 100%;
+      padding: .5rem .65rem;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: .84rem;
+      border: 1px solid var(--rule);
+      border-radius: var(--radius);
+      background: #fff;
+      color: var(--ink);
+      outline: none;
+      resize: vertical;
+      min-height: 3rem;
+      transition: border-color .18s;
+    }
+    .review-textarea:focus { border-color: var(--amber-bd); }
+    .review-counter {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: .7rem;
+      color: var(--ink-3);
+      text-align: right;
+      margin-top: .2rem;
+      margin-bottom: .75rem;
+    }
+    .review-actions {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+    }
+    .review-remove {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: .72rem;
+      color: var(--ink-3);
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      margin-top: .5rem;
+      text-decoration: underline;
+    }
+    .review-remove:hover { color: var(--accent); }
+
+    /* ── Edit form (inline) ──────────────────────────────────────── */
+    .item-card.edit-mode {
+      background: var(--paper-2);
+      border-radius: var(--radius);
+      padding: 1rem;
+    }
+    .edit-form {
+      display: flex;
+      flex-direction: column;
+      gap: .65rem;
+    }
+    .edit-field {
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+    }
+    .edit-label {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: .75rem;
+      font-weight: 600;
+      color: var(--ink-2);
+    }
+    .edit-form textarea.dietary-input {
+      resize: vertical;
+      min-height: 3.5rem;
+    }
+    .edit-actions {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      margin-top: .25rem;
+    }
+    .edit-save {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      padding: .4rem .85rem;
+      background: var(--ink);
+      color: var(--paper);
+      border: none;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: background .18s;
+    }
+    .edit-save:hover { background: var(--accent); }
+    .edit-cancel {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: .78rem;
+      color: var(--ink-3);
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+    }
+    .edit-cancel:hover { color: var(--ink-2); }
+
+    /* ── Scan block separator ─────────────────────────────────────── */
+    .scan-block + .scan-block {
+      border-top: 2px solid var(--rule);
+      padding-top: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    /* ── Scan block header ───────────────────────────────────────── */
+    .scan-header {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      padding-bottom: .75rem;
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: .75rem;
+    }
+    .scan-thumb {
+      width: 40px;
+      height: 40px;
+      object-fit: cover;
+      border-radius: 4px;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+    .scan-meta {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: .78rem;
+      color: var(--ink-2);
+    }
+    .scan-toggle {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: .72rem;
+      color: var(--ink-3);
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      white-space: nowrap;
+    }
+    .scan-toggle:hover { color: var(--ink-2); }
+    .scan-delete {
+      font-size: .8rem;
+      color: var(--ink-3);
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+    .scan-delete:hover { color: var(--accent); }
+    .add-item-btn {
+      display: block;
+      width: 100%;
+      margin-top: .75rem;
+      padding: .45rem 0;
+      background: none;
+      border: 1.5px dashed var(--rule);
+      border-radius: var(--radius);
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: .78rem;
+      color: var(--ink-3);
+      cursor: pointer;
+      transition: border-color .18s, color .18s;
+    }
+    .add-item-btn:hover { border-color: var(--ink-3); color: var(--ink-2); }
+
+    /* ── Scan-another trigger ───────────────────────────────────── */
+    .scan-trigger {
+      display: inline-block;
+      padding: .55rem 1rem;
+      background: transparent;
+      border: 1.5px solid var(--ink);
+      border-radius: var(--radius);
+      color: var(--ink);
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      width: auto;
+      transition: background .18s, color .18s;
+    }
+    .scan-trigger:hover { background: var(--ink); color: var(--paper); }
+    #uploadPanel { margin-top: 1rem; }
+
+    /* ── Verification panel ──────────────────────────────────────── */
+    .verify-panel {
+      margin-top: 1rem;
+    }
+    .verify-header {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: .72rem;
+      color: var(--ink-3);
+      margin-bottom: .75rem;
+      line-height: 1.5;
+    }
+    .verify-list {
+      max-height: 50vh;
+      overflow-y: auto;
+      border: 1px solid var(--rule);
+      border-radius: var(--radius);
+    }
+    .verify-row {
+      position: relative;
+      padding: .65rem .75rem;
+      display: flex;
+      flex-direction: column;
+      gap: .35rem;
+    }
+    .verify-row-delete {
+      position: absolute;
+      top: .5rem;
+      right: .5rem;
+      font-size: .8rem;
+      color: var(--ink-3);
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      line-height: 1;
+    }
+    .verify-row-delete:hover { color: var(--accent); }
+
+    /* ── Confirm-delete modal ──────────────────────────────────────── */
+    #confirmModal {
+      position: fixed; inset: 0;
+      display: none;
+      align-items: center; justify-content: center;
+      background: rgba(0,0,0,.45);
+      z-index: 2000;
+    }
+    .confirm-box {
+      background: var(--paper);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 1.5rem 1.75rem;
+      max-width: 340px;
+      width: 90%;
+      text-align: center;
+    }
+    .confirm-msg {
+      font-size: .95rem;
+      margin-bottom: 1.25rem;
+      color: var(--ink);
+    }
+    .confirm-actions {
+      display: flex; gap: .75rem;
+      justify-content: center;
+    }
+    .confirm-yes, .confirm-no {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: .82rem;
+      font-weight: 600;
+      padding: .45rem 1.1rem;
+      border-radius: var(--radius);
+      border: none;
+      cursor: pointer;
+    }
+    .confirm-yes {
+      background: var(--accent);
+      color: #fff;
+    }
+    .confirm-yes:hover { background: var(--accent-dk); }
+    .confirm-no {
+      background: var(--paper-3);
+      color: var(--ink);
+    }
+    .confirm-no:hover { background: var(--rule); }
+    .verify-row + .verify-row {
+      border-top: 1px solid var(--rule);
+    }
+    .verify-row input.dietary-input,
+    .verify-row textarea.dietary-input {
+      width: 100%;
+    }
+    .verify-row textarea.dietary-input {
+      resize: vertical;
+      min-height: 2.5rem;
+    }
+    .verify-actions {
+      margin-top: .75rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .5rem;
+    }
+    .verify-cancel {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: .78rem;
+      color: var(--ink-3);
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+    }
+    .verify-cancel:hover { color: var(--ink-2); }
+
+    /* ── Lightbox ────────────────────────────────────────────────── */
+    #lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.85);
+      display: none;
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+    }
+    #lightbox img {
+      max-width: 90vw;
+      max-height: 90vh;
+      object-fit: contain;
+    }
+    /* ── Login screen ──────────────────────────────────────────────── */
+    #loginScreen {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 1rem;
+    }
+    .login-card {
+      width: 100%;
+      max-width: 360px;
+    }
+    .login-header {
+      text-align: center;
+      border-top: 3px solid var(--ink);
+      border-bottom: 1px solid var(--ink);
+      padding: 1.25rem 0 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .login-header h2 {
+      font-size: clamp(1.6rem, 5vw, 2.4rem);
+      font-weight: 400;
+      letter-spacing: -.02em;
+      line-height: 1;
+    }
+    .login-form {
+      display: flex;
+      flex-direction: column;
+      gap: .75rem;
+    }
+    .login-form .dietary-input {
+      padding: .6rem .65rem;
+    }
+    .login-submit {
+      width: 100%;
+      padding: .75rem 1rem;
+      background: var(--ink);
+      color: var(--paper);
+      border: none;
+      border-radius: var(--radius);
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: .85rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background .18s;
+    }
+    .login-submit:hover { background: var(--accent); }
+    .login-toggle {
+      display: block;
+      text-align: center;
+      margin-top: .75rem;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: .78rem;
+      color: var(--ink-3);
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+    }
+    .login-toggle:hover { color: var(--ink-2); }
+    .login-error {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: .78rem;
+      color: var(--accent);
+      text-align: center;
+      min-height: 1.2em;
+    }
+  </style>
+</head>
+<body>
+<div id="loginScreen">
+  <div class="login-card">
+    <div class="login-header">
+      <h2>Menu Scanner</h2>
+    </div>
+    <form class="login-form" id="loginForm" autocomplete="off">
+      <input class="dietary-input" type="text" id="loginUsername" placeholder="Username" required />
+      <input class="dietary-input" type="password" id="loginPassword" placeholder="Password" required />
+      <input class="dietary-input" type="password" id="loginConfirm" placeholder="Confirm password" style="display:none" />
+      <p class="login-error" id="loginError">&nbsp;</p>
+      <button type="submit" class="login-submit" id="loginSubmit">Sign in</button>
+    </form>
+    <button type="button" class="login-toggle" id="loginToggle">Don't have an account? Create one</button>
+  </div>
+</div>
+<div id="confirmModal">
+  <div class="confirm-box">
+    <p class="confirm-msg"></p>
+    <div class="confirm-actions">
+      <button class="confirm-yes">Delete</button>
+      <button class="confirm-no">Cancel</button>
+    </div>
+  </div>
+</div>
+<div id="reviewModal"></div>
+<div id="lightbox"><img id="lightboxImg" alt="Full size menu" /></div>
+<div class="page">
+
+  <!-- Masthead -->
+  <header class="masthead">
+    <p class="masthead-kicker">AI-Powered</p>
+    <h1>Menu Scanner</h1>
+    <p class="masthead-sub">Upload a menu photograph &mdash; get ingredients, allergens &amp; dietary notes instantly &middot; <a href="#" id="signOutLink" style="color:var(--accent);text-decoration:none">Sign out</a></p>
+  </header>
+
+  <!-- Top trigger (hidden until first scan) -->
+  <div id="topTriggerWrap" style="display:none; margin-bottom:1.5rem">
+    <button id="topTriggerBtn" class="scan-trigger">&#43; Scan another menu</button>
+  </div>
+
+  <!-- Results -->
+  <section id="resultsSection">
+    <div class="results-header" id="resultsHeader">
+      <span class="results-title">Menu Items</span>
+      <span class="results-count" id="resultsCount"></span>
+    </div>
+    <div id="results"></div>
+  </section>
+
+  <!-- Bottom trigger (hidden until first scan) -->
+  <div id="bottomTriggerWrap" style="display:none; margin-top:1.5rem">
+    <button id="bottomTriggerBtn" class="scan-trigger">&#43; Scan another menu</button>
+  </div>
+
+  <!-- Shared upload panel -->
+  <div id="uploadPanel">
+    <div class="preview-wrap" id="previewWrap">
+      <img id="preview" alt="Menu preview" />
+      <button class="preview-clear" id="clearBtn" aria-label="Remove image">&times;</button>
+    </div>
+
+    <div class="drop-zone" id="dropZone" role="button" tabindex="0" aria-label="Upload menu image">
+      <input type="file" id="fileInput" accept="image/jpeg,image/png,image/webp,image/gif" aria-hidden="true" />
+      <svg class="drop-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
+        <polyline points="21 15 16 10 5 21"/>
+      </svg>
+      <p class="drop-title">Drop a menu image here, or click to browse</p>
+      <p class="drop-hint">JPEG &middot; PNG &middot; WEBP &middot; GIF</p>
+    </div>
+
+    <div class="dietary-section visible" id="dietarySection">
+      <label class="dietary-label" for="dietaryInput">Your dietary restrictions (comma-separated)</label>
+      <input class="dietary-input" type="text" id="dietaryInput" placeholder="e.g. gluten, shellfish, vegan, dairy" />
+      <div class="dietary-tags" id="dietaryTags"></div>
+      <button class="dietary-clear-all" id="dietaryClearAll" type="button">Clear all</button>
+      <span class="dietary-limit-msg" id="dietaryLimitMsg">Maximum 10 restrictions</span>
+    </div>
+
+    <button class="scan-btn" id="scanBtn">Scan Menu</button>
+
+    <div class="loader" id="loader" aria-live="polite">
+      <div class="spinner"></div>
+      <span id="loaderText">Analysing menu&hellip;</span>
+    </div>
+
+    <div class="error-banner" id="errorBanner" role="alert"></div>
+  </div>
+
+</div>
+
+<script>
+  const API_BASE = 'http://localhost:8000';
+
+  // ── Auth ──────────────────────────────────────────────────────────
+  let currentUser = null;
+  const loginScreen  = document.getElementById('loginScreen');
+  const loginForm    = document.getElementById('loginForm');
+  const loginUsername = document.getElementById('loginUsername');
+  const loginPassword = document.getElementById('loginPassword');
+  const loginConfirm = document.getElementById('loginConfirm');
+  const loginError   = document.getElementById('loginError');
+  const loginSubmit  = document.getElementById('loginSubmit');
+  const loginToggle  = document.getElementById('loginToggle');
+  const pageEl       = document.querySelector('.page');
+
+  let isCreateMode = false;
+
+  function hashPassword(pw) {
+    let hash = 5381;
+    for (let i = 0; i < pw.length; i++) {
+      hash = ((hash << 5) + hash) ^ pw.charCodeAt(i);
+      hash = hash & hash; // keep 32-bit int
+    }
+    return String(hash >>> 0);
+  }
+
+  function getUsers() {
+    try { return JSON.parse(localStorage.getItem('menu_scanner_users') || '[]'); } catch { return []; }
+  }
+  function saveUsers(users) {
+    localStorage.setItem('menu_scanner_users', JSON.stringify(users));
+  }
+
+  function showLoginError(msg) { loginError.textContent = msg; }
+  function clearLoginError() { loginError.innerHTML = '&nbsp;'; }
+
+  loginToggle.addEventListener('click', () => {
+    isCreateMode = !isCreateMode;
+    loginConfirm.style.display = isCreateMode ? '' : 'none';
+    loginSubmit.textContent = isCreateMode ? 'Create account' : 'Sign in';
+    loginToggle.textContent = isCreateMode
+      ? 'Already have an account? Sign in'
+      : "Don't have an account? Create one";
+    clearLoginError();
+  });
+
+  loginForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    try {
+      clearLoginError();
+      const username = loginUsername.value.trim().toLowerCase();
+      const password = loginPassword.value;
+      const users = getUsers();
+
+      if (isCreateMode) {
+        if (username.length < 3) { showLoginError('Username must be at least 3 characters'); return; }
+        if (password.length < 6) { showLoginError('Password must be at least 6 characters'); return; }
+        if (password !== loginConfirm.value) { showLoginError('Passwords do not match'); return; }
+        if (users.some(u => u.username === username)) { showLoginError('Username already taken'); return; }
+        const passwordHash = hashPassword(password);
+        users.push({ username, passwordHash });
+        saveUsers(users);
+        loginSuccess(username);
+      } else {
+        const user = users.find(u => u.username === username);
+        if (!user) { showLoginError('Username not found'); return; }
+        const passwordHash = hashPassword(password);
+        if (user.passwordHash !== passwordHash) { showLoginError('Incorrect password'); return; }
+        loginSuccess(username);
+      }
+    } catch (err) {
+      showLoginError(err.message);
+    }
+  });
+
+  function loginSuccess(username) {
+    currentUser = username;
+    sessionStorage.setItem('menu_scanner_session', username);
+    loginScreen.style.display = 'none';
+    pageEl.style.display = '';
+    initApp();
+  }
+
+  // Check for existing session on load
+  (function checkSession() {
+    const session = sessionStorage.getItem('menu_scanner_session');
+    const users = getUsers();
+    if (session && users.some(u => u.username === session)) {
+      currentUser = session;
+      loginScreen.style.display = 'none';
+      pageEl.style.display = '';
+    } else {
+      loginScreen.style.display = '';
+      pageEl.style.display = 'none';
+    }
+  })();
+
+  document.getElementById('signOutLink').addEventListener('click', (e) => {
+    e.preventDefault();
+    sessionStorage.removeItem('menu_scanner_session');
+    location.reload();
+  });
+
+  // ── Reviews store ───────────────────────────────────────────────
+  let reviews = {};
+  const reviewModal = document.getElementById('reviewModal');
+
+  function loadReviews() {
+    try { reviews = JSON.parse(localStorage.getItem('menu_scanner_reviews_' + currentUser) || '{}'); } catch { reviews = {}; }
+  }
+  function saveReviews() {
+    localStorage.setItem('menu_scanner_reviews_' + currentUser, JSON.stringify(reviews));
+  }
+  function reviewKey(scanId, itemName) {
+    return scanId + '|' + (itemName || '').toLowerCase().trim();
+  }
+
+  function openReviewModal(item, scanId, cardEl) {
+    const key = reviewKey(scanId, item.name);
+    const existing = reviews[key] || null;
+    let selectedRating = existing ? existing.rating : 0;
+
+    reviewModal.innerHTML = '';
+    const box = document.createElement('div');
+    box.className = 'review-box';
+
+    const nameEl = document.createElement('p');
+    nameEl.className = 'review-item-name';
+    nameEl.textContent = item.name || 'Unnamed item';
+    box.appendChild(nameEl);
+
+    const starsRow = document.createElement('div');
+    starsRow.className = 'review-stars';
+    const starSpans = [];
+    for (let i = 1; i <= 5; i++) {
+      const s = document.createElement('span');
+      s.textContent = i <= selectedRating ? '\u2605' : '\u2606';
+      if (i <= selectedRating) s.classList.add('filled');
+      s.addEventListener('mouseenter', () => {
+        starSpans.forEach((sp, idx) => {
+          sp.classList.toggle('hover', idx < i);
+          sp.textContent = idx < i ? '\u2605' : '\u2606';
+        });
+      });
+      s.addEventListener('click', () => {
+        selectedRating = i;
+        starSpans.forEach((sp, idx) => {
+          sp.classList.toggle('filled', idx < i);
+          sp.textContent = idx < i ? '\u2605' : '\u2606';
+        });
+      });
+      starSpans.push(s);
+      starsRow.appendChild(s);
+    }
+    starsRow.addEventListener('mouseleave', () => {
+      starSpans.forEach((sp, idx) => {
+        sp.classList.remove('hover');
+        sp.classList.toggle('filled', idx < selectedRating);
+        sp.textContent = idx < selectedRating ? '\u2605' : '\u2606';
+      });
+    });
+    box.appendChild(starsRow);
+
+    const textarea = document.createElement('textarea');
+    textarea.className = 'review-textarea';
+    textarea.placeholder = 'Write a short review (optional)';
+    textarea.maxLength = 200;
+    textarea.value = existing ? existing.review || '' : '';
+    box.appendChild(textarea);
+
+    const counter = document.createElement('div');
+    counter.className = 'review-counter';
+    counter.textContent = textarea.value.length + ' / 200';
+    textarea.addEventListener('input', () => {
+      counter.textContent = textarea.value.length + ' / 200';
+    });
+    box.appendChild(counter);
+
+    const actions = document.createElement('div');
+    actions.className = 'review-actions';
+
+    const saveBtn = document.createElement('button');
+    saveBtn.className = 'edit-save';
+    saveBtn.type = 'button';
+    saveBtn.textContent = 'Save';
+    saveBtn.addEventListener('click', () => {
+      if (selectedRating === 0) return;
+      reviews[key] = { rating: selectedRating, review: textarea.value.trim(), timestamp: Date.now() };
+      saveReviews();
+      const starBtn = cardEl.querySelector('.star-btn');
+      if (starBtn) { starBtn.textContent = '\u2605'; starBtn.classList.add('has-review'); }
+      reviewModal.style.display = 'none';
+    });
+    actions.appendChild(saveBtn);
+
+    const cancelBtn = document.createElement('button');
+    cancelBtn.className = 'edit-cancel';
+    cancelBtn.type = 'button';
+    cancelBtn.textContent = 'Cancel';
+    cancelBtn.addEventListener('click', () => { reviewModal.style.display = 'none'; });
+    actions.appendChild(cancelBtn);
+
+    box.appendChild(actions);
+
+    if (existing) {
+      const removeLink = document.createElement('button');
+      removeLink.className = 'review-remove';
+      removeLink.type = 'button';
+      removeLink.textContent = 'Remove review';
+      removeLink.addEventListener('click', () => {
+        delete reviews[key];
+        saveReviews();
+        const starBtn = cardEl.querySelector('.star-btn');
+        if (starBtn) { starBtn.textContent = '\u2606'; starBtn.classList.remove('has-review'); }
+        reviewModal.style.display = 'none';
+      });
+      box.appendChild(removeLink);
+    }
+
+    reviewModal.appendChild(box);
+    reviewModal.style.display = 'flex';
+  }
+
+  const dropZone    = document.getElementById('dropZone');
+  const fileInput   = document.getElementById('fileInput');
+  const previewWrap = document.getElementById('previewWrap');
+  const preview     = document.getElementById('preview');
+  const clearBtn    = document.getElementById('clearBtn');
+  const scanBtn     = document.getElementById('scanBtn');
+  const loader      = document.getElementById('loader');
+  const loaderText  = document.getElementById('loaderText');
+  const errorBanner = document.getElementById('errorBanner');
+  const resultsSection = document.getElementById('resultsSection');
+  const resultsHeader = document.getElementById('resultsHeader');
+  const resultsCount  = document.getElementById('resultsCount');
+  const results     = document.getElementById('results');
+
+  const dietarySection  = document.getElementById('dietarySection');
+  const dietaryInput    = document.getElementById('dietaryInput');
+  const dietaryTags     = document.getElementById('dietaryTags');
+  const dietaryClearAll = document.getElementById('dietaryClearAll');
+
+  const lightbox    = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+
+  // ── Confirm-delete modal helper ─────────────────────────────────
+  const confirmModal = document.getElementById('confirmModal');
+  const confirmMsg   = confirmModal.querySelector('.confirm-msg');
+  const confirmYes   = confirmModal.querySelector('.confirm-yes');
+  const confirmNo    = confirmModal.querySelector('.confirm-no');
+
+  function confirmDelete(message) {
+    return new Promise(resolve => {
+      confirmMsg.textContent = message;
+      confirmModal.style.display = 'flex';
+      function cleanup() {
+        confirmYes.removeEventListener('click', onYes);
+        confirmNo.removeEventListener('click', onNo);
+        confirmModal.style.display = 'none';
+      }
+      function onYes() { cleanup(); resolve(true); }
+      function onNo()  { cleanup(); resolve(false); }
+      confirmYes.addEventListener('click', onYes);
+      confirmNo.addEventListener('click', onNo);
+    });
+  }
+  lightbox.addEventListener('click', () => { lightbox.style.display = 'none'; lightboxImg.src = ''; });
+  function openLightbox(src) { lightboxImg.src = src; lightbox.style.display = 'flex'; }
+
+  const uploadPanel      = document.getElementById('uploadPanel');
+  const topTriggerWrap   = document.getElementById('topTriggerWrap');
+  const bottomTriggerWrap = document.getElementById('bottomTriggerWrap');
+  const topTriggerBtn    = document.getElementById('topTriggerBtn');
+  const bottomTriggerBtn = document.getElementById('bottomTriggerBtn');
+
+  let activeTrigger = null; // 'top' | 'bottom' | null
+
+  const LABEL_OPEN = '\u2190 Back to menus';
+  const LABEL_CLOSED = '\u002b Scan another menu';
+
+  function updateTriggerLabels(panelOpen) {
+    const label = panelOpen ? LABEL_OPEN : LABEL_CLOSED;
+    topTriggerBtn.textContent = label;
+    bottomTriggerBtn.textContent = label;
+  }
+
+  function openPanel(which) {
+    if (activeTrigger === which) { closePanel(); return; }
+    const wrap = which === 'top' ? topTriggerWrap : bottomTriggerWrap;
+    const otherWrap = which === 'top' ? bottomTriggerWrap : topTriggerWrap;
+    wrap.after(uploadPanel);
+    uploadPanel.style.display = '';
+    activeTrigger = which;
+    otherWrap.style.display = 'none';
+    resultsSection.style.display = 'none';
+    if (!selectedFile) resetUpload();
+    updateTriggerLabels(true);
+  }
+
+  function closePanel() {
+    uploadPanel.style.display = 'none';
+    activeTrigger = null;
+    resultsSection.style.display = '';
+    const hasScanBlocks = results.children.length > 0;
+    topTriggerWrap.style.display = hasScanBlocks ? '' : 'none';
+    bottomTriggerWrap.style.display = hasScanBlocks ? '' : 'none';
+    updateTriggerLabels(false);
+  }
+
+  topTriggerBtn.addEventListener('click', () => openPanel('top'));
+  bottomTriggerBtn.addEventListener('click', () => openPanel('bottom'));
+
+  let selectedFile = null;
+  let restrictions = [];
+  let scans = [];
+
+  const dietaryLimitMsg = document.getElementById('dietaryLimitMsg');
+  let limitMsgTimer = null;
+
+  // ── Dietary tag input ────────────────────────────────────────────
+
+  function sanitizeRestriction(raw) {
+    const cleaned = raw
+      .toLowerCase()
+      .replace(/[^a-z\s-]/g, '')
+      .replace(/\s+/g, ' ')
+      .trim();
+    return cleaned.length < 2 ? null : cleaned;
+  }
+
+  function addTag(value) {
+    const tag = sanitizeRestriction(value);
+    if (!tag) return;
+    if (restrictions.some(t => t.toLowerCase() === tag.toLowerCase())) return;
+    if (restrictions.length >= 10) {
+      dietaryLimitMsg.classList.add('visible');
+      clearTimeout(limitMsgTimer);
+      limitMsgTimer = setTimeout(() => dietaryLimitMsg.classList.remove('visible'), 3000);
+      return;
+    }
+    restrictions.push(tag);
+    renderTags();
+  }
+
+  function removeTag(tag) {
+    restrictions = restrictions.filter(t => t !== tag);
+    renderTags();
+  }
+
+  function clearAllTags() {
+    restrictions = [];
+    renderTags();
+  }
+
+  function renderTags() {
+    dietaryTags.innerHTML = restrictions.map(tag =>
+      `<span class="dietary-tag">${esc(tag)}<button type="button" aria-label="Remove ${esc(tag)}">&times;</button></span>`
+    ).join('');
+    dietaryTags.querySelectorAll('.dietary-tag button').forEach((btn, i) => {
+      btn.addEventListener('click', () => removeTag(restrictions[i]));
+    });
+    dietaryClearAll.classList.toggle('visible', restrictions.length > 0);
+    localStorage.setItem('dietaryRestrictions_' + currentUser, JSON.stringify(restrictions));
+  }
+
+  dietaryInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ',') {
+      e.preventDefault();
+      addTag(dietaryInput.value.replace(/,/g, ''));
+      dietaryInput.value = '';
+    }
+  });
+
+  // Also capture comma in input event for paste scenarios
+  dietaryInput.addEventListener('input', () => {
+    if (dietaryInput.value.includes(',')) {
+      const parts = dietaryInput.value.split(',');
+      parts.slice(0, -1).forEach(p => addTag(p));
+      dietaryInput.value = parts[parts.length - 1];
+    }
+  });
+
+  dietaryClearAll.addEventListener('click', clearAllTags);
+
+  function initApp() {
+    // Load user-specific data
+    loadReviews();
+    restrictions = JSON.parse(localStorage.getItem('dietaryRestrictions_' + currentUser) || '[]');
+    try { scans = JSON.parse(localStorage.getItem('menu_scanner_scans_' + currentUser) || '[]'); } catch { scans = []; }
+
+    // Render persisted tags
+    if (restrictions.length > 0) renderTags();
+
+    // Restore saved scans (oldest first so newest ends up on top)
+    scans.forEach(scan => renderScanBlock(scan, false));
+
+    // Initial panel state: show panel directly if no history, else hide it
+    if (scans.length === 0) {
+      bottomTriggerWrap.after(uploadPanel);
+      uploadPanel.style.display = '';
+    } else {
+      uploadPanel.style.display = 'none';
+    }
+  }
+
+  // If session was restored at top, init immediately
+  if (currentUser) initApp();
+
+  // ── File handling ────────────────────────────────────────────────
+
+  function handleFile(file) {
+    if (!file) return;
+    const allowed = ['image/jpeg', 'image/png', 'image/webp', 'image/gif'];
+    if (!allowed.includes(file.type)) {
+      showError(`Unsupported file type "${file.type}". Please upload a JPEG, PNG, WEBP, or GIF.`);
+      return;
+    }
+    selectedFile = file;
+    const url = URL.createObjectURL(file);
+    preview.src = url;
+    previewWrap.style.display = 'block';
+    dropZone.style.display = 'none';
+    scanBtn.style.display = 'block';
+    hideError();
+  }
+
+  function resetUpload() {
+    selectedFile = null;
+    dropZone.style.display = '';
+    fileInput.value = '';
+    preview.src = '';
+    previewWrap.style.display = 'none';
+    scanBtn.style.display = 'none';
+    dietaryInput.value = '';
+    hideError();
+  }
+
+  fileInput.addEventListener('change', () => handleFile(fileInput.files[0]));
+  clearBtn.addEventListener('click', (e) => { e.stopPropagation(); resetUpload(); });
+  preview.addEventListener('click', () => { if (preview.src) openLightbox(preview.src); });
+  preview.style.cursor = 'pointer';
+
+  // Keyboard activation for drop zone
+  dropZone.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); fileInput.click(); }
+  });
+
+  dropZone.addEventListener('dragover', (e) => { e.preventDefault(); dropZone.classList.add('drag-over'); });
+  dropZone.addEventListener('dragleave', (e) => {
+    if (!dropZone.contains(e.relatedTarget)) dropZone.classList.remove('drag-over');
+  });
+  dropZone.addEventListener('drop', (e) => {
+    e.preventDefault();
+    dropZone.classList.remove('drag-over');
+    handleFile(e.dataTransfer.files[0]);
+  });
+
+  // ── Scan ─────────────────────────────────────────────────────────
+
+  scanBtn.addEventListener('click', async () => {
+    if (!selectedFile) return;
+
+    setLoading(true);
+    previewWrap.style.display = 'block';
+    hideError();
+
+    const messages = [
+      'Analysing menu\u2026',
+      'Identifying ingredients\u2026',
+      'Checking allergens\u2026',
+      'Almost there\u2026',
+    ];
+    let msgIdx = 0;
+    const msgInterval = setInterval(() => {
+      msgIdx = (msgIdx + 1) % messages.length;
+      loaderText.textContent = messages[msgIdx];
+    }, 2200);
+
+    try {
+      const activeRestrictions = [...restrictions];
+
+      const thumbnailDataUrl = await new Promise(resolve => {
+        const reader = new FileReader();
+        reader.onload = e => resolve(e.target.result);
+        reader.readAsDataURL(selectedFile);
+      });
+
+      const formData = new FormData();
+      formData.append('file', selectedFile);
+      formData.append('dietary_restrictions', JSON.stringify(activeRestrictions));
+
+      const res = await fetch(`${API_BASE}/scan/stage1`, { method: 'POST', body: formData });
+
+      if (!res.ok) {
+        let detail = `Server error ${res.status}`;
+        try { const body = await res.json(); detail = body.detail || detail; } catch {}
+        throw new Error(detail);
+      }
+
+      const data = await res.json();
+      const items = data.items;
+
+      if (!Array.isArray(items) || items.length === 0) {
+        clearInterval(msgInterval);
+        setLoading(false);
+        showError('No menu items could be identified in this image. Please try a clearer photo.');
+        return;
+      }
+
+      clearInterval(msgInterval);
+      setLoading(false);
+      showVerificationStep(items, activeRestrictions, thumbnailDataUrl);
+
+    } catch (err) {
+      clearInterval(msgInterval);
+      setLoading(false);
+      showError(err.message);
+    }
+  });
+
+  // ── Verification step ──────────────────────────────────────────
+
+  function showVerificationStep(rawItems, activeRestrictions, thumbnailDataUrl) {
+    loader.classList.remove('visible');
+    scanBtn.style.display = 'none';
+
+    // Remove any existing verification panel
+    const existing = uploadPanel.querySelector('.verify-panel');
+    if (existing) existing.remove();
+
+    const panel = document.createElement('div');
+    panel.className = 'verify-panel';
+
+    const header = document.createElement('p');
+    header.className = 'verify-header';
+    header.textContent = 'Review extracted items before analysis \u2014 edit any names or descriptions, then confirm.';
+    panel.appendChild(header);
+
+    const list = document.createElement('div');
+    list.className = 'verify-list';
+
+    rawItems.forEach((item, i) => {
+      const row = document.createElement('div');
+      row.className = 'verify-row';
+      row.dataset.index = i;
+
+      const deleteBtn = document.createElement('button');
+      deleteBtn.type = 'button';
+      deleteBtn.className = 'verify-row-delete';
+      deleteBtn.textContent = '\u00d7';
+      deleteBtn.title = 'Remove item';
+      deleteBtn.addEventListener('click', async () => {
+        if (await confirmDelete('Remove this item?')) row.remove();
+      });
+
+      const nameLabel = document.createElement('label');
+      nameLabel.className = 'edit-label';
+      nameLabel.textContent = 'Name';
+
+      const nameInput = document.createElement('input');
+      nameInput.type = 'text';
+      nameInput.className = 'dietary-input';
+      nameInput.value = item.name || '';
+      nameInput.placeholder = 'Item name';
+
+      const descLabel = document.createElement('label');
+      descLabel.className = 'edit-label';
+      descLabel.textContent = 'Description';
+
+      const descArea = document.createElement('textarea');
+      descArea.className = 'dietary-input';
+      descArea.value = item.raw_description || '';
+      descArea.placeholder = 'Description (optional)';
+
+      row.appendChild(deleteBtn);
+      row.appendChild(nameLabel);
+      row.appendChild(nameInput);
+      row.appendChild(descLabel);
+      row.appendChild(descArea);
+      list.appendChild(row);
+    });
+
+    panel.appendChild(list);
+
+    const actions = document.createElement('div');
+    actions.className = 'verify-actions';
+
+    const confirmBtn = document.createElement('button');
+    confirmBtn.className = 'scan-btn';
+    confirmBtn.style.display = 'block';
+    confirmBtn.textContent = 'Confirm & Analyse';
+
+    const cancelLink = document.createElement('button');
+    cancelLink.className = 'verify-cancel';
+    cancelLink.type = 'button';
+    cancelLink.textContent = 'Cancel';
+
+    actions.appendChild(confirmBtn);
+    actions.appendChild(cancelLink);
+    panel.appendChild(actions);
+
+    uploadPanel.appendChild(panel);
+
+    cancelLink.addEventListener('click', () => {
+      panel.remove();
+      resetUpload();
+    });
+
+    confirmBtn.addEventListener('click', async () => {
+      const rows = list.querySelectorAll('.verify-row');
+      const verifiedItems = [];
+      rows.forEach(row => {
+        const name = row.querySelector('input').value.trim();
+        const description = row.querySelector('textarea').value.trim();
+        if (name) verifiedItems.push({ name, description });
+      });
+
+      if (verifiedItems.length === 0) return;
+
+      confirmBtn.disabled = true;
+      panel.querySelector('.verify-list').style.opacity = '.5';
+      loader.classList.add('visible');
+      loaderText.textContent = 'Analysing ingredients & allergens\u2026';
+      hideError();
+
+      try {
+        const res = await fetch(`${API_BASE}/scan/stage2`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ items: verifiedItems, dietary_restrictions: activeRestrictions }),
+        });
+
+        if (!res.ok) {
+          let detail = `Server error ${res.status}`;
+          try { const body = await res.json(); detail = body.detail || detail; } catch {}
+          throw new Error(detail);
+        }
+
+        const data = await res.json();
+        loader.classList.remove('visible');
+        panel.remove();
+        renderItems(data.items, activeRestrictions, thumbnailDataUrl);
+        resetUpload();
+        closePanel();
+      } catch (err) {
+        loader.classList.remove('visible');
+        confirmBtn.disabled = false;
+        panel.querySelector('.verify-list').style.opacity = '';
+        showError(err.message);
+      }
+    });
+  }
+
+  // ── Render ───────────────────────────────────────────────────────
+
+  function renderCard(item, idx) {
+    const name        = esc(item.name ?? 'Unnamed item');
+    const desc        = (typeof item.description === 'string' && item.description.trim()) ? `<p class="item-desc">${esc(item.description)}</p>` : '';
+    const visible     = (item.visible_dietary_flags || []).filter(Boolean);
+    const userFlags   = (item.user_dietary_flags    || []).filter(Boolean);
+    const common      = (item.common_ingredients  || []).filter(Boolean);
+    const obscure     = (item.obscure_ingredient_notes || []).filter(Boolean);
+
+    const allBadges = [
+      ...visible.map(v => `<span class="badge badge-green">${esc(v)}</span>`),
+      ...userFlags.map(u => `<span class="badge badge-amber">${esc(u)}</span>`),
+    ].join('');
+    const badges = allBadges ? `<div class="item-badges">${allBadges}</div>` : '';
+
+    // Ingredients row
+    const commonStr = common.length
+      ? `<p class="item-meta"><strong>Ingredients:</strong> ${esc(common.join(', '))}</p>`
+      : '';
+
+    // Obscure notes — expandable
+    let obscureHtml = '';
+    if (obscure.length) {
+      const listItems = obscure.map(n => `<li>${esc(n)}</li>`).join('');
+      const id = `obscure-${idx}`;
+      obscureHtml = `
+        <button class="obscure-toggle" aria-expanded="false" aria-controls="${id}">
+          <span class="arr">&#9658;</span> ${obscure.length} obscure ingredient note${obscure.length !== 1 ? 's' : ''}
+        </button>
+        <ul class="obscure-list" id="${id}">${listItems}</ul>`;
+    }
+
+    return `
+      <div class="item-top">
+        <h2 class="item-name">${name}</h2>
+        <button class="star-btn" aria-label="Review ${name}">&#9734;</button>
+        <button class="edit-btn" aria-label="Edit ${name}">&#9998; Edit</button>
+      </div>
+      ${badges}
+      ${desc}
+      ${commonStr}
+      ${obscureHtml}`;
+  }
+
+  function wireCard(cardEl, item, idx) {
+    // Wire up expandable obscure toggles
+    cardEl.querySelectorAll('.obscure-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        const list = document.getElementById(btn.getAttribute('aria-controls'));
+        list.classList.toggle('open', !expanded);
+      });
+    });
+
+    // Wire up star review button
+    const starBtn = cardEl.querySelector('.star-btn');
+    if (starBtn) {
+      const scanBlock = cardEl.closest('.scan-block');
+      const scanId = scanBlock ? scanBlock.dataset.scanId : '';
+      const key = reviewKey(scanId, item.name);
+      if (reviews[key]) {
+        starBtn.textContent = '\u2605';
+        starBtn.classList.add('has-review');
+      }
+      starBtn.addEventListener('click', () => openReviewModal(item, scanId, cardEl));
+    }
+
+    // Wire up edit button
+    const editBtn = cardEl.querySelector('.edit-btn');
+    if (editBtn) {
+      editBtn.addEventListener('click', () => showEditForm(cardEl, item, idx));
+    }
+  }
+
+  function showEditForm(cardEl, item, idx) {
+    cardEl.innerHTML = `
+      <form class="edit-form" autocomplete="off">
+        <div class="edit-field">
+          <label class="edit-label">Name</label>
+          <input class="dietary-input" type="text" name="name" value="${esc(item.name ?? '')}" />
+        </div>
+        <div class="edit-field">
+          <label class="edit-label">Description</label>
+          <textarea class="dietary-input" name="description">${esc(typeof item.description === 'string' ? item.description : '')}</textarea>
+          <em style="font-size:.72rem;color:var(--ink-3)">Ingredients and allergens will be regenerated on save.</em>
+        </div>
+        <div class="edit-actions">
+          <button type="submit" class="edit-save">Save</button>
+          <button type="button" class="edit-cancel">Cancel</button>
+          <button type="button" class="edit-delete scan-delete" aria-label="Delete item" style="margin-left:auto">&#128465;</button>
+        </div>
+      </form>`;
+
+    cardEl.classList.add('edit-mode');
+
+    const form = cardEl.querySelector('.edit-form');
+    const saveBtn = form.querySelector('.edit-save');
+
+    // Wire up delete button
+    const editDelBtn = form.querySelector('.edit-delete');
+    editDelBtn.addEventListener('click', async () => {
+      if (!await confirmDelete('Delete this item?')) return;
+      const scanBlock = cardEl.closest('.scan-block');
+      cardEl.remove();
+      if (scanBlock) {
+        const scanId = Number(scanBlock.dataset.scanId);
+        const scan = scans.find(s => s.id === scanId);
+        if (scan) {
+          scan.items.splice(idx, 1);
+          saveScanHistory();
+        }
+      }
+      const total = results.querySelectorAll('.item-card').length;
+      resultsCount.textContent = `${total} item${total !== 1 ? 's' : ''}`;
+    });
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const newName = form.elements.name.value.trim() || (item.name ?? '');
+      const newDesc = form.elements.description.value.trim();
+
+      saveBtn.disabled = true;
+      saveBtn.textContent = 'Saving\u2026';
+
+      try {
+        const res = await fetch(`${API_BASE}/refine-item`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: newName,
+            description: newDesc,
+            dietary_restrictions: [...restrictions],
+          }),
+        });
+
+        if (!res.ok) {
+          let detail = `Server error ${res.status}`;
+          try { const body = await res.json(); detail = body.detail || detail; } catch {}
+          throw new Error(detail);
+        }
+
+        const { item: refined } = await res.json();
+        item.name                    = newName;
+        item.description             = newDesc;
+        item.common_ingredients      = refined.common_ingredients;
+        item.obscure_ingredient_notes = refined.obscure_ingredient_notes;
+        item.visible_dietary_flags   = refined.visible_dietary_flags;
+        item.user_dietary_flags      = refined.user_dietary_flags;
+        saveScanHistory();
+
+        cardEl.classList.remove('edit-mode');
+        cardEl.innerHTML = renderCard(item, idx);
+        wireCard(cardEl, item, idx);
+      } catch (err) {
+        saveBtn.disabled = false;
+        saveBtn.textContent = 'Save';
+        const actions = form.querySelector('.edit-actions');
+        let errMsg = actions.querySelector('.edit-error');
+        if (!errMsg) {
+          errMsg = document.createElement('span');
+          errMsg.className = 'edit-error';
+          errMsg.style.cssText = 'font-size:.75rem;color:var(--accent)';
+          actions.appendChild(errMsg);
+        }
+        errMsg.textContent = err.message;
+      }
+    });
+
+    cardEl.querySelector('.edit-cancel').addEventListener('click', () => {
+      cardEl.classList.remove('edit-mode');
+      cardEl.innerHTML = renderCard(item, idx);
+      wireCard(cardEl, item, idx);
+    });
+  }
+
+  function saveScanHistory() {
+    if (scans.length > 10) scans = scans.slice(-10);
+    localStorage.setItem('menu_scanner_scans_' + currentUser, JSON.stringify(scans));
+  }
+
+  function renderScanBlock(scan, isNew) {
+    resultsHeader.classList.add('visible');
+
+    const scanBlock = document.createElement('div');
+    scanBlock.className = 'scan-block';
+    scanBlock.dataset.scanId = String(scan.id);
+
+    // ── Header ──────────────────────────────────────────────────────
+    const header = document.createElement('div');
+    header.className = 'scan-header';
+
+    const thumb = document.createElement('img');
+    thumb.className = 'scan-thumb';
+    thumb.src = scan.thumbnailDataUrl || '';
+    thumb.alt = 'Menu thumbnail';
+    thumb.addEventListener('click', () => openLightbox(scan.thumbnailDataUrl));
+    header.appendChild(thumb);
+
+    const dateStr = new Date(scan.timestamp).toLocaleString(undefined, {
+      month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit',
+    });
+    if (!scan.name && scan.name !== '') scan.name = '';
+
+    const meta = document.createElement('span');
+    meta.className = 'scan-meta';
+    meta.style.cursor = 'pointer';
+
+    function renderMetaDisplay() {
+      if (scan.name) {
+        meta.textContent = scan.name;
+        meta.style.fontStyle = '';
+        meta.style.color = '';
+      } else {
+        meta.textContent = dateStr;
+        meta.style.fontStyle = 'italic';
+        meta.style.color = 'var(--ink-3)';
+      }
+    }
+    renderMetaDisplay();
+
+    meta.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const input = document.createElement('input');
+      input.type = 'text';
+      input.value = scan.name;
+      input.placeholder = dateStr;
+      input.style.cssText = 'border:none;background:none;outline:none;font-family:inherit;font-size:inherit;color:inherit;padding:0;margin:0;width:12ch;min-width:8ch';
+      meta.replaceWith(input);
+      input.focus();
+
+      function commit() {
+        const val = input.value.trim();
+        scan.name = val;
+        saveScanHistory();
+        input.replaceWith(meta);
+        renderMetaDisplay();
+      }
+      function cancel() {
+        input.replaceWith(meta);
+      }
+
+      input.addEventListener('blur', commit);
+      input.addEventListener('keydown', (ev) => {
+        if (ev.key === 'Enter') { ev.preventDefault(); input.removeEventListener('blur', commit); commit(); }
+        if (ev.key === 'Escape') { ev.preventDefault(); input.removeEventListener('blur', commit); cancel(); }
+      });
+    });
+
+    header.appendChild(meta);
+
+    const spacer = document.createElement('span');
+    spacer.style.flex = '1';
+    header.appendChild(spacer);
+
+    const toggleBtn = document.createElement('button');
+    toggleBtn.className = 'scan-toggle';
+
+    const deleteBtn = document.createElement('button');
+    deleteBtn.className = 'scan-delete';
+    deleteBtn.textContent = '\u00d7';
+    deleteBtn.title = 'Delete scan';
+
+    header.appendChild(toggleBtn);
+    header.appendChild(deleteBtn);
+    scanBlock.appendChild(header);
+
+    // ── Body ─────────────────────────────────────────────────────────
+    const body = document.createElement('div');
+    body.className = 'scan-body';
+
+    if (scan.activeRestrictions && scan.activeRestrictions.length > 0) {
+      const pills = scan.activeRestrictions.map(r => `<span class="dietary-tag">${esc(r)}</span>`).join('');
+      const summary = document.createElement('div');
+      summary.style.cssText = 'margin-bottom:.75rem;padding-bottom:.75rem;border-bottom:1px solid var(--rule)';
+      summary.innerHTML = `<span style="display:block;font-family:sans-serif;font-size:.72rem;color:var(--ink-3);margin-bottom:.35rem">Scanned with restrictions:</span>${pills}`;
+      body.appendChild(summary);
+    }
+
+    scan.items.forEach((item, idx) => {
+      const article = document.createElement('article');
+      article.className = 'item-card';
+      if (isNew) article.style.animationDelay = `${idx * 60}ms`;
+      article.innerHTML = renderCard(item, idx);
+      body.appendChild(article);
+    });
+
+    scanBlock.appendChild(body);
+    results.insertBefore(scanBlock, results.firstChild);
+
+    body.querySelectorAll('.item-card').forEach((cardEl, idx) => {
+      wireCard(cardEl, scan.items[idx], idx);
+    });
+
+    const total = results.querySelectorAll('.item-card').length;
+    resultsCount.textContent = `${total} item${total !== 1 ? 's' : ''}`;
+
+    // Show trigger buttons once results exist
+    const hasScanBlocks = results.children.length > 0;
+    topTriggerWrap.style.display = hasScanBlocks ? '' : 'none';
+    bottomTriggerWrap.style.display = hasScanBlocks ? '' : 'none';
+
+    // ── Collapse / expand ─────────────────────────────────────────────
+    function setExpanded(expanded) {
+      body.style.display = expanded ? '' : 'none';
+      toggleBtn.textContent = expanded ? '\u25be Hide' : '\u25b8 Show';
+    }
+
+    if (isNew) {
+      results.querySelectorAll('.scan-block').forEach(block => {
+        if (block !== scanBlock) {
+          const b = block.querySelector('.scan-body');
+          const t = block.querySelector('.scan-toggle');
+          if (b) b.style.display = 'none';
+          if (t) t.textContent = '\u25b8 Show';
+        }
+      });
+      setExpanded(true);
+    } else {
+      setExpanded(false);
+    }
+
+    toggleBtn.addEventListener('click', () => setExpanded(body.style.display === 'none'));
+
+    // ── Add item ──────────────────────────────────────────────────────
+    const addBtn = document.createElement('button');
+    addBtn.className = 'add-item-btn';
+    addBtn.type = 'button';
+    addBtn.textContent = '+ Add item';
+    body.appendChild(addBtn);
+
+    addBtn.addEventListener('click', () => {
+      const cardEl = document.createElement('article');
+      cardEl.className = 'item-card edit-mode';
+      cardEl.innerHTML = `
+        <form class="edit-form" autocomplete="off">
+          <div class="edit-field">
+            <label class="edit-label">Name</label>
+            <input class="dietary-input" type="text" name="name" placeholder="Item name" />
+          </div>
+          <div class="edit-field">
+            <label class="edit-label">Description</label>
+            <textarea class="dietary-input" name="description" placeholder="Description (optional)"></textarea>
+            <em style="font-size:.72rem;color:var(--ink-3)">Ingredients and allergens will be regenerated on save.</em>
+          </div>
+          <div class="edit-actions">
+            <button type="submit" class="edit-save">Save</button>
+            <button type="button" class="edit-cancel">Cancel</button>
+          </div>
+        </form>`;
+
+      body.insertBefore(cardEl, addBtn);
+
+      const form = cardEl.querySelector('.edit-form');
+      const saveBtn = form.querySelector('.edit-save');
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const newName = form.elements.name.value.trim();
+        const newDesc = form.elements.description.value.trim();
+        if (!newName) { form.elements.name.focus(); return; }
+
+        saveBtn.disabled = true;
+        saveBtn.textContent = 'Saving\u2026';
+
+        try {
+          const res = await fetch(`${API_BASE}/refine-item`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              name: newName,
+              description: newDesc,
+              dietary_restrictions: scan.activeRestrictions || [],
+            }),
+          });
+
+          if (!res.ok) {
+            let detail = `Server error ${res.status}`;
+            try { const body2 = await res.json(); detail = body2.detail || detail; } catch {}
+            throw new Error(detail);
+          }
+
+          const { item: refined } = await res.json();
+          refined.name = newName;
+          refined.description = newDesc;
+
+          scan.items.push(refined);
+          saveScanHistory();
+
+          const newIdx = scan.items.length - 1;
+          cardEl.classList.remove('edit-mode');
+          cardEl.innerHTML = renderCard(refined, newIdx);
+          wireCard(cardEl, refined, newIdx);
+
+          const total = results.querySelectorAll('.item-card').length;
+          resultsCount.textContent = `${total} item${total !== 1 ? 's' : ''}`;
+        } catch (err) {
+          saveBtn.disabled = false;
+          saveBtn.textContent = 'Save';
+          const actions = form.querySelector('.edit-actions');
+          let errMsg = actions.querySelector('.edit-error');
+          if (!errMsg) {
+            errMsg = document.createElement('span');
+            errMsg.className = 'edit-error';
+            errMsg.style.cssText = 'font-size:.75rem;color:var(--accent)';
+            actions.appendChild(errMsg);
+          }
+          errMsg.textContent = err.message;
+        }
+      });
+
+      cardEl.querySelector('.edit-cancel').addEventListener('click', () => cardEl.remove());
+    });
+
+    // ── Delete ────────────────────────────────────────────────────────
+    deleteBtn.addEventListener('click', async () => {
+      if (!await confirmDelete('Delete this entire scan?')) return;
+      scanBlock.remove();
+      scans = scans.filter(s => s.id !== scan.id);
+      saveScanHistory();
+      const remaining = results.querySelectorAll('.item-card').length;
+      resultsCount.textContent = `${remaining} item${remaining !== 1 ? 's' : ''}`;
+      if (!results.querySelector('.scan-block')) {
+        resultsHeader.classList.remove('visible');
+        topTriggerWrap.style.display = 'none';
+        bottomTriggerWrap.style.display = 'none';
+        bottomTriggerWrap.after(uploadPanel);
+        uploadPanel.style.display = '';
+        activeTrigger = null;
+        resetUpload();
+      }
+    });
+  }
+
+  function renderItems(items, activeRestrictions, thumbnailDataUrl) {
+    const scan = { id: Date.now(), timestamp: Date.now(), name: '', activeRestrictions, items, thumbnailDataUrl };
+    scans.push(scan);
+    saveScanHistory();
+    renderScanBlock(scan, true);
+  }
+
+  // ── UI helpers ───────────────────────────────────────────────────
+
+  function setLoading(on) {
+    scanBtn.disabled = on;
+    loader.classList.toggle('visible', on);
+    if (!on) loaderText.textContent = 'Analysing menu\u2026';
+  }
+
+  function showError(msg) {
+    errorBanner.textContent = msg;
+    errorBanner.classList.add('visible');
+  }
+  function hideError() {
+    errorBanner.classList.remove('visible');
+    errorBanner.textContent = '';
+  }
+
+  function clearResults() {
+    results.innerHTML = '';
+    resultsHeader.classList.remove('visible');
+    resultsCount.textContent = '';
+  }
+
+  function esc(str) {
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+</script>
+</body>
+</html>

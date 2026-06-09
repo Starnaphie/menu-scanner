@@ -9,7 +9,7 @@ from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
-from extractor import _stage1_extract, _stage2_refine, _stage3_explain_flags, extract_menu
+from backend.extractor import _stage1_extract, _stage2_refine, _stage3_explain_flags, extract_menu
 
 FRONTEND_DIR = Path(__file__).resolve().parent.parent / "frontend"
 

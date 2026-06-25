@@ -52,5 +52,5 @@ echo "Starting Menu Scanner API on http://localhost:8000"
 echo "Frontend: open frontend/index.html in your browser"
 echo ""
 
-cd "$SCRIPT_DIR/backend"
-exec uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+cd "$SCRIPT_DIR"
+exec uvicorn backend.main:app --host 0.0.0.0 --port 8000 --reload

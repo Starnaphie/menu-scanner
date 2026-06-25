@@ -879,6 +879,21 @@
       padding: 0;
     }
     .login-toggle:hover { color: var(--ink-2); }
+    .login-guest {
+      display: block;
+      width: 100%;
+      text-align: center;
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border: none;
+      border-top: 1px solid var(--rule);
+      background: none;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: .78rem;
+      color: var(--ink-3);
+      cursor: pointer;
+    }
+    .login-guest:hover { color: var(--ink-2); }
     .login-error {
       font-family: 'Helvetica Neue', Arial, sans-serif;
       font-size: .78rem;
@@ -886,6 +901,34 @@
       text-align: center;
       min-height: 1.2em;
     }
+    #guestBanner {
+      background: var(--amber-bg);
+      color: var(--amber);
+      border: 1px solid var(--amber-bd);
+      border-radius: 4px;
+      padding: .55rem .85rem;
+      margin-bottom: 1rem;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: .8rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: .75rem;
+    }
+    #guestBanner button {
+      background: none;
+      border: 1px solid var(--amber-bd);
+      color: var(--amber);
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .04em;
+      padding: .25rem .65rem;
+      border-radius: 3px;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    #guestBanner button:hover { background: var(--amber-bd); color: #fff; }
   </style>
 </head>
 <body>
@@ -902,6 +945,9 @@
       <button type="submit" class="login-submit" id="loginSubmit">Sign in</button>
     </form>
     <button type="button" class="login-toggle" id="loginToggle">Don't have an account? Create one</button>
+    <button type="button" class="login-guest" id="loginGuest">
+      Continue as Guest
+    </button>
   </div>
 </div>
 <div id="confirmModal">
@@ -923,6 +969,11 @@
     <h1>Menu Scanner</h1>
     <p class="masthead-sub">Upload a menu photograph &mdash; get ingredients, allergens &amp; dietary notes instantly &middot; <a href="#" id="signOutLink" style="color:var(--accent);text-decoration:none">Sign out</a></p>
   </header>
+
+  <div id="guestBanner" style="display:none">
+    You're browsing as a guest — your scans won't be saved between sessions.
+    <button type="button" id="guestSignUp">Create an account</button>
+  </div>
 
   <!-- Top trigger (hidden until first scan) -->
   <div id="topTriggerWrap" style="display:none; margin-bottom:1.5rem">
@@ -993,6 +1044,7 @@
   const loginError   = document.getElementById('loginError');
   const loginSubmit  = document.getElementById('loginSubmit');
   const loginToggle  = document.getElementById('loginToggle');
+  const loginGuest   = document.getElementById('loginGuest');
   const pageEl       = document.querySelector('.page');
 
   let isCreateMode = false;
@@ -1024,6 +1076,10 @@
       ? 'Already have an account? Sign in'
       : "Don't have an account? Create one";
     clearLoginError();
+  });
+
+  loginGuest.addEventListener('click', () => {
+    loginSuccess('__guest__');
   });
 
   loginForm.addEventListener('submit', async (e) => {
@@ -1061,13 +1117,29 @@
     loginScreen.style.display = 'none';
     pageEl.style.display = '';
     initApp();
+    if (currentUser === '__guest__') {
+      document.getElementById('guestBanner').style.display = '';
+    }
   }
+
+  document.getElementById('guestSignUp').addEventListener('click', () => {
+    sessionStorage.removeItem('menu_scanner_session');
+    currentUser = null;
+    document.getElementById('guestBanner').style.display = 'none';
+    pageEl.style.display = 'none';
+    loginScreen.style.display = '';
+    isCreateMode = true;
+    loginConfirm.style.display = '';
+    loginSubmit.textContent = 'Create account';
+    loginToggle.textContent = 'Already have an account? Sign in';
+    clearLoginError();
+  });
 
   // Check for existing session on load
   (function checkSession() {
     const session = sessionStorage.getItem('menu_scanner_session');
     const users = getUsers();
-    if (session && users.some(u => u.username === session)) {
+    if (session === '__guest__' || (session && users.some(u => u.username === session))) {
       currentUser = session;
       loginScreen.style.display = 'none';
       pageEl.style.display = '';
@@ -1368,7 +1440,12 @@
     // Load user-specific data
     loadReviews();
     restrictions = JSON.parse(localStorage.getItem('dietaryRestrictions_' + currentUser) || '[]');
-    try { scans = JSON.parse(localStorage.getItem('menu_scanner_scans_' + currentUser) || '[]'); } catch { scans = []; }
+    try {
+      const scansRaw = currentUser === '__guest__'
+        ? sessionStorage.getItem('menu_scanner_scans_guest')
+        : localStorage.getItem('menu_scanner_scans_' + currentUser);
+      scans = JSON.parse(scansRaw || '[]');
+    } catch { scans = []; }
 
     // Render persisted tags
     if (restrictions.length > 0) renderTags();
@@ -1386,7 +1463,12 @@
   }
 
   // If session was restored at top, init immediately
-  if (currentUser) initApp();
+  if (currentUser) {
+    initApp();
+    if (currentUser === '__guest__') {
+      document.getElementById('guestBanner').style.display = '';
+    }
+  }
 
   // ── File handling ────────────────────────────────────────────────
 
@@ -1812,7 +1894,12 @@
 
   function saveScanHistory() {
     if (scans.length > 10) scans = scans.slice(-10);
-    localStorage.setItem('menu_scanner_scans_' + currentUser, JSON.stringify(scans));
+    const payload = JSON.stringify(scans);
+    if (currentUser === '__guest__') {
+      sessionStorage.setItem('menu_scanner_scans_guest', payload);
+    } else {
+      localStorage.setItem('menu_scanner_scans_' + currentUser, payload);
+    }
   }
 
   function renderScanBlock(scan, isNew) {

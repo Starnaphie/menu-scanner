@@ -1023,7 +1023,7 @@
 
     <div class="loader" id="loader" aria-live="polite">
       <div class="spinner"></div>
-      <span id="loaderText">Analysing menu&hellip;</span>
+      <span id="loaderText">Analyzing menu&hellip;</span>
     </div>
 
     <div class="error-banner" id="errorBanner" role="alert"></div>
@@ -1032,9 +1032,9 @@
 </div>
 
 <script>
-  const API_BASE = window.location.hostname === 'localhost'
-  ? 'http://localhost:8000'
-  : 'https://menu-scanner-o1ab.onrender.com';
+  const API_BASE = window.location.hostname.includes('onrender.com')
+  ? 'https://menu-scanner-o1ab.onrender.com'
+  : `http://${window.location.hostname}:8000`;
 
   // ── Auth ──────────────────────────────────────────────────────────
   let currentUser = null;
@@ -1531,7 +1531,7 @@
     hideError();
 
     const messages = [
-      'Analysing menu\u2026',
+      'Analyzing menu\u2026',
       'Identifying ingredients\u2026',
       'Checking allergens\u2026',
       'Almost there\u2026',
@@ -1654,7 +1654,7 @@
     const confirmBtn = document.createElement('button');
     confirmBtn.className = 'scan-btn';
     confirmBtn.style.display = 'block';
-    confirmBtn.textContent = 'Confirm & Analyse';
+    confirmBtn.textContent = 'Confirm & Analyze';
 
     const cancelLink = document.createElement('button');
     cancelLink.className = 'verify-cancel';
@@ -1686,7 +1686,7 @@
       confirmBtn.disabled = true;
       panel.querySelector('.verify-list').style.opacity = '.5';
       loader.classList.add('visible');
-      loaderText.textContent = 'Analysing ingredients & allergens\u2026';
+      loaderText.textContent = 'Analyzing ingredients & allergens\u2026';
       hideError();
 
       try {
@@ -2169,7 +2169,7 @@
   function setLoading(on) {
     scanBtn.disabled = on;
     loader.classList.toggle('visible', on);
-    if (!on) loaderText.textContent = 'Analysing menu\u2026';
+    if (!on) loaderText.textContent = 'Analyzing menu\u2026';
   }
 
   function showError(msg) {

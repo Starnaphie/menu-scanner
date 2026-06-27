@@ -9,7 +9,21 @@ from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
-from backend.extractor import _stage1_extract, _stage2_refine, _stage3_explain_flags, extract_menu
+from backend.extractor import _stage1_extract, _stage2_refine, extract_menu
+
+from dotenv import load_dotenv
+load_dotenv()
+
+handler = logging.StreamHandler()
+handler.setLevel(logging.INFO)
+formatter = logging.Formatter("%(levelname)s:%(name)s:%(message)s")
+handler.setFormatter(formatter)
+
+for name in ("backend.main", "backend.extractor"):
+    lg = logging.getLogger(name)
+    lg.setLevel(logging.INFO)
+    lg.addHandler(handler)
+    lg.propagate = False
 
 FRONTEND_DIR = Path(__file__).resolve().parent.parent / "frontend"
 
@@ -25,6 +39,24 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+
+@app.middleware("http")
+async def log_requests(request, call_next):
+    logger.info(
+        "Request: method=%s path=%s query_params=%s",
+        request.method,
+        request.url.path,
+        dict(request.query_params),
+    )
+    response = await call_next(request)
+    logger.info(
+        "Response: method=%s path=%s status_code=%s",
+        request.method,
+        request.url.path,
+        response.status_code,
+    )
+    return response
 
 
 @app.post("/scan/stage1")
@@ -89,7 +121,12 @@ class RefineRequest(BaseModel):
 async def refine_item(body: RefineRequest):
     item_dict = {"name": body.name, "description": body.description}
     restrictions = body.dietary_restrictions or None
-    logger.debug("refine-item called with item=%s restrictions=%s", item_dict, restrictions)
+    logger.info(
+        "refine-item request: name=%s description=%s dietary_restrictions=%s",
+        body.name,
+        body.description,
+        body.dietary_restrictions,
+    )
     try:
         refined, _usage = _stage2_refine([item_dict], restrictions)
     except openai.OpenAIError as exc:
@@ -99,32 +136,19 @@ async def refine_item(body: RefineRequest):
         logger.exception("Unexpected error during refinement")
         raise HTTPException(status_code=500, detail=str(exc)) from exc
 
+    logger.info("refine-item: raw _stage2_refine output=%s", refined)
+
     if not refined:
+        logger.warning(
+            "refine-item: _stage2_refine returned empty for input item=%s restrictions=%s",
+            item_dict,
+            restrictions,
+        )
         raise HTTPException(status_code=422, detail="Refinement produced no output")
 
     result = refined[0]
     result["name"] = body.name
     result["description"] = body.description if body.description.strip() else None
-
-    try:
-        flag_explanations, _ = _stage3_explain_flags(result, restrictions)
-    except openai.OpenAIError as exc:
-        logger.exception("OpenAI API error during flag explanation")
-        raise HTTPException(status_code=502, detail=f"OpenAI error: {exc}") from exc
-    except Exception as exc:
-        logger.exception("Unexpected error during flag explanation")
-        raise HTTPException(status_code=500, detail=str(exc)) from exc
-
-    # Remove flags that stage 3 determined are safe
-    safe_restrictions = {
-        e["restriction"].lower()
-        for e in flag_explanations
-        if e.get("verdict") == "safe"
-    }
-    result["user_dietary_flags"] = [
-        f for f in result.get("user_dietary_flags", [])
-        if f.lower() not in safe_restrictions
-    ]
 
     return {"item": result}
 

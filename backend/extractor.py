@@ -1,9 +1,12 @@
 import base64
 import json
+import logging
 import os
 import re
 
 from openai import OpenAI
+
+logger = logging.getLogger(__name__)
 
 _client: OpenAI | None = None
 
@@ -114,8 +117,14 @@ def _stage2_refine(
             "if the item contains or may contain ingredients relevant to that restriction. "
             "Only add a restriction to user_dietary_flags if the item CONTAINS or MAY CONTAIN "
             "that restricted ingredient — never add restrictions the item is safe from. "
+            "Important clarifications: 'dairy' means animal-derived milk products only (cow, goat, sheep), "
+            "many breads, breakfasts, or sauces include dairy even if not obvious."
+            "'meat' means animal flesh only — do NOT flag plant-based meat substitutes like Beyond Meat, "
+            "Impossible, or any ingredient explicitly labeled plant-based or vegan."
             "Do not add flags for restrictions that have no relevance to this item."
         )
+
+    logger.info("_stage2_refine: system_prompt=%s", system_prompt)
 
     # 1. STRIP raw_flags before sending to LLM
     items_for_llm = [
@@ -138,6 +147,7 @@ def _stage2_refine(
 
     # 2. PARSE the LLM response
     raw = response.choices[0].message.content or ""
+    logger.info("_stage2_refine: raw LLM response=%s", raw)
     raw = raw.strip()
 
     # Strip accidental markdown code fences (```json … ```)
@@ -171,78 +181,49 @@ def _stage2_refine(
     return refined_items, usage
 
 
-_STAGE3_SYSTEM_PROMPT = """
-You are a dietary restriction analyst. You will receive a single menu item (name and description) and a list of the user's dietary restrictions.
-
-Each restriction is something the user CANNOT eat or AVOIDS. "beef" means no beef, "dairy" means no dairy, "gluten" means no gluten, and so on — treat every restriction as a prohibition, not a preference.
-
-For each of the user's restrictions, read the item name and description and determine whether the item is likely to contain, may contain, or is safe from that restricted ingredient or category. Return a JSON array where each element has:
-- restriction (string): the user's restriction being evaluated
-- verdict (string): one of "contains", "may contain", or "safe" — "contains" if the item clearly has it, "may contain" if it is uncertain or a common hidden ingredient, "safe" if the item clearly does not have it
-- explanation (string): a concise 1-2 sentence explanation based only on the item name and description
-
-Include every one of the user's restrictions in the output, even if safe. Do not reference visible_dietary_flags. Do not invent ingredients not implied by the name or description.
-Output ONLY a valid JSON array, no markdown, no explanation.
-""".strip()
-
-
-def _stage3_explain_flags(
-    item: dict,
-    restrictions: list[str] | None = None,
-) -> tuple[list[dict], dict]:
-    """
-    For a single refined menu item, return confidence and explanation for each
-    dietary flag relevant to the user's restrictions.
-    """
-    restriction_note = ""
-    if restrictions:
-        joined = ", ".join(restrictions)
-        restriction_note = f"\n\nThe user's dietary restrictions are: {joined}."
-
-    response = _get_client().chat.completions.create(
-        model="gpt-4o-mini",
-        messages=[
-            {"role": "system", "content": _STAGE3_SYSTEM_PROMPT + restriction_note},
-            {
-                "role": "user",
-                "content": f"Evaluate this menu item against the user's restrictions: {json.dumps(item)}",
-            },
-        ],
-        max_tokens=1024,
-        temperature=0,
-    )
-
-    raw = response.choices[0].message.content or ""
-    raw = raw.strip()
-    raw = re.sub(r"^```(?:json)?\s*", "", raw)
-    raw = re.sub(r"\s*```$", "", raw)
-
-    try:
-        explanations: list[dict] = json.loads(raw)
-    except (json.JSONDecodeError, ValueError):
-        explanations = []
-    usage = {
-        "input_tokens": response.usage.prompt_tokens,
-        "output_tokens": response.usage.completion_tokens,
-    }
-    return explanations, usage
-
-
-def extract_menu(
-    image_bytes: bytes,
-    mime_type: str = "image/jpeg",
-    restrictions: list[str] | None = None,
-) -> tuple[list[dict], dict]:
-    """
-    Orchestrate Stage 1 (faithful extraction) and Stage 2 (culinary refinement),
-    returning (refined_items, combined_usage).
-    """
+def extract_menu(image_bytes, mime_type="image/jpeg", restrictions=None):
     raw_items, usage1 = _stage1_extract(image_bytes, mime_type)
-    print(raw_items)
-    refined_items, usage2 = _stage2_refine(raw_items, restrictions)
-    print(refined_items)
+
+    BATCH_SIZE = 10
+    all_refined = []
+    total_usage2 = {"input_tokens": 0, "output_tokens": 0}
+
+    logger.info("extract_menu: total raw items=%d", len(raw_items))
+
+    for batch_index, i in enumerate(range(0, len(raw_items), BATCH_SIZE)):
+        batch = raw_items[i:i + BATCH_SIZE]
+        batch_names = [item.get("name") for item in batch]
+        logger.info(
+            "extract_menu: batch_index=%d batch_size=%d item_names=%s",
+            batch_index,
+            len(batch),
+            batch_names,
+        )
+
+        refined_batch, usage2 = _stage2_refine(batch, restrictions)
+
+        logger.info(
+            "extract_menu: batch_index=%d refined_count=%d",
+            batch_index,
+            len(refined_batch),
+        )
+        for refined_item in refined_batch:
+            logger.info(
+                "extract_menu: batch_index=%d name=%s user_dietary_flags=%s visible_dietary_flags=%s",
+                batch_index,
+                refined_item.get("name"),
+                refined_item.get("user_dietary_flags"),
+                refined_item.get("visible_dietary_flags"),
+            )
+
+        all_refined.extend(refined_batch)
+        total_usage2["input_tokens"] += usage2["input_tokens"]
+        total_usage2["output_tokens"] += usage2["output_tokens"]
+
+    logger.info("extract_menu: total refined items collected=%d", len(all_refined))
+
     combined_usage = {
-        "input_tokens": usage1["input_tokens"] + usage2["input_tokens"],
-        "output_tokens": usage1["output_tokens"] + usage2["output_tokens"],
+        "input_tokens": usage1["input_tokens"] + total_usage2["input_tokens"],
+        "output_tokens": usage1["output_tokens"] + total_usage2["output_tokens"],
     }
-    return refined_items, combined_usage
+    return all_refined, combined_usage

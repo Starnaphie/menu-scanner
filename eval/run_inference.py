@@ -54,7 +54,7 @@ for i, case in enumerate(to_run, start=1):
         "webp": "image/webp",
     }.get(ext, "image/jpeg")
 
-    items, usage = extract_menu(image_bytes, mime)
+    items, usage, _cost_usd = extract_menu(image_bytes, mime)
 
     cache["cases"].append({
         "image": image_rel,

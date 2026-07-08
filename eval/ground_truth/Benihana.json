@@ -1,0 +1,247 @@
+[
+  {
+    "name": "Edamame",
+    "description": "Served with crushed sea salt",
+    "category": "small dishes",
+    "price": "4.30",
+    "dietary_tags": []
+  },
+  {
+    "name": "Spicy Edamame",
+    "description": "Served with lemon garlic chili sauce",
+    "category": "small dishes",
+    "price": "4.70",
+    "dietary_tags": []
+  },
+  {
+    "name": "Hibachi Chicken",
+    "description": null,
+    "category": "hot plates",
+    "price": "22.50",
+    "dietary_tags": []
+  },
+  {
+    "name": "Hibachi or Teriyaki Steak",
+    "description": null,
+    "category": "hot plates",
+    "price": "29.50",
+    "dietary_tags": []
+  },
+  {
+    "name": "Prawn Tempura",
+    "description": "Deep Fried prawn with light batter",
+    "category": "hot plates",
+    "price": "9.80",
+    "dietary_tags": []
+  },
+  {
+    "name": "Filet Mignon",
+    "description": null,
+    "category": "hot plates",
+    "price": "34.50",
+    "dietary_tags": []
+  },
+  {
+    "name": "Hibachi Salmon",
+    "description": null,
+    "category": "hot plates",
+    "price": "25.50",
+    "dietary_tags": []
+  },
+  {
+    "name": "Pirikara Prawn",
+    "description": "Tempura Prawn pieces served with our spicy mayonnaise sauce",
+    "category": "hot plates",
+    "price": "10.80",
+    "dietary_tags": []
+  },
+  {
+    "name": "Hibachi Prawn",
+    "description": null,
+    "category": "hot plates",
+    "price": "26.50",
+    "dietary_tags": []
+  },
+  {
+    "name": "Sushi & Hibachi Steak",
+    "description": null,
+    "category": "hot plates",
+    "price": "31.50",
+    "dietary_tags": []
+  },
+  {
+    "name": "Chicken Gyoza",
+    "description": "served with Gyoza sauce",
+    "category": "small dishes",
+    "price": "6.80",
+    "dietary_tags": []
+  },
+  {
+    "name": "Vegetable Gyoza",
+    "description": "served with Gyoza sauce",
+    "category": "small dishes",
+    "price": "6.80",
+    "dietary_tags": []
+  },
+  {
+    "name": "Hibachi Chicken & Prawns",
+    "description": null,
+    "category": "hot plates",
+    "price": "29.50",
+    "dietary_tags": []
+  },
+  {
+    "name": "Spring Rolls",
+    "description": "Served with sweet chili sauce",
+    "category": "small dishes",
+    "price": "6.50",
+    "dietary_tags": []
+  },
+  {
+    "name": "Hibachi Steak & Chicken",
+    "description": null,
+    "category": "hot plates",
+    "price": "33.50",
+    "dietary_tags": []
+  },
+  {
+    "name": "Natural Bites",
+    "description": "Plant-based goodness served with Wasabi Mayo",
+    "category": "small dishes",
+    "price": "6.90",
+    "dietary_tags": []
+  },
+  {
+    "name": "Hibachi Steak & Prawns",
+    "description": null,
+    "category": "hot plates",
+    "price": "37.50",
+    "dietary_tags": []
+  },
+  {
+    "name": "Sushi Combination",
+    "description": "2-Tuna, 2-Salmon, 1-Prawn, 1-Sea Bass",
+    "category": "sushi & sashimi combo",
+    "price": "10.50",
+    "dietary_tags": []
+  },
+  {
+    "name": "Vegetable Delight",
+    "description": "Miso soup, Benihana Salad, Vegetarian spring rolls and Hibachi Vegetables",
+    "category": "benihana lunches",
+    "price": "19.50",
+    "dietary_tags": []
+  },
+  {
+    "name": "Sashimi Combination",
+    "description": "2-Tuna, 3-Salmon, 2-Sea Bass",
+    "category": "sushi & sashimi combo",
+    "price": "15.00",
+    "dietary_tags": []
+  },
+  {
+    "name": "Sushi & Sashimi Combination",
+    "description": "2-Tuna, 2-Salmon, 2-Prawn Sushi ; 3-Tuna, 3-Salmon, 2-Sea Bass",
+    "category": "sushi & sashimi combo",
+    "price": "22.00",
+    "dietary_tags": []
+  },
+  {
+    "name": "Avocado Roll",
+    "description": null,
+    "category": "sushi rolls",
+    "price": "3.50",
+    "dietary_tags": []
+  },
+  {
+    "name": "Deluxe Sushi Lunch",
+    "description": "2-Tuna; 2-Salmon; 1-Prawn; 6-Salmon Roll",
+    "category": "benihana lunches",
+    "price": "13.00",
+    "dietary_tags": []
+  },
+  {
+    "name": "Cucumber Roll",
+    "description": null,
+    "category": "sushi rolls",
+    "price": "3.50",
+    "dietary_tags": []
+  },
+  {
+    "name": "Tuna Roll",
+    "description": null,
+    "category": "sushi rolls",
+    "price": "6.00",
+    "dietary_tags": []
+  },
+  {
+    "name": "Salmon Roll",
+    "description": null,
+    "category": "sushi rolls",
+    "price": "5.50",
+    "dietary_tags": []
+  },
+  {
+    "name": "California Roll",
+    "description": null,
+    "category": "sushi rolls",
+    "price": "6.90",
+    "dietary_tags": []
+  },
+  {
+    "name": "Prawn Tempura Roll",
+    "description": null,
+    "category": "sushi rolls",
+    "price": "9.80",
+    "dietary_tags": []
+  },
+  {
+    "name": "Salmon or Prawn or Tobiko",
+    "description": null,
+    "category": "sushi rolls",
+    "price": "5.50",
+    "dietary_tags": []
+  },
+  {
+    "name": "Tuna or Sea Bass",
+    "description": null,
+    "category": "sushi rolls",
+    "price": "6.00",
+    "dietary_tags": []
+  },
+  {
+    "name": "Eel",
+    "description": null,
+    "category": "sushi rolls",
+    "price": "6.80",
+    "dietary_tags": []
+  },
+  {
+    "name": "Sushi & Sashimi Combo",
+    "description": "2-Tuna; 2-Salmon; 2-Prawn Sushi; 3-Tuna, Sea Bass & Salmon Sashimi",
+    "category": "sushi rolls",
+    "price": "6.80",
+    "dietary_tags": []
+  },
+  {
+    "name": "Tuna",
+    "description": null,
+    "category": "sushi & sashimi combo",
+    "price": "7.00",
+    "dietary_tags": []
+  },
+  {
+    "name": "Salmon",
+    "description": null,
+    "category": "sushi & sashimi combo",
+    "price": "6.00",
+    "dietary_tags": []
+  },
+  {
+    "name": "Sea Bass",
+    "description": null,
+    "category": "sushi & sashimi combo",
+    "price": "6.50",
+    "dietary_tags": []
+  }
+]

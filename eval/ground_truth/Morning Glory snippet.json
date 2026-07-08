@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Morning Glory Ginger Fried Rice",
+    "description": "Pork Belly, Peas, Bok Choy, Sesame Seeds, Broccolini, Carrots, Onions, Scallions, Sunny Up Egg",
+    "category": "breakfast",
+    "price": "16",
+    "dietary_tags": []
+  },
+  {
+    "name": "Breakfast Carbonara",
+    "description": "Bucatini, Crispy Pork Belly, Creamy Cheese Sauce, Soft-Poached Egg, Calabrian Chili Oil",
+    "category": "breakfast",
+    "price": "15",
+    "dietary_tags": []
+  },
+  {
+    "name": "Khachapuri",
+    "description": "Mozzarella, Feta, Garlic, Olive Oil, Egg, Butter",
+    "category": "breakfast",
+    "price": "16",
+    "dietary_tags": []
+  },
+  {
+    "name": "French Omelet",
+    "description": "Goat Cheese, Chives, Bistro Salad, Toast",
+    "category": "breakfast",
+    "price": "15",
+    "dietary_tags": []
+  },
+  {
+    "name": "American Breakfast",
+    "description": "Two Eggs, Bacon or Sausage, Crispy Hash Brown, Toast",
+    "category": "breakfast",
+    "price": "14",
+    "dietary_tags": []
+  },
+  {
+    "name": "Quesabirria",
+    "description": "Corn Tortillas, Oaxaca Cheese, Beef, Avocado Salsa, Roasted Jalape\u00f1o, Radish, Red Onion, Cilantro, Consomm\u00e9",
+    "category": "breakfast",
+    "price": "24",
+    "dietary_tags": []
+  },
+  {
+    "name": "Turkish Eggs",
+    "description": "Garlic Herb Greek Yogurt, Poached Eggs, Roasted Cherry Tomatoes, Chili Garlic Oil, Dill & Mint, Olive Oil Toasted Levain Bread",
+    "category": "breakfast",
+    "price": "16",
+    "dietary_tags": []
+  },
+  {
+    "name": "Chilaquiles",
+    "description": "Tomatillo Jalape\u00f1o Salsa, Corn Tortilla Chips, Crema, Cotija Cheese, Red Onion, Jalapeno, Radish, Sunny Up Egg",
+    "category": "breakfast",
+    "price": "16",
+    "dietary_tags": []
+  }
+]

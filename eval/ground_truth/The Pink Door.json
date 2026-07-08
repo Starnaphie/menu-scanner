@@ -1,0 +1,212 @@
+[
+  {
+    "name": "Bruschetta",
+    "description": "Grilled ciabatta bread with the ripest organic summer heirloom tomatoes, basilico, really, really good olive oil and Sicilian sea salt",
+    "category": "antipasti",
+    "price": "16.",
+    "dietary_tags": []
+  },
+  {
+    "name": "Arancini",
+    "description": "Fried saffron rice balls stuffed with fontina cheese",
+    "category": "antipasti",
+    "price": "15.",
+    "dietary_tags": []
+  },
+  {
+    "name": "Squid, Octopus, Prawn & Celery Salad",
+    "description": "Parsley, olive oil and lemon",
+    "category": "antipasti",
+    "price": "17.",
+    "dietary_tags": []
+  },
+  {
+    "name": "Antipasto of the House",
+    "description": "Prosciutto, tuscan bean salad, fresh mozzarella, tapanada, vegetables, salumi and more",
+    "category": "antipasti",
+    "price": "21. + half 14.",
+    "dietary_tags": []
+  },
+  {
+    "name": "Cheese Board Deluxe",
+    "description": "Artisanal Italian cheeses, fig and chianti compote with a housemade cracker and walnuts",
+    "category": "antipasti",
+    "price": "20.",
+    "dietary_tags": []
+  },
+  {
+    "name": "Salumi Platter",
+    "description": "Capocolla, wild boar salame, mortadella, prosciutto, Tuscan chicken liver pat\u00e9 ~ pickley things",
+    "category": "antipasti",
+    "price": "22.",
+    "dietary_tags": []
+  },
+  {
+    "name": "Fusilloni Gigante",
+    "description": "Burrata, summer tomato sauce and basil",
+    "category": "pasta",
+    "price": "21.",
+    "dietary_tags": []
+  },
+  {
+    "name": "Trofie with Basil & Arugula Pesto",
+    "description": "Pine nuts ~ potatoes and green beans from the farm",
+    "category": "pasta",
+    "price": "21.",
+    "dietary_tags": []
+  },
+  {
+    "name": "Lasagna Pink Door",
+    "description": "Fresh spinach pasta layered with besciamella, pesto and topped with marinara sauce",
+    "category": "pasta",
+    "price": "20.",
+    "dietary_tags": []
+  },
+  {
+    "name": "Linguine alle Vongole",
+    "description": "Baby clams in their shell, pancetta, garlic, chilis and white wine",
+    "category": "pasta",
+    "price": "22.",
+    "dietary_tags": []
+  },
+  {
+    "name": "Rigatoni and Don & Joe's Grilled Italian Sausage or Mama's Meatballs",
+    "description": "With marinara sauce",
+    "category": "pasta",
+    "price": "20.",
+    "dietary_tags": []
+  },
+  {
+    "name": "Pappardelle al Ragu Bolognese",
+    "description": "Slow-simmered meat sauce, fresh pasta",
+    "category": "pasta",
+    "price": "23.",
+    "dietary_tags": []
+  },
+  {
+    "name": "Summer Risotto",
+    "description": "Northwest dungeness crab, saffron and fresh corn",
+    "category": "pasta",
+    "price": "25.",
+    "dietary_tags": []
+  },
+  {
+    "name": "Seared Sea Scallops",
+    "description": "Preserved lemon & chervil sauce, semolina gnocchi, watercress salad",
+    "category": "pesce",
+    "price": "31.",
+    "dietary_tags": []
+  },
+  {
+    "name": "Penn Cove Mussels and Clams",
+    "description": "White vermouth, garlic, parsley and a touch of cream ~ garlic toast",
+    "category": "pesce",
+    "price": "22",
+    "dietary_tags": []
+  },
+  {
+    "name": "Cioppino Pink Door",
+    "description": "Prawns, rock fish, mussels, clams and calamari in a spicy tomato and white wine broth",
+    "category": "pesce",
+    "price": "27.",
+    "dietary_tags": []
+  },
+  {
+    "name": "Northwest Fish of the Day",
+    "description": "Chef Stefano's summer creation",
+    "category": "pesce",
+    "price": "MP",
+    "dietary_tags": []
+  },
+  {
+    "name": "Lavender Glazed Lamb Porterhouse",
+    "description": "Pole beans ~ artichoke sformato",
+    "category": "carne",
+    "price": "32.",
+    "dietary_tags": []
+  },
+  {
+    "name": "Stuffed Chicken Breast",
+    "description": "Pistachios-ricotta orange zest stuffing ~ smashed herb potatoes",
+    "category": "carne",
+    "price": "29.",
+    "dietary_tags": []
+  },
+  {
+    "name": "Grilled Flank Steak Tagliata",
+    "description": "Arugula, cherry tomatoes, parmigiano",
+    "category": "carne",
+    "price": "30.",
+    "dietary_tags": []
+  },
+  {
+    "name": "Insalata Misticanza",
+    "description": "Farm fresh organic lettuces, carrots, radish and soft herbs",
+    "category": "salads",
+    "price": "small 10. large 13.",
+    "dietary_tags": []
+  },
+  {
+    "name": "Insalata Caprese Pink Door",
+    "description": "The finest ripest organic heirloom tomatoes, fresh mozzarella, torn basil, ricotta salata, first pressed olive oil and Sicilian sea salt",
+    "category": "salads",
+    "price": "small 13. large 16.",
+    "dietary_tags": []
+  },
+  {
+    "name": "Pink Door Caesar",
+    "description": "With fennel dusted croutons",
+    "category": "salads",
+    "price": "11.",
+    "dietary_tags": []
+  },
+  {
+    "name": "La Fettunta",
+    "description": "Grilled garlic bread with the finest of olive oils",
+    "category": "sides",
+    "price": "7.",
+    "dietary_tags": []
+  },
+  {
+    "name": "Three of Mama's Meatballs",
+    "description": "Marinara sauce",
+    "category": "sides",
+    "price": "15.",
+    "dietary_tags": []
+  },
+  {
+    "name": "Soft Stew of Summer Vegetables",
+    "description": "Potato, eggplant, tomatoes, peppers and Taggiasca olives",
+    "category": "sides",
+    "price": "10.",
+    "dietary_tags": []
+  },
+  {
+    "name": "Tuscan Fries & Fried Herbs",
+    "description": "Aioli (No, we do not have ketchup!)",
+    "category": "sides",
+    "price": "11.",
+    "dietary_tags": []
+  },
+  {
+    "name": "Artichoke Sformato",
+    "description": "A cooked custard flan",
+    "category": "sides",
+    "price": "11.",
+    "dietary_tags": []
+  },
+  {
+    "name": "Fresh Pole Beans from the Farm",
+    "description": null,
+    "category": "sides",
+    "price": "9.",
+    "dietary_tags": []
+  },
+  {
+    "name": "Creamy Grilled Corn",
+    "description": null,
+    "category": "sides",
+    "price": "9.",
+    "dietary_tags": []
+  }
+]

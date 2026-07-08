@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Garlic Bread",
+    "description": "With melted parmesan cheese and a special blend of herbs and spices",
+    "category": "starters",
+    "price": "4.25",
+    "dietary_tags": []
+  },
+  {
+    "name": "Stuffed Mushrooms",
+    "description": "Parmesan, Romano and mozzarella cheese, clams and herb breadcrumbs baked in mushroom caps",
+    "category": "starters",
+    "price": "6.50",
+    "dietary_tags": []
+  },
+  {
+    "name": "Calamari",
+    "description": "Lightly breaded and fried. Served with lemon wedges and marinara sauce",
+    "category": "starters",
+    "price": "8.25",
+    "dietary_tags": []
+  },
+  {
+    "name": "Chicken Pancetta",
+    "description": "Sourdough, chicken, pancetta, tomato, fontina, watercress",
+    "category": "panini",
+    "price": "9",
+    "dietary_tags": []
+  },
+  {
+    "name": "Eggplant Mozzarella",
+    "description": "Tomato, basil, balsamic vinegar",
+    "category": "panini",
+    "price": "9",
+    "dietary_tags": []
+  },
+  {
+    "name": "Umbria Turkey",
+    "description": "Turkey breast, avocado, tomato and organic spring mix",
+    "category": "panini",
+    "price": "9",
+    "dietary_tags": []
+  },
+  {
+    "name": "Chicken Parmigiana",
+    "description": "Grilled chicken breast, parmesan, mozzarella, marinara",
+    "category": "panini",
+    "price": "11",
+    "dietary_tags": []
+  },
+  {
+    "name": "Italian Sausage",
+    "description": "Spicy sausage, roasted red peppers, onions, marinara",
+    "category": "panini",
+    "price": "11",
+    "dietary_tags": []
+  },
+  {
+    "name": "Salami and Goat Cheese",
+    "description": "Spicy Calabrese salami, roasted red peppers and goat cheese spread",
+    "category": "panini",
+    "price": "10",
+    "dietary_tags": []
+  }
+]

@@ -1,0 +1,184 @@
+[
+  {
+    "name": "Roasted Octopus",
+    "description": "Harissa braised tomato, chickpea, sal secco olive, lemon, basil",
+    "category": "starters",
+    "price": "24",
+    "dietary_tags": []
+  },
+  {
+    "name": "Crispy Chicken Wings",
+    "description": "Fine herbs, lemon, garlic, labneh ranch, chili",
+    "category": "starters",
+    "price": "18",
+    "dietary_tags": []
+  },
+  {
+    "name": "Caramel Apple French Toast",
+    "description": "Cinnamon streusel, candied pecans, maple whipped cream",
+    "category": "brunch",
+    "price": "18",
+    "dietary_tags": []
+  },
+  {
+    "name": "The Short Stack",
+    "description": "2 pancakes, maple syrup, butter",
+    "category": "brunch",
+    "price": "16",
+    "dietary_tags": []
+  },
+  {
+    "name": "Lemon Ricotta Pancakes",
+    "description": "Macerated blueberries, candied pecans, pumpkin seeds, orange, toasted coconut, fennel pollen",
+    "category": "brunch",
+    "price": "19",
+    "dietary_tags": []
+  },
+  {
+    "name": "Breakfast Sandwich",
+    "description": "Farm egg, lamb sausage, caramelized goat cheese, mint, fris\u00e9e, fresno chili aioli, brioche bun",
+    "category": "brunch",
+    "price": "18",
+    "dietary_tags": []
+  },
+  {
+    "name": "Smoked Salmon & Pita",
+    "description": "Herbed labneh, pickled red onion, cucumber, capers, herbs, sprouts, pita",
+    "category": "brunch",
+    "price": "20",
+    "dietary_tags": []
+  },
+  {
+    "name": "Shakshuka",
+    "description": "Tomato, vadouvan, chili, lamb sausage, roasted cabbage, feta, pomegranate, two soft eggs, served with pita",
+    "category": "brunch",
+    "price": "20",
+    "dietary_tags": []
+  },
+  {
+    "name": "Harissa Benedict",
+    "description": "Grilled steak, bloomsdale spinach, avocado, sourdough, harissa hollandaise, country potatoes",
+    "category": "brunch",
+    "price": "22",
+    "dietary_tags": []
+  },
+  {
+    "name": "Hummus & Fresh Pita",
+    "description": "Pickled vegetables, garlic chili oil",
+    "category": "starters",
+    "price": "13",
+    "dietary_tags": []
+  },
+  {
+    "name": "Smoked Deviled Eggs",
+    "description": "Crispy prosciutto, pickled jalapeno, salsa verde",
+    "category": "starters",
+    "price": "10",
+    "dietary_tags": []
+  },
+  {
+    "name": "Steak & Eggs",
+    "description": "Dry aged ribeye, crispy garlic, sungold tomatoes, red wine porcini jus, avocado, country potatoes",
+    "category": "brunch",
+    "price": "42",
+    "dietary_tags": []
+  },
+  {
+    "name": "Market Quiche",
+    "description": "Pork lardon, spinach, tomato, summer squash, chevre, cheddar, spring onion, served with potatoes or salad",
+    "category": "brunch",
+    "price": "19",
+    "dietary_tags": []
+  },
+  {
+    "name": "The Fausto Pizza",
+    "description": "Wild mushroom, fontina, garlic chili oil, lemon, thyme, farm egg, wild arugula",
+    "category": "pizza",
+    "price": "22",
+    "dietary_tags": []
+  },
+  {
+    "name": "Fennel Salsiccia and Fig Pizza",
+    "description": "Fiore di latte, provolone picante, fontina, calabrian chile, hot honey, garlic cream, black pepper",
+    "category": "pizza",
+    "price": "24",
+    "dietary_tags": []
+  },
+  {
+    "name": "Green Egg & Ham",
+    "description": "Pancetta, rapini, mozzarella, asiago, garlic, farm egg, asparagus cream",
+    "category": "pizza",
+    "price": "21",
+    "dietary_tags": []
+  },
+  {
+    "name": "Ezzo Pepperoni Pizza",
+    "description": "Tomato, garlic, chili, cilantro, chive, mozzarella, sesame seed crust",
+    "category": "pizza",
+    "price": "21",
+    "dietary_tags": []
+  },
+  {
+    "name": "Watermelon Salad",
+    "description": "Feta, kalamata olive, mint, dill, basil, aleppo, hazelnut, dukkha",
+    "category": "salads",
+    "price": "18",
+    "dietary_tags": []
+  },
+  {
+    "name": "Caesar Salad",
+    "description": "Market lettuces, crispy prosciutto, crouton, parmesan, anchovies",
+    "category": "salads",
+    "price": "17",
+    "dietary_tags": []
+  },
+  {
+    "name": "Seasonal Fruit Plate",
+    "description": "Seasonal fruit, whipped vanilla mascarpone, almonds",
+    "category": "sides",
+    "price": "9",
+    "dietary_tags": []
+  },
+  {
+    "name": "Candied Bacon",
+    "description": "Slab bacon, maple",
+    "category": "sides",
+    "price": "9",
+    "dietary_tags": []
+  },
+  {
+    "name": "Lebanese Homemade Tabouleh",
+    "description": "Mint, parsley, shallots, bulgur wheat, tomatoes",
+    "category": "sides",
+    "price": "10",
+    "dietary_tags": []
+  },
+  {
+    "name": "Chef's Seasonal Toast",
+    "description": "Chef's whim of spread and toppings",
+    "category": "sides",
+    "price": "12",
+    "dietary_tags": []
+  },
+  {
+    "name": "Fries with Harissa Aioli",
+    "description": null,
+    "category": "sides",
+    "price": "8",
+    "dietary_tags": []
+  },
+  {
+    "name": "Spicy Fried Chicken Sandwich",
+    "description": "Crunchy slaw, spicy aioli, pickles, seeded bun",
+    "category": "sandwiches",
+    "price": "19",
+    "dietary_tags": []
+  },
+  {
+    "name": "Boujie Cheeseburger",
+    "description": "Brisket & short rib grind, crispy bacon, garlic aioli, pickled red onion, lettuce, cambozola, pan de mie bun",
+    "category": "sandwiches",
+    "price": "25",
+    "dietary_tags": []
+  }
+]

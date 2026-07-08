@@ -10,14 +10,14 @@ An AI-powered web app that analyzes restaurant menu photos and returns structure
 
 ```mermaid
 flowchart TD
-    A[Menu Image] --> B[Google Vision API\ndocument_text_detection]
-    B --> C[Raw OCR Text]
-    C --> D[GPT-4o\nStructured JSON Parsing\n+ Dietary Flag Injection]
-    D --> E[Schema Validator\nfield checks + warnings]
-    E --> F[/extract response\nitems + scan_id + cost + latency]
-    F --> G[OpenAI Embeddings\ntext-embedding-3-small]
-    G --> H[FAISS IndexFlatL2\nper-scan in-memory index]
-    H --> I[/search response\nranked items + L2 scores]
+    A["Menu Image"] --> B["Google Vision API<br/>document_text_detection"]
+    B --> C["Raw OCR Text"]
+    C --> D["GPT-4o<br/>Structured JSON Parsing<br/>+ Dietary Flag Injection"]
+    D --> E["Schema Validator<br/>field checks + warnings"]
+    E --> F["/extract response<br/>items + scan_id + cost + latency"]
+    F --> G["OpenAI Embeddings<br/>text-embedding-3-small"]
+    G --> H["FAISS IndexFlatL2<br/>per-scan in-memory index"]
+    H --> I["/search response<br/>ranked items + L2 scores"]
 ```
 
 **Pipeline stages:**

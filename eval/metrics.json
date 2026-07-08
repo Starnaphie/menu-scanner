@@ -1,18 +1,276 @@
 {
-  "confusion_matrix": {
-    "TP": 19,
-    "FP": 6,
-    "TN": 25,
-    "FN": 0
+  "per_image": [
+    {
+      "filename": "A Taste of Italia.jpeg",
+      "items_returned": 9,
+      "wall_latency_ms": 16089.163791009923,
+      "cost_usd": 0.0005938499999999999,
+      "extraction": {
+        "name_accuracy": 1.0,
+        "description_accuracy": 1.0,
+        "price_accuracy": 1.0,
+        "matched_count": 9,
+        "gt_count": 9,
+        "pred_count": 9
+      },
+      "hallucination": {
+        "hallucination_rate": 0.0,
+        "hallucinated_count": 0,
+        "total_predicted": 9,
+        "hallucinated_names": []
+      },
+      "dietary": {
+        "precision": null,
+        "recall": null,
+        "true_positives_total": 0,
+        "false_positives_total": 0,
+        "false_negatives_total": 0,
+        "evaluated_items_count": 0
+      }
+    },
+    {
+      "filename": "Benihana.jpg",
+      "items_returned": 28,
+      "wall_latency_ms": 25011.306667001918,
+      "cost_usd": 0.0014720999999999998,
+      "extraction": {
+        "name_accuracy": 0.6857142857142857,
+        "description_accuracy": 0.9230769230769231,
+        "price_accuracy": 0.75,
+        "matched_count": 24,
+        "gt_count": 35,
+        "pred_count": 28
+      },
+      "hallucination": {
+        "hallucination_rate": 0.14285714285714285,
+        "hallucinated_count": 4,
+        "total_predicted": 28,
+        "hallucinated_names": [
+          "Nigiri Sushi",
+          "Nigiri Sushi",
+          "Nigiri Sushi",
+          "Sashimi"
+        ]
+      },
+      "dietary": {
+        "precision": null,
+        "recall": null,
+        "true_positives_total": 0,
+        "false_positives_total": 0,
+        "false_negatives_total": 0,
+        "evaluated_items_count": 0
+      }
+    },
+    {
+      "filename": "Brunch at Boujie.webp",
+      "items_returned": 26,
+      "wall_latency_ms": 29546.31624999456,
+      "cost_usd": 0.0018799499999999998,
+      "extraction": {
+        "name_accuracy": 1.0,
+        "description_accuracy": 0.96,
+        "price_accuracy": 1.0,
+        "matched_count": 26,
+        "gt_count": 26,
+        "pred_count": 26
+      },
+      "hallucination": {
+        "hallucination_rate": 0.0,
+        "hallucinated_count": 0,
+        "total_predicted": 26,
+        "hallucinated_names": []
+      },
+      "dietary": {
+        "precision": null,
+        "recall": null,
+        "true_positives_total": 0,
+        "false_positives_total": 0,
+        "false_negatives_total": 0,
+        "evaluated_items_count": 0
+      }
+    },
+    {
+      "filename": "Cesarina.webp",
+      "items_returned": 14,
+      "wall_latency_ms": 26323.47837499401,
+      "cost_usd": 0.0013356,
+      "extraction": {
+        "name_accuracy": 1.0,
+        "description_accuracy": 1.0,
+        "price_accuracy": 1.0,
+        "matched_count": 14,
+        "gt_count": 14,
+        "pred_count": 14
+      },
+      "hallucination": {
+        "hallucination_rate": 0.0,
+        "hallucinated_count": 0,
+        "total_predicted": 14,
+        "hallucinated_names": []
+      },
+      "dietary": {
+        "precision": null,
+        "recall": null,
+        "true_positives_total": 0,
+        "false_positives_total": 0,
+        "false_negatives_total": 0,
+        "evaluated_items_count": 0
+      }
+    },
+    {
+      "filename": "Italy in Town.jpg",
+      "items_returned": 26,
+      "wall_latency_ms": 26922.46320900449,
+      "cost_usd": 0.001692,
+      "extraction": {
+        "name_accuracy": 0.9629629629629629,
+        "description_accuracy": 1.0,
+        "price_accuracy": 1.0,
+        "matched_count": 26,
+        "gt_count": 27,
+        "pred_count": 26
+      },
+      "hallucination": {
+        "hallucination_rate": 0.0,
+        "hallucinated_count": 0,
+        "total_predicted": 26,
+        "hallucinated_names": []
+      },
+      "dietary": {
+        "precision": null,
+        "recall": null,
+        "true_positives_total": 0,
+        "false_positives_total": 0,
+        "false_negatives_total": 0,
+        "evaluated_items_count": 0
+      }
+    },
+    {
+      "filename": "Juniper & Ivy.jpg",
+      "items_returned": 34,
+      "wall_latency_ms": 63745.112000004156,
+      "cost_usd": 0.0023241,
+      "extraction": {
+        "name_accuracy": 0.9166666666666666,
+        "description_accuracy": 1.0,
+        "price_accuracy": 0.6666666666666666,
+        "matched_count": 33,
+        "gt_count": 36,
+        "pred_count": 34
+      },
+      "hallucination": {
+        "hallucination_rate": 0.029411764705882353,
+        "hallucinated_count": 1,
+        "total_predicted": 34,
+        "hallucinated_names": [
+          "Bay Scallop"
+        ]
+      },
+      "dietary": {
+        "precision": null,
+        "recall": null,
+        "true_positives_total": 0,
+        "false_positives_total": 0,
+        "false_negatives_total": 0,
+        "evaluated_items_count": 0
+      }
+    },
+    {
+      "filename": "Morning Glory snippet.jpg",
+      "items_returned": 8,
+      "wall_latency_ms": 11093.177958988235,
+      "cost_usd": 0.00068715,
+      "extraction": {
+        "name_accuracy": 1.0,
+        "description_accuracy": 1.0,
+        "price_accuracy": 0.875,
+        "matched_count": 8,
+        "gt_count": 8,
+        "pred_count": 8
+      },
+      "hallucination": {
+        "hallucination_rate": 0.0,
+        "hallucinated_count": 0,
+        "total_predicted": 8,
+        "hallucinated_names": []
+      },
+      "dietary": {
+        "precision": null,
+        "recall": null,
+        "true_positives_total": 0,
+        "false_positives_total": 0,
+        "false_negatives_total": 0,
+        "evaluated_items_count": 0
+      }
+    },
+    {
+      "filename": "Piccolo.jpg",
+      "items_returned": 14,
+      "wall_latency_ms": 18886.16495799215,
+      "cost_usd": 0.0009708,
+      "extraction": {
+        "name_accuracy": 1.0,
+        "description_accuracy": 1.0,
+        "price_accuracy": 0.9285714285714286,
+        "matched_count": 14,
+        "gt_count": 14,
+        "pred_count": 14
+      },
+      "hallucination": {
+        "hallucination_rate": 0.0,
+        "hallucinated_count": 0,
+        "total_predicted": 14,
+        "hallucinated_names": []
+      },
+      "dietary": {
+        "precision": null,
+        "recall": null,
+        "true_positives_total": 0,
+        "false_positives_total": 0,
+        "false_negatives_total": 0,
+        "evaluated_items_count": 0
+      }
+    },
+    {
+      "filename": "The Pink Door.jpg",
+      "items_returned": 29,
+      "wall_latency_ms": 24837.372708992916,
+      "cost_usd": 0.0019003499999999999,
+      "extraction": {
+        "name_accuracy": 0.9666666666666667,
+        "description_accuracy": 1.0,
+        "price_accuracy": 0.9655172413793104,
+        "matched_count": 29,
+        "gt_count": 30,
+        "pred_count": 29
+      },
+      "hallucination": {
+        "hallucination_rate": 0.0,
+        "hallucinated_count": 0,
+        "total_predicted": 29,
+        "hallucinated_names": []
+      },
+      "dietary": {
+        "precision": null,
+        "recall": null,
+        "true_positives_total": 0,
+        "false_positives_total": 0,
+        "false_negatives_total": 0,
+        "evaluated_items_count": 0
+      }
+    }
+  ],
+  "averages": {
+    "avg_wall_latency_ms": 26939.39510199804,
+    "avg_cost_usd": 0.0014284333333333334,
+    "avg_items_returned": 20.88888888888889,
+    "name_accuracy": 0.9480011757789535,
+    "description_accuracy": 0.9870085470085469,
+    "price_accuracy": 0.9095283707352674,
+    "hallucination_rate": 0.019140989729225025,
+    "dietary_precision": null,
+    "dietary_recall": null
   },
-  "accuracy": 0.88,
-  "precision": 0.76,
-  "recall": 1.0,
-  "f1": 0.8636,
-  "first_item_accuracy": 0.8889,
-  "first_item_correct": 16,
-  "first_item_total": 18,
-  "total_input_tokens": 678164,
-  "total_output_tokens": 35333,
-  "estimated_cost_usd": 0.122924
+  "ocr_failures": [],
+  "eval_set_size": 9
 }

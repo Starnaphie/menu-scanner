@@ -313,6 +313,47 @@
       color: var(--ink-3);
     }
 
+    /* ── Search section ──────────────────────────────────────────── */
+    .search-section {
+      display: none;
+      margin: 1.25rem 0 1.5rem;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+    }
+    .search-row {
+      display: flex;
+      gap: .5rem;
+      align-items: center;
+    }
+    .search-row .dietary-input {
+      flex: 1;
+    }
+    .search-btn {
+      padding: .5rem .85rem;
+      background: var(--ink);
+      color: var(--paper);
+      border: none;
+      border-radius: var(--radius);
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+    .search-btn:hover { background: var(--accent); }
+    .search-cancel-btn {
+      display: none;
+      margin-left: auto;
+      padding: .25rem .35rem;
+      background: none;
+      border: none;
+      color: var(--ink-3);
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .search-cancel-btn:hover { color: var(--accent); }
+
     /* ── Item card ────────────────────────────────────────────────── */
     .item-card {
       padding: 1.1rem 0;
@@ -452,99 +493,6 @@
       color: var(--accent);
     }
 
-    /* ── Star review button ────────────────────────────────────── */
-    .star-btn {
-      font-size: .9rem;
-      color: var(--ink-3);
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 0;
-      flex-shrink: 0;
-      line-height: 1;
-    }
-    .star-btn:hover { color: var(--amber); }
-    .star-btn.has-review { color: var(--amber); }
-
-    /* ── Review modal ──────────────────────────────────────────── */
-    #reviewModal {
-      position: fixed; inset: 0;
-      display: none;
-      align-items: center; justify-content: center;
-      background: rgba(0,0,0,.45);
-      z-index: 2000;
-    }
-    .review-box {
-      background: var(--paper);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 1.5rem 1.75rem;
-      max-width: 420px;
-      width: 90%;
-    }
-    .review-item-name {
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      font-size: .82rem;
-      font-weight: 600;
-      color: var(--ink-2);
-      margin-bottom: .75rem;
-    }
-    .review-stars {
-      display: flex;
-      gap: .25rem;
-      margin-bottom: .75rem;
-    }
-    .review-stars span {
-      font-size: 1.5rem;
-      cursor: pointer;
-      color: var(--rule);
-      transition: color .12s;
-      user-select: none;
-    }
-    .review-stars span.filled { color: var(--amber); }
-    .review-stars span:hover,
-    .review-stars span.hover { color: var(--amber); }
-    .review-textarea {
-      width: 100%;
-      padding: .5rem .65rem;
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      font-size: .84rem;
-      border: 1px solid var(--rule);
-      border-radius: var(--radius);
-      background: #fff;
-      color: var(--ink);
-      outline: none;
-      resize: vertical;
-      min-height: 3rem;
-      transition: border-color .18s;
-    }
-    .review-textarea:focus { border-color: var(--amber-bd); }
-    .review-counter {
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      font-size: .7rem;
-      color: var(--ink-3);
-      text-align: right;
-      margin-top: .2rem;
-      margin-bottom: .75rem;
-    }
-    .review-actions {
-      display: flex;
-      align-items: center;
-      gap: .75rem;
-    }
-    .review-remove {
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      font-size: .72rem;
-      color: var(--ink-3);
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 0;
-      margin-top: .5rem;
-      text-decoration: underline;
-    }
-    .review-remove:hover { color: var(--accent); }
-
     /* ── Edit form (inline) ──────────────────────────────────────── */
     .item-card.edit-mode {
       background: var(--paper-2);
@@ -603,46 +551,6 @@
     }
     .edit-cancel:hover { color: var(--ink-2); }
 
-    /* ── Scan block separator ─────────────────────────────────────── */
-    .scan-block + .scan-block {
-      border-top: 2px solid var(--rule);
-      padding-top: 1.5rem;
-      margin-top: 1.5rem;
-    }
-
-    /* ── Scan block header ───────────────────────────────────────── */
-    .scan-header {
-      display: flex;
-      align-items: center;
-      gap: .75rem;
-      padding-bottom: .75rem;
-      border-bottom: 1px solid var(--rule);
-      margin-bottom: .75rem;
-    }
-    .scan-thumb {
-      width: 40px;
-      height: 40px;
-      object-fit: cover;
-      border-radius: 4px;
-      cursor: pointer;
-      flex-shrink: 0;
-    }
-    .scan-meta {
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      font-size: .78rem;
-      color: var(--ink-2);
-    }
-    .scan-toggle {
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      font-size: .72rem;
-      color: var(--ink-3);
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 0;
-      white-space: nowrap;
-    }
-    .scan-toggle:hover { color: var(--ink-2); }
     .scan-delete {
       font-size: .8rem;
       color: var(--ink-3);
@@ -690,44 +598,6 @@
     .scan-trigger:hover { background: var(--ink); color: var(--paper); }
     #uploadPanel { margin-top: 1rem; }
 
-    /* ── Verification panel ──────────────────────────────────────── */
-    .verify-panel {
-      margin-top: 1rem;
-    }
-    .verify-header {
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      font-size: .72rem;
-      color: var(--ink-3);
-      margin-bottom: .75rem;
-      line-height: 1.5;
-    }
-    .verify-list {
-      max-height: 50vh;
-      overflow-y: auto;
-      border: 1px solid var(--rule);
-      border-radius: var(--radius);
-    }
-    .verify-row {
-      position: relative;
-      padding: .65rem .75rem;
-      display: flex;
-      flex-direction: column;
-      gap: .35rem;
-    }
-    .verify-row-delete {
-      position: absolute;
-      top: .5rem;
-      right: .5rem;
-      font-size: .8rem;
-      color: var(--ink-3);
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 0;
-      line-height: 1;
-    }
-    .verify-row-delete:hover { color: var(--accent); }
-
     /* ── Confirm-delete modal ──────────────────────────────────────── */
     #confirmModal {
       position: fixed; inset: 0;
@@ -773,35 +643,6 @@
       color: var(--ink);
     }
     .confirm-no:hover { background: var(--rule); }
-    .verify-row + .verify-row {
-      border-top: 1px solid var(--rule);
-    }
-    .verify-row input.dietary-input,
-    .verify-row textarea.dietary-input {
-      width: 100%;
-    }
-    .verify-row textarea.dietary-input {
-      resize: vertical;
-      min-height: 2.5rem;
-    }
-    .verify-actions {
-      margin-top: .75rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: .5rem;
-    }
-    .verify-cancel {
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      font-size: .78rem;
-      color: var(--ink-3);
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 0;
-    }
-    .verify-cancel:hover { color: var(--ink-2); }
-
     /* ── Lightbox ────────────────────────────────────────────────── */
     #lightbox {
       position: fixed;
@@ -817,139 +658,9 @@
       max-height: 90vh;
       object-fit: contain;
     }
-    /* ── Login screen ──────────────────────────────────────────────── */
-    #loginScreen {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      padding: 1rem;
-    }
-    .login-card {
-      width: 100%;
-      max-width: 360px;
-    }
-    .login-header {
-      text-align: center;
-      border-top: 3px solid var(--ink);
-      border-bottom: 1px solid var(--ink);
-      padding: 1.25rem 0 1rem;
-      margin-bottom: 1.5rem;
-    }
-    .login-header h2 {
-      font-size: clamp(1.6rem, 5vw, 2.4rem);
-      font-weight: 400;
-      letter-spacing: -.02em;
-      line-height: 1;
-    }
-    .login-form {
-      display: flex;
-      flex-direction: column;
-      gap: .75rem;
-    }
-    .login-form .dietary-input {
-      padding: .6rem .65rem;
-    }
-    .login-submit {
-      width: 100%;
-      padding: .75rem 1rem;
-      background: var(--ink);
-      color: var(--paper);
-      border: none;
-      border-radius: var(--radius);
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      font-size: .85rem;
-      font-weight: 700;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition: background .18s;
-    }
-    .login-submit:hover { background: var(--accent); }
-    .login-toggle {
-      display: block;
-      text-align: center;
-      margin-top: .75rem;
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      font-size: .78rem;
-      color: var(--ink-3);
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 0;
-    }
-    .login-toggle:hover { color: var(--ink-2); }
-    .login-guest {
-      display: block;
-      width: 100%;
-      text-align: center;
-      margin-top: 1rem;
-      padding-top: 1rem;
-      border: none;
-      border-top: 1px solid var(--rule);
-      background: none;
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      font-size: .78rem;
-      color: var(--ink-3);
-      cursor: pointer;
-    }
-    .login-guest:hover { color: var(--ink-2); }
-    .login-error {
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      font-size: .78rem;
-      color: var(--accent);
-      text-align: center;
-      min-height: 1.2em;
-    }
-    #guestBanner {
-      background: var(--amber-bg);
-      color: var(--amber);
-      border: 1px solid var(--amber-bd);
-      border-radius: 4px;
-      padding: .55rem .85rem;
-      margin-bottom: 1rem;
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      font-size: .8rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: .75rem;
-    }
-    #guestBanner button {
-      background: none;
-      border: 1px solid var(--amber-bd);
-      color: var(--amber);
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      font-size: .75rem;
-      font-weight: 700;
-      letter-spacing: .04em;
-      padding: .25rem .65rem;
-      border-radius: 3px;
-      cursor: pointer;
-      white-space: nowrap;
-    }
-    #guestBanner button:hover { background: var(--amber-bd); color: #fff; }
   </style>
 </head>
 <body>
-<div id="loginScreen">
-  <div class="login-card">
-    <div class="login-header">
-      <h2>Menu Scanner</h2>
-    </div>
-    <form class="login-form" id="loginForm" autocomplete="off">
-      <input class="dietary-input" type="text" id="loginUsername" placeholder="Username" required />
-      <input class="dietary-input" type="password" id="loginPassword" placeholder="Password" required />
-      <input class="dietary-input" type="password" id="loginConfirm" placeholder="Confirm password" style="display:none" />
-      <p class="login-error" id="loginError">&nbsp;</p>
-      <button type="submit" class="login-submit" id="loginSubmit">Sign in</button>
-    </form>
-    <button type="button" class="login-toggle" id="loginToggle">Don't have an account? Create one</button>
-    <button type="button" class="login-guest" id="loginGuest">
-      Continue as Guest
-    </button>
-  </div>
-</div>
 <div id="confirmModal">
   <div class="confirm-box">
     <p class="confirm-msg"></p>
@@ -959,7 +670,6 @@
     </div>
   </div>
 </div>
-<div id="reviewModal"></div>
 <div id="lightbox"><img id="lightboxImg" alt="Full size menu" /></div>
 <div class="page">
 
@@ -967,17 +677,11 @@
   <header class="masthead">
     <p class="masthead-kicker">AI-Powered</p>
     <h1>Menu Scanner</h1>
-    <p class="masthead-sub">Upload a menu photograph &mdash; get ingredients, allergens &amp; dietary notes instantly &middot; <a href="#" id="signOutLink" style="color:var(--accent);text-decoration:none">Sign out</a></p>
+    <p class="masthead-sub">Upload a menu photograph &mdash; get ingredients, allergens &amp; dietary notes instantly</p>
   </header>
 
-  <div id="guestBanner" style="display:none">
-    You're browsing as a guest — your scans won't be saved between sessions.
-    <button type="button" id="guestSignUp">Create an account</button>
-  </div>
-
-  <!-- Top trigger (hidden until first scan) -->
   <div id="topTriggerWrap" style="display:none; margin-bottom:1.5rem">
-    <button id="topTriggerBtn" class="scan-trigger">&#43; Scan another menu</button>
+    <button id="topTriggerBtn" class="scan-trigger">+ Analyze a new menu</button>
   </div>
 
   <!-- Results -->
@@ -986,12 +690,18 @@
       <span class="results-title">Menu Items</span>
       <span class="results-count" id="resultsCount"></span>
     </div>
+    <div id="searchSection" class="search-section">
+      <div class="search-row">
+        <input class="dietary-input" type="text" id="searchInput" placeholder="Search menu items..." />
+        <button type="button" id="searchBtn" class="search-btn">Search</button>
+        <button type="button" id="searchCancelBtn" class="search-cancel-btn" style="display:none" aria-label="Cancel search">✕</button>
+      </div>
+    </div>
     <div id="results"></div>
   </section>
 
-  <!-- Bottom trigger (hidden until first scan) -->
   <div id="bottomTriggerWrap" style="display:none; margin-top:1.5rem">
-    <button id="bottomTriggerBtn" class="scan-trigger">&#43; Scan another menu</button>
+    <button id="bottomTriggerBtn" class="scan-trigger">+ Analyze a new menu</button>
   </div>
 
   <!-- Shared upload panel -->
@@ -1012,7 +722,7 @@
     </div>
 
     <div class="dietary-section visible" id="dietarySection">
-      <label class="dietary-label" for="dietaryInput">Your dietary restrictions (comma-separated)</label>
+      <label class="dietary-label" for="dietaryInput">Your dietary restrictions ('enter' to confirm)</label>
       <input class="dietary-input" type="text" id="dietaryInput" placeholder="e.g. gluten, shellfish, vegan, dairy" />
       <div class="dietary-tags" id="dietaryTags"></div>
       <button class="dietary-clear-all" id="dietaryClearAll" type="button">Clear all</button>
@@ -1033,249 +743,8 @@
 
 <script>
   const API_BASE = window.location.hostname.includes('onrender.com')
-  ? 'https://menu-scanner-o1ab.onrender.com'
-  : `http://${window.location.hostname}:8000`;
-
-  // ── Auth ──────────────────────────────────────────────────────────
-  let currentUser = null;
-  const loginScreen  = document.getElementById('loginScreen');
-  const loginForm    = document.getElementById('loginForm');
-  const loginUsername = document.getElementById('loginUsername');
-  const loginPassword = document.getElementById('loginPassword');
-  const loginConfirm = document.getElementById('loginConfirm');
-  const loginError   = document.getElementById('loginError');
-  const loginSubmit  = document.getElementById('loginSubmit');
-  const loginToggle  = document.getElementById('loginToggle');
-  const loginGuest   = document.getElementById('loginGuest');
-  const pageEl       = document.querySelector('.page');
-
-  let isCreateMode = false;
-
-  function hashPassword(pw) {
-    let hash = 5381;
-    for (let i = 0; i < pw.length; i++) {
-      hash = ((hash << 5) + hash) ^ pw.charCodeAt(i);
-      hash = hash & hash; // keep 32-bit int
-    }
-    return String(hash >>> 0);
-  }
-
-  function getUsers() {
-    try { return JSON.parse(localStorage.getItem('menu_scanner_users') || '[]'); } catch { return []; }
-  }
-  function saveUsers(users) {
-    localStorage.setItem('menu_scanner_users', JSON.stringify(users));
-  }
-
-  function showLoginError(msg) { loginError.textContent = msg; }
-  function clearLoginError() { loginError.innerHTML = '&nbsp;'; }
-
-  loginToggle.addEventListener('click', () => {
-    isCreateMode = !isCreateMode;
-    loginConfirm.style.display = isCreateMode ? '' : 'none';
-    loginSubmit.textContent = isCreateMode ? 'Create account' : 'Sign in';
-    loginToggle.textContent = isCreateMode
-      ? 'Already have an account? Sign in'
-      : "Don't have an account? Create one";
-    clearLoginError();
-  });
-
-  loginGuest.addEventListener('click', () => {
-    loginSuccess('__guest__');
-  });
-
-  loginForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    try {
-      clearLoginError();
-      const username = loginUsername.value.trim().toLowerCase();
-      const password = loginPassword.value;
-      const users = getUsers();
-
-      if (isCreateMode) {
-        if (username.length < 3) { showLoginError('Username must be at least 3 characters'); return; }
-        if (password.length < 6) { showLoginError('Password must be at least 6 characters'); return; }
-        if (password !== loginConfirm.value) { showLoginError('Passwords do not match'); return; }
-        if (users.some(u => u.username === username)) { showLoginError('Username already taken'); return; }
-        const passwordHash = hashPassword(password);
-        users.push({ username, passwordHash });
-        saveUsers(users);
-        loginSuccess(username);
-      } else {
-        const user = users.find(u => u.username === username);
-        if (!user) { showLoginError('Username not found'); return; }
-        const passwordHash = hashPassword(password);
-        if (user.passwordHash !== passwordHash) { showLoginError('Incorrect password'); return; }
-        loginSuccess(username);
-      }
-    } catch (err) {
-      showLoginError(err.message);
-    }
-  });
-
-  function loginSuccess(username) {
-    currentUser = username;
-    sessionStorage.setItem('menu_scanner_session', username);
-    loginScreen.style.display = 'none';
-    pageEl.style.display = '';
-    initApp();
-    if (currentUser === '__guest__') {
-      document.getElementById('guestBanner').style.display = '';
-    }
-  }
-
-  document.getElementById('guestSignUp').addEventListener('click', () => {
-    sessionStorage.removeItem('menu_scanner_session');
-    currentUser = null;
-    document.getElementById('guestBanner').style.display = 'none';
-    pageEl.style.display = 'none';
-    loginScreen.style.display = '';
-    isCreateMode = true;
-    loginConfirm.style.display = '';
-    loginSubmit.textContent = 'Create account';
-    loginToggle.textContent = 'Already have an account? Sign in';
-    clearLoginError();
-  });
-
-  // Check for existing session on load
-  (function checkSession() {
-    const session = sessionStorage.getItem('menu_scanner_session');
-    const users = getUsers();
-    if (session === '__guest__' || (session && users.some(u => u.username === session))) {
-      currentUser = session;
-      loginScreen.style.display = 'none';
-      pageEl.style.display = '';
-    } else {
-      loginScreen.style.display = '';
-      pageEl.style.display = 'none';
-    }
-  })();
-
-  document.getElementById('signOutLink').addEventListener('click', (e) => {
-    e.preventDefault();
-    sessionStorage.removeItem('menu_scanner_session');
-    location.reload();
-  });
-
-  // ── Reviews store ───────────────────────────────────────────────
-  let reviews = {};
-  const reviewModal = document.getElementById('reviewModal');
-
-  function loadReviews() {
-    try { reviews = JSON.parse(localStorage.getItem('menu_scanner_reviews_' + currentUser) || '{}'); } catch { reviews = {}; }
-  }
-  function saveReviews() {
-    localStorage.setItem('menu_scanner_reviews_' + currentUser, JSON.stringify(reviews));
-  }
-  function reviewKey(scanId, itemName) {
-    return scanId + '|' + (itemName || '').toLowerCase().trim();
-  }
-
-  function openReviewModal(item, scanId, cardEl) {
-    const key = reviewKey(scanId, item.name);
-    const existing = reviews[key] || null;
-    let selectedRating = existing ? existing.rating : 0;
-
-    reviewModal.innerHTML = '';
-    const box = document.createElement('div');
-    box.className = 'review-box';
-
-    const nameEl = document.createElement('p');
-    nameEl.className = 'review-item-name';
-    nameEl.textContent = item.name || 'Unnamed item';
-    box.appendChild(nameEl);
-
-    const starsRow = document.createElement('div');
-    starsRow.className = 'review-stars';
-    const starSpans = [];
-    for (let i = 1; i <= 5; i++) {
-      const s = document.createElement('span');
-      s.textContent = i <= selectedRating ? '\u2605' : '\u2606';
-      if (i <= selectedRating) s.classList.add('filled');
-      s.addEventListener('mouseenter', () => {
-        starSpans.forEach((sp, idx) => {
-          sp.classList.toggle('hover', idx < i);
-          sp.textContent = idx < i ? '\u2605' : '\u2606';
-        });
-      });
-      s.addEventListener('click', () => {
-        selectedRating = i;
-        starSpans.forEach((sp, idx) => {
-          sp.classList.toggle('filled', idx < i);
-          sp.textContent = idx < i ? '\u2605' : '\u2606';
-        });
-      });
-      starSpans.push(s);
-      starsRow.appendChild(s);
-    }
-    starsRow.addEventListener('mouseleave', () => {
-      starSpans.forEach((sp, idx) => {
-        sp.classList.remove('hover');
-        sp.classList.toggle('filled', idx < selectedRating);
-        sp.textContent = idx < selectedRating ? '\u2605' : '\u2606';
-      });
-    });
-    box.appendChild(starsRow);
-
-    const textarea = document.createElement('textarea');
-    textarea.className = 'review-textarea';
-    textarea.placeholder = 'Write a short review (optional)';
-    textarea.maxLength = 200;
-    textarea.value = existing ? existing.review || '' : '';
-    box.appendChild(textarea);
-
-    const counter = document.createElement('div');
-    counter.className = 'review-counter';
-    counter.textContent = textarea.value.length + ' / 200';
-    textarea.addEventListener('input', () => {
-      counter.textContent = textarea.value.length + ' / 200';
-    });
-    box.appendChild(counter);
-
-    const actions = document.createElement('div');
-    actions.className = 'review-actions';
-
-    const saveBtn = document.createElement('button');
-    saveBtn.className = 'edit-save';
-    saveBtn.type = 'button';
-    saveBtn.textContent = 'Save';
-    saveBtn.addEventListener('click', () => {
-      if (selectedRating === 0) return;
-      reviews[key] = { rating: selectedRating, review: textarea.value.trim(), timestamp: Date.now() };
-      saveReviews();
-      const starBtn = cardEl.querySelector('.star-btn');
-      if (starBtn) { starBtn.textContent = '\u2605'; starBtn.classList.add('has-review'); }
-      reviewModal.style.display = 'none';
-    });
-    actions.appendChild(saveBtn);
-
-    const cancelBtn = document.createElement('button');
-    cancelBtn.className = 'edit-cancel';
-    cancelBtn.type = 'button';
-    cancelBtn.textContent = 'Cancel';
-    cancelBtn.addEventListener('click', () => { reviewModal.style.display = 'none'; });
-    actions.appendChild(cancelBtn);
-
-    box.appendChild(actions);
-
-    if (existing) {
-      const removeLink = document.createElement('button');
-      removeLink.className = 'review-remove';
-      removeLink.type = 'button';
-      removeLink.textContent = 'Remove review';
-      removeLink.addEventListener('click', () => {
-        delete reviews[key];
-        saveReviews();
-        const starBtn = cardEl.querySelector('.star-btn');
-        if (starBtn) { starBtn.textContent = '\u2606'; starBtn.classList.remove('has-review'); }
-        reviewModal.style.display = 'none';
-      });
-      box.appendChild(removeLink);
-    }
-
-    reviewModal.appendChild(box);
-    reviewModal.style.display = 'flex';
-  }
+    ? 'https://menu-scanner-o1ab.onrender.com'
+    : `http://${window.location.hostname}:8000`;
 
   const dropZone    = document.getElementById('dropZone');
   const fileInput   = document.getElementById('fileInput');
@@ -1290,6 +759,14 @@
   const resultsHeader = document.getElementById('resultsHeader');
   const resultsCount  = document.getElementById('resultsCount');
   const results     = document.getElementById('results');
+  const searchSection = document.getElementById('searchSection');
+  const searchInput = document.getElementById('searchInput');
+  const searchBtn = document.getElementById('searchBtn');
+  const searchCancelBtn = document.getElementById('searchCancelBtn');
+  const topTriggerWrap = document.getElementById('topTriggerWrap');
+  const bottomTriggerWrap = document.getElementById('bottomTriggerWrap');
+  const topTriggerBtn = document.getElementById('topTriggerBtn');
+  const bottomTriggerBtn = document.getElementById('bottomTriggerBtn');
 
   const dietarySection  = document.getElementById('dietarySection');
   const dietaryInput    = document.getElementById('dietaryInput');
@@ -1324,51 +801,13 @@
   function openLightbox(src) { lightboxImg.src = src; lightbox.style.display = 'flex'; }
 
   const uploadPanel      = document.getElementById('uploadPanel');
-  const topTriggerWrap   = document.getElementById('topTriggerWrap');
-  const bottomTriggerWrap = document.getElementById('bottomTriggerWrap');
-  const topTriggerBtn    = document.getElementById('topTriggerBtn');
-  const bottomTriggerBtn = document.getElementById('bottomTriggerBtn');
-
-  let activeTrigger = null; // 'top' | 'bottom' | null
-
-  const LABEL_OPEN = '\u2190 Back to menus';
-  const LABEL_CLOSED = '\u002b Scan another menu';
-
-  function updateTriggerLabels(panelOpen) {
-    const label = panelOpen ? LABEL_OPEN : LABEL_CLOSED;
-    topTriggerBtn.textContent = label;
-    bottomTriggerBtn.textContent = label;
-  }
-
-  function openPanel(which) {
-    if (activeTrigger === which) { closePanel(); return; }
-    const wrap = which === 'top' ? topTriggerWrap : bottomTriggerWrap;
-    const otherWrap = which === 'top' ? bottomTriggerWrap : topTriggerWrap;
-    wrap.after(uploadPanel);
-    uploadPanel.style.display = '';
-    activeTrigger = which;
-    otherWrap.style.display = 'none';
-    resultsSection.style.display = 'none';
-    if (!selectedFile) resetUpload();
-    updateTriggerLabels(true);
-  }
-
-  function closePanel() {
-    uploadPanel.style.display = 'none';
-    activeTrigger = null;
-    resultsSection.style.display = '';
-    const hasScanBlocks = results.children.length > 0;
-    topTriggerWrap.style.display = hasScanBlocks ? '' : 'none';
-    bottomTriggerWrap.style.display = hasScanBlocks ? '' : 'none';
-    updateTriggerLabels(false);
-  }
-
-  topTriggerBtn.addEventListener('click', () => openPanel('top'));
-  bottomTriggerBtn.addEventListener('click', () => openPanel('bottom'));
 
   let selectedFile = null;
   let restrictions = [];
-  let scans = [];
+  let currentScanId = null;
+  let inResultsState = false;
+  let preSearchResultsHTML = null;
+  let currentItems = [];
 
   const dietaryLimitMsg = document.getElementById('dietaryLimitMsg');
   let limitMsgTimer = null;
@@ -1416,7 +855,6 @@
       btn.addEventListener('click', () => removeTag(restrictions[i]));
     });
     dietaryClearAll.classList.toggle('visible', restrictions.length > 0);
-    localStorage.setItem('dietaryRestrictions_' + currentUser, JSON.stringify(restrictions));
   }
 
   dietaryInput.addEventListener('keydown', (e) => {
@@ -1439,38 +877,51 @@
   dietaryClearAll.addEventListener('click', clearAllTags);
 
   function initApp() {
-    // Load user-specific data
-    loadReviews();
-    restrictions = JSON.parse(localStorage.getItem('dietaryRestrictions_' + currentUser) || '[]');
-    try {
-      const scansRaw = currentUser === '__guest__'
-        ? sessionStorage.getItem('menu_scanner_scans_guest')
-        : localStorage.getItem('menu_scanner_scans_' + currentUser);
-      scans = JSON.parse(scansRaw || '[]');
-    } catch { scans = []; }
+    showScanState();
+  }
 
-    // Render persisted tags
-    if (restrictions.length > 0) renderTags();
+  initApp();
 
-    // Restore saved scans (oldest first so newest ends up on top)
-    scans.forEach(scan => renderScanBlock(scan, false));
+  function updateTriggerLabels(label) {
+    topTriggerBtn.textContent = label;
+    bottomTriggerBtn.textContent = label;
+  }
 
-    // Initial panel state: show panel directly if no history, else hide it
-    if (scans.length === 0) {
-      bottomTriggerWrap.after(uploadPanel);
-      uploadPanel.style.display = '';
+  function showScanState() {
+    uploadPanel.style.display = '';
+    resultsSection.style.display = 'none';
+    searchSection.style.display = 'none';
+    topTriggerWrap.style.display = 'none';
+    bottomTriggerWrap.style.display = 'none';
+    searchCancelBtn.style.display = 'none';
+    searchInput.style.display = '';
+    searchBtn.style.display = '';
+    preSearchResultsHTML = null;
+    inResultsState = false;
+    updateTriggerLabels('+ Analyze a new menu');
+    resetUpload();
+  }
+
+  function showResultsState() {
+    uploadPanel.style.display = 'none';
+    resultsSection.style.display = '';
+    searchSection.style.display = 'block';
+    topTriggerWrap.style.display = '';
+    bottomTriggerWrap.style.display = '';
+    inResultsState = true;
+    updateTriggerLabels('\u2190 Back to menu');
+  }
+
+  function handleTriggerClick() {
+    if (inResultsState) {
+      showScanState();
     } else {
-      uploadPanel.style.display = 'none';
+      showResultsState();
     }
   }
 
-  // If session was restored at top, init immediately
-  if (currentUser) {
-    initApp();
-    if (currentUser === '__guest__') {
-      document.getElementById('guestBanner').style.display = '';
-    }
-  }
+  topTriggerBtn.addEventListener('click', handleTriggerClick);
+  bottomTriggerBtn.addEventListener('click', handleTriggerClick);
 
   // ── File handling ────────────────────────────────────────────────
 
@@ -1555,7 +1006,7 @@
       formData.append('file', selectedFile);
       formData.append('dietary_restrictions', JSON.stringify(activeRestrictions));
 
-      const res = await fetch(`${API_BASE}/scan/stage1`, { method: 'POST', body: formData });
+      const res = await fetch(`${API_BASE}/extract`, { method: 'POST', body: formData });
 
       if (!res.ok) {
         let detail = `Server error ${res.status}`;
@@ -1565,6 +1016,7 @@
 
       const data = await res.json();
       const items = data.items;
+      currentScanId = data.scan_id || null;
 
       if (!Array.isArray(items) || items.length === 0) {
         clearInterval(msgInterval);
@@ -1575,7 +1027,12 @@
 
       clearInterval(msgInterval);
       setLoading(false);
-      showVerificationStep(items, activeRestrictions, thumbnailDataUrl);
+      renderItems(items, activeRestrictions, thumbnailDataUrl);
+      preSearchResultsHTML = null;
+      searchCancelBtn.style.display = 'none';
+      searchInput.style.display = '';
+      searchBtn.style.display = '';
+      showResultsState();
 
     } catch (err) {
       clearInterval(msgInterval);
@@ -1583,139 +1040,6 @@
       showError(err.message);
     }
   });
-
-  // ── Verification step ──────────────────────────────────────────
-
-  function showVerificationStep(rawItems, activeRestrictions, thumbnailDataUrl) {
-    loader.classList.remove('visible');
-    scanBtn.style.display = 'none';
-
-    // Remove any existing verification panel
-    const existing = uploadPanel.querySelector('.verify-panel');
-    if (existing) existing.remove();
-
-    const panel = document.createElement('div');
-    panel.className = 'verify-panel';
-
-    const header = document.createElement('p');
-    header.className = 'verify-header';
-    header.textContent = 'Review extracted items before analysis \u2014 edit any names or descriptions, then confirm.';
-    panel.appendChild(header);
-
-    const list = document.createElement('div');
-    list.className = 'verify-list';
-
-    rawItems.forEach((item, i) => {
-      const row = document.createElement('div');
-      row.className = 'verify-row';
-      row.dataset.index = i;
-
-      const deleteBtn = document.createElement('button');
-      deleteBtn.type = 'button';
-      deleteBtn.className = 'verify-row-delete';
-      deleteBtn.textContent = '\u00d7';
-      deleteBtn.title = 'Remove item';
-      deleteBtn.addEventListener('click', async () => {
-        if (await confirmDelete('Remove this item?')) row.remove();
-      });
-
-      const nameLabel = document.createElement('label');
-      nameLabel.className = 'edit-label';
-      nameLabel.textContent = 'Name';
-
-      const nameInput = document.createElement('input');
-      nameInput.type = 'text';
-      nameInput.className = 'dietary-input';
-      nameInput.value = item.name || '';
-      nameInput.placeholder = 'Item name';
-
-      const descLabel = document.createElement('label');
-      descLabel.className = 'edit-label';
-      descLabel.textContent = 'Description';
-
-      const descArea = document.createElement('textarea');
-      descArea.className = 'dietary-input';
-      descArea.value = item.raw_description || '';
-      descArea.placeholder = 'Description (optional)';
-
-      row.appendChild(deleteBtn);
-      row.appendChild(nameLabel);
-      row.appendChild(nameInput);
-      row.appendChild(descLabel);
-      row.appendChild(descArea);
-      list.appendChild(row);
-    });
-
-    panel.appendChild(list);
-
-    const actions = document.createElement('div');
-    actions.className = 'verify-actions';
-
-    const confirmBtn = document.createElement('button');
-    confirmBtn.className = 'scan-btn';
-    confirmBtn.style.display = 'block';
-    confirmBtn.textContent = 'Confirm & Analyze';
-
-    const cancelLink = document.createElement('button');
-    cancelLink.className = 'verify-cancel';
-    cancelLink.type = 'button';
-    cancelLink.textContent = 'Cancel';
-
-    actions.appendChild(confirmBtn);
-    actions.appendChild(cancelLink);
-    panel.appendChild(actions);
-
-    uploadPanel.appendChild(panel);
-
-    cancelLink.addEventListener('click', () => {
-      panel.remove();
-      resetUpload();
-    });
-
-    confirmBtn.addEventListener('click', async () => {
-      const rows = list.querySelectorAll('.verify-row');
-      const verifiedItems = [];
-      rows.forEach(row => {
-        const name = row.querySelector('input').value.trim();
-        const description = row.querySelector('textarea').value.trim();
-        if (name) verifiedItems.push({ name, description });
-      });
-
-      if (verifiedItems.length === 0) return;
-
-      confirmBtn.disabled = true;
-      panel.querySelector('.verify-list').style.opacity = '.5';
-      loader.classList.add('visible');
-      loaderText.textContent = 'Analyzing ingredients & allergens\u2026';
-      hideError();
-
-      try {
-        const res = await fetch(`${API_BASE}/scan/stage2`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ items: verifiedItems, dietary_restrictions: activeRestrictions }),
-        });
-
-        if (!res.ok) {
-          let detail = `Server error ${res.status}`;
-          try { const body = await res.json(); detail = body.detail || detail; } catch {}
-          throw new Error(detail);
-        }
-
-        const data = await res.json();
-        loader.classList.remove('visible');
-        panel.remove();
-        renderItems(data.items, activeRestrictions, thumbnailDataUrl);
-        resetUpload();
-        closePanel();
-      } catch (err) {
-        loader.classList.remove('visible');
-        confirmBtn.disabled = false;
-        panel.querySelector('.verify-list').style.opacity = '';
-        showError(err.message);
-      }
-    });
-  }
 
   // ── Render ───────────────────────────────────────────────────────
 
@@ -1753,7 +1077,6 @@
     return `
       <div class="item-top">
         <h2 class="item-name">${name}</h2>
-        <button class="star-btn" aria-label="Review ${name}">&#9734;</button>
         <button class="edit-btn" aria-label="Edit ${name}">&#9998; Edit</button>
       </div>
       ${badges}
@@ -1762,7 +1085,7 @@
       ${obscureHtml}`;
   }
 
-  function wireCard(cardEl, item, idx) {
+  function wireCard(cardEl, item, idx, items) {
     // Wire up expandable obscure toggles
     cardEl.querySelectorAll('.obscure-toggle').forEach(btn => {
       btn.addEventListener('click', () => {
@@ -1773,27 +1096,14 @@
       });
     });
 
-    // Wire up star review button
-    const starBtn = cardEl.querySelector('.star-btn');
-    if (starBtn) {
-      const scanBlock = cardEl.closest('.scan-block');
-      const scanId = scanBlock ? scanBlock.dataset.scanId : '';
-      const key = reviewKey(scanId, item.name);
-      if (reviews[key]) {
-        starBtn.textContent = '\u2605';
-        starBtn.classList.add('has-review');
-      }
-      starBtn.addEventListener('click', () => openReviewModal(item, scanId, cardEl));
-    }
-
     // Wire up edit button
     const editBtn = cardEl.querySelector('.edit-btn');
     if (editBtn) {
-      editBtn.addEventListener('click', () => showEditForm(cardEl, item, idx));
+      editBtn.addEventListener('click', () => showEditForm(cardEl, item, idx, items));
     }
   }
 
-  function showEditForm(cardEl, item, idx) {
+  function showEditForm(cardEl, item, idx, items) {
     cardEl.innerHTML = `
       <form class="edit-form" autocomplete="off">
         <div class="edit-field">
@@ -1821,18 +1131,12 @@
     const editDelBtn = form.querySelector('.edit-delete');
     editDelBtn.addEventListener('click', async () => {
       if (!await confirmDelete('Delete this item?')) return;
-      const scanBlock = cardEl.closest('.scan-block');
       cardEl.remove();
-      if (scanBlock) {
-        const scanId = Number(scanBlock.dataset.scanId);
-        const scan = scans.find(s => s.id === scanId);
-        if (scan) {
-          scan.items.splice(idx, 1);
-          saveScanHistory();
-        }
+      if (items) {
+        const currentIdx = items.indexOf(item);
+        if (currentIdx !== -1) items.splice(currentIdx, 1);
       }
-      const total = results.querySelectorAll('.item-card').length;
-      resultsCount.textContent = `${total} item${total !== 1 ? 's' : ''}`;
+      updateResultsCount();
     });
 
     form.addEventListener('submit', async (e) => {
@@ -1867,11 +1171,10 @@
         item.obscure_ingredient_notes = refined.obscure_ingredient_notes;
         item.visible_dietary_flags   = refined.visible_dietary_flags;
         item.user_dietary_flags      = refined.user_dietary_flags;
-        saveScanHistory();
 
         cardEl.classList.remove('edit-mode');
         cardEl.innerHTML = renderCard(item, idx);
-        wireCard(cardEl, item, idx);
+        wireCard(cardEl, item, idx, items);
       } catch (err) {
         saveBtn.disabled = false;
         saveBtn.textContent = 'Save';
@@ -1890,164 +1193,46 @@
     cardEl.querySelector('.edit-cancel').addEventListener('click', () => {
       cardEl.classList.remove('edit-mode');
       cardEl.innerHTML = renderCard(item, idx);
-      wireCard(cardEl, item, idx);
+      wireCard(cardEl, item, idx, items);
     });
   }
 
-  function saveScanHistory() {
-    if (scans.length > 10) scans = scans.slice(-10);
-    const payload = JSON.stringify(scans);
-    if (currentUser === '__guest__') {
-      sessionStorage.setItem('menu_scanner_scans_guest', payload);
-    } else {
-      localStorage.setItem('menu_scanner_scans_' + currentUser, payload);
-    }
+  function updateResultsCount() {
+    const total = results.querySelectorAll('.item-card').length;
+    resultsCount.textContent = `${total} item${total !== 1 ? 's' : ''}`;
+    resultsHeader.classList.toggle('visible', total > 0);
   }
 
-  function renderScanBlock(scan, isNew) {
+  function renderItems(items, activeRestrictions, thumbnailDataUrl) {
+    currentItems = items;
     resultsHeader.classList.add('visible');
+    results.innerHTML = '';
 
-    const scanBlock = document.createElement('div');
-    scanBlock.className = 'scan-block';
-    scanBlock.dataset.scanId = String(scan.id);
-
-    // ── Header ──────────────────────────────────────────────────────
-    const header = document.createElement('div');
-    header.className = 'scan-header';
-
-    const thumb = document.createElement('img');
-    thumb.className = 'scan-thumb';
-    thumb.src = scan.thumbnailDataUrl || '';
-    thumb.alt = 'Menu thumbnail';
-    thumb.addEventListener('click', () => openLightbox(scan.thumbnailDataUrl));
-    header.appendChild(thumb);
-
-    const dateStr = new Date(scan.timestamp).toLocaleString(undefined, {
-      month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit',
-    });
-    if (!scan.name && scan.name !== '') scan.name = '';
-
-    const meta = document.createElement('span');
-    meta.className = 'scan-meta';
-    meta.style.cursor = 'pointer';
-
-    function renderMetaDisplay() {
-      if (scan.name) {
-        meta.textContent = scan.name;
-        meta.style.fontStyle = '';
-        meta.style.color = '';
-      } else {
-        meta.textContent = dateStr;
-        meta.style.fontStyle = 'italic';
-        meta.style.color = 'var(--ink-3)';
-      }
-    }
-    renderMetaDisplay();
-
-    meta.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const input = document.createElement('input');
-      input.type = 'text';
-      input.value = scan.name;
-      input.placeholder = dateStr;
-      input.style.cssText = 'border:none;background:none;outline:none;font-family:inherit;font-size:inherit;color:inherit;padding:0;margin:0;width:12ch;min-width:8ch';
-      meta.replaceWith(input);
-      input.focus();
-
-      function commit() {
-        const val = input.value.trim();
-        scan.name = val;
-        saveScanHistory();
-        input.replaceWith(meta);
-        renderMetaDisplay();
-      }
-      function cancel() {
-        input.replaceWith(meta);
-      }
-
-      input.addEventListener('blur', commit);
-      input.addEventListener('keydown', (ev) => {
-        if (ev.key === 'Enter') { ev.preventDefault(); input.removeEventListener('blur', commit); commit(); }
-        if (ev.key === 'Escape') { ev.preventDefault(); input.removeEventListener('blur', commit); cancel(); }
-      });
-    });
-
-    header.appendChild(meta);
-
-    const spacer = document.createElement('span');
-    spacer.style.flex = '1';
-    header.appendChild(spacer);
-
-    const toggleBtn = document.createElement('button');
-    toggleBtn.className = 'scan-toggle';
-
-    const deleteBtn = document.createElement('button');
-    deleteBtn.className = 'scan-delete';
-    deleteBtn.textContent = '\u00d7';
-    deleteBtn.title = 'Delete scan';
-
-    header.appendChild(toggleBtn);
-    header.appendChild(deleteBtn);
-    scanBlock.appendChild(header);
-
-    // ── Body ─────────────────────────────────────────────────────────
     const body = document.createElement('div');
     body.className = 'scan-body';
 
-    if (scan.activeRestrictions && scan.activeRestrictions.length > 0) {
-      const pills = scan.activeRestrictions.map(r => `<span class="dietary-tag">${esc(r)}</span>`).join('');
+    if (activeRestrictions && activeRestrictions.length > 0) {
+      const pills = activeRestrictions.map(r => `<span class="dietary-tag">${esc(r)}</span>`).join('');
       const summary = document.createElement('div');
       summary.style.cssText = 'margin-bottom:.75rem;padding-bottom:.75rem;border-bottom:1px solid var(--rule)';
       summary.innerHTML = `<span style="display:block;font-family:sans-serif;font-size:.72rem;color:var(--ink-3);margin-bottom:.35rem">Scanned with restrictions:</span>${pills}`;
       body.appendChild(summary);
     }
 
-    scan.items.forEach((item, idx) => {
+    items.forEach((item, idx) => {
       const article = document.createElement('article');
       article.className = 'item-card';
-      if (isNew) article.style.animationDelay = `${idx * 60}ms`;
+      article.style.animationDelay = `${idx * 60}ms`;
       article.innerHTML = renderCard(item, idx);
       body.appendChild(article);
     });
 
-    scanBlock.appendChild(body);
-    results.insertBefore(scanBlock, results.firstChild);
+    results.appendChild(body);
 
     body.querySelectorAll('.item-card').forEach((cardEl, idx) => {
-      wireCard(cardEl, scan.items[idx], idx);
+      wireCard(cardEl, items[idx], idx, items);
     });
 
-    const total = results.querySelectorAll('.item-card').length;
-    resultsCount.textContent = `${total} item${total !== 1 ? 's' : ''}`;
-
-    // Show trigger buttons once results exist
-    const hasScanBlocks = results.children.length > 0;
-    topTriggerWrap.style.display = hasScanBlocks ? '' : 'none';
-    bottomTriggerWrap.style.display = hasScanBlocks ? '' : 'none';
-
-    // ── Collapse / expand ─────────────────────────────────────────────
-    function setExpanded(expanded) {
-      body.style.display = expanded ? '' : 'none';
-      toggleBtn.textContent = expanded ? '\u25be Hide' : '\u25b8 Show';
-    }
-
-    if (isNew) {
-      results.querySelectorAll('.scan-block').forEach(block => {
-        if (block !== scanBlock) {
-          const b = block.querySelector('.scan-body');
-          const t = block.querySelector('.scan-toggle');
-          if (b) b.style.display = 'none';
-          if (t) t.textContent = '\u25b8 Show';
-        }
-      });
-      setExpanded(true);
-    } else {
-      setExpanded(false);
-    }
-
-    toggleBtn.addEventListener('click', () => setExpanded(body.style.display === 'none'));
-
-    // ── Add item ──────────────────────────────────────────────────────
     const addBtn = document.createElement('button');
     addBtn.className = 'add-item-btn';
     addBtn.type = 'button';
@@ -2095,7 +1280,7 @@
             body: JSON.stringify({
               name: newName,
               description: newDesc,
-              dietary_restrictions: scan.activeRestrictions || [],
+              dietary_restrictions: activeRestrictions || [],
             }),
           });
 
@@ -2109,16 +1294,14 @@
           refined.name = newName;
           refined.description = newDesc;
 
-          scan.items.push(refined);
-          saveScanHistory();
+          items.push(refined);
 
-          const newIdx = scan.items.length - 1;
+          const newIdx = items.length - 1;
           cardEl.classList.remove('edit-mode');
           cardEl.innerHTML = renderCard(refined, newIdx);
-          wireCard(cardEl, refined, newIdx);
+          wireCard(cardEl, refined, newIdx, items);
 
-          const total = results.querySelectorAll('.item-card').length;
-          resultsCount.textContent = `${total} item${total !== 1 ? 's' : ''}`;
+          updateResultsCount();
         } catch (err) {
           saveBtn.disabled = false;
           saveBtn.textContent = 'Save';
@@ -2136,32 +1319,80 @@
 
       cardEl.querySelector('.edit-cancel').addEventListener('click', () => cardEl.remove());
     });
-
-    // ── Delete ────────────────────────────────────────────────────────
-    deleteBtn.addEventListener('click', async () => {
-      if (!await confirmDelete('Delete this entire scan?')) return;
-      scanBlock.remove();
-      scans = scans.filter(s => s.id !== scan.id);
-      saveScanHistory();
-      const remaining = results.querySelectorAll('.item-card').length;
-      resultsCount.textContent = `${remaining} item${remaining !== 1 ? 's' : ''}`;
-      if (!results.querySelector('.scan-block')) {
-        resultsHeader.classList.remove('visible');
-        topTriggerWrap.style.display = 'none';
-        bottomTriggerWrap.style.display = 'none';
-        bottomTriggerWrap.after(uploadPanel);
-        uploadPanel.style.display = '';
-        activeTrigger = null;
-        resetUpload();
-      }
-    });
+    updateResultsCount();
   }
 
-  function renderItems(items, activeRestrictions, thumbnailDataUrl) {
-    const scan = { id: Date.now(), timestamp: Date.now(), name: '', activeRestrictions, items, thumbnailDataUrl };
-    scans.push(scan);
-    saveScanHistory();
-    renderScanBlock(scan, true);
+  searchBtn.addEventListener('click', async () => {
+    const query = searchInput.value.trim();
+    if (!query || currentScanId === null) return;
+
+    searchBtn.disabled = true;
+    try {
+      const res = await fetch(`${API_BASE}/search`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ scan_id: currentScanId, query, threshold: 1.5 }),
+      });
+
+      if (!res.ok) {
+        let detail = `Server error ${res.status}`;
+        try { const body = await res.json(); detail = body.detail || detail; } catch {}
+        throw new Error(detail);
+      }
+
+      const data = await res.json();
+      if (preSearchResultsHTML === null) {
+        preSearchResultsHTML = results.innerHTML;
+      }
+      renderSearchResults(data.results || []);
+      searchCancelBtn.style.display = 'inline-block';
+    } catch (err) {
+      showError(err.message);
+    } finally {
+      searchBtn.disabled = false;
+    }
+  });
+
+  searchCancelBtn.addEventListener('click', cancelSearch);
+
+  searchInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      searchBtn.click();
+    }
+  });
+
+  function renderSearchResults(items) {
+    results.innerHTML = '';
+    if (items.length === 0) {
+      const empty = document.createElement('p');
+      empty.style.cssText = 'font-family:sans-serif;font-size:.85rem;color:var(--ink-3);padding:1rem 0';
+      empty.textContent = 'No close matches found. Try a different search.';
+      results.appendChild(empty);
+      updateResultsCount();
+      return;
+    }
+
+    items.forEach((item, idx) => {
+      const cardEl = document.createElement('article');
+      cardEl.className = 'item-card';
+      cardEl.innerHTML = renderCard(item, idx);
+      results.appendChild(cardEl);
+      wireCard(cardEl, item, idx, null);
+    });
+    updateResultsCount();
+  }
+
+  function cancelSearch() {
+    if (preSearchResultsHTML === null) return;
+
+    results.innerHTML = preSearchResultsHTML;
+    results.querySelectorAll('.item-card').forEach((cardEl, idx) => {
+      wireCard(cardEl, currentItems[idx], idx, currentItems);
+    });
+    searchCancelBtn.style.display = 'none';
+    preSearchResultsHTML = null;
+    updateResultsCount();
   }
 
   // ── UI helpers ───────────────────────────────────────────────────

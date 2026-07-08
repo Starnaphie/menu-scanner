@@ -1,0 +1,191 @@
+[
+  {
+    "name": "Tomato Basil Soup",
+    "description": null,
+    "category": "appetizers",
+    "price": "6",
+    "dietary_tags": []
+  },
+  {
+    "name": "House Salad",
+    "description": "Spring Mix, Tomato, Onions, Mozzarella Cheese, Olives, Cucumbers, tossed with House Vinaigrette",
+    "category": "appetizers",
+    "price": "7",
+    "dietary_tags": []
+  },
+  {
+    "name": "Caesar Salad",
+    "description": null,
+    "category": "appetizers",
+    "price": "8",
+    "dietary_tags": []
+  },
+  {
+    "name": "Caprese",
+    "description": "Fresh Mozzarella & Tomato slices garnished with Fresh Basil & extra Virgin Olive Oil",
+    "category": "appetizers",
+    "price": "11",
+    "dietary_tags": []
+  },
+  {
+    "name": "Fried Calamari",
+    "description": "Lightly floured & deep fried Tubes and Tentacles, served with house-made Marinara Sauce",
+    "category": "appetizers",
+    "price": "11",
+    "dietary_tags": []
+  },
+  {
+    "name": "Fried Cheese Ravioli",
+    "description": "Breaded Cheese filled Ravioli served with house-made Marinara",
+    "category": "appetizers",
+    "price": "10",
+    "dietary_tags": []
+  },
+  {
+    "name": "Fettuccine Alfredo",
+    "description": null,
+    "category": "pasta",
+    "price": "14",
+    "dietary_tags": []
+  },
+  {
+    "name": "Cheese Ravioli with Marinara Sauce",
+    "description": null,
+    "category": "pasta",
+    "price": "14",
+    "dietary_tags": []
+  },
+  {
+    "name": "Cannelloni",
+    "description": "Rolls of Pasta stuffed with Beef & Pork, topped with a Bolognese Bechamel Sauce",
+    "category": "pasta",
+    "price": "15",
+    "dietary_tags": []
+  },
+  {
+    "name": "Manicotti",
+    "description": "Ricotta filled Pasta Tubes in a Marinara Sauce",
+    "category": "pasta",
+    "price": "14",
+    "dietary_tags": []
+  },
+  {
+    "name": "Lasagna",
+    "description": "Layers of Egg Noodle Pasta baked in Beef Ragu and covered in Bechamel Sauce",
+    "category": "pasta",
+    "price": "15",
+    "dietary_tags": []
+  },
+  {
+    "name": "Eggplant Parmesan",
+    "description": "Breaded Eggplant pan fried then baked in layers with Mozzarella & Marinara. Served with Spaghetti",
+    "category": "pasta",
+    "price": "16",
+    "dietary_tags": []
+  },
+  {
+    "name": "Fusili Mare Monte",
+    "description": "Corkscrew Pasta saut\u00e9ed with Shiitake Mushrooms, Shrimp, Asparagus & Saffron",
+    "category": "pasta",
+    "price": "18",
+    "dietary_tags": []
+  },
+  {
+    "name": "Penne Arrabiata",
+    "description": "Penne Pasta saut\u00e9ed in extra Virgin Olive Oil & Garlic with fresh diced Tomato in a spicy Marinara and fresh Basil",
+    "category": "pasta",
+    "price": "15",
+    "dietary_tags": []
+  },
+  {
+    "name": "Penne Alla Vodka",
+    "description": "Penne Pasta with Vodka in light Tomato Cream Sauce & fresh Basil",
+    "category": "pasta",
+    "price": "15",
+    "dietary_tags": []
+  },
+  {
+    "name": "Spaghetti",
+    "description": "Your Choice of: -Meatballs: Two hand rolled Meatballs",
+    "category": "pasta",
+    "price": "14",
+    "dietary_tags": []
+  },
+  {
+    "name": "Spaghetti Chitarra",
+    "description": "Organic Egg Noodle Pasta tossed with saut\u00e9ed Shiitake Mushrooms in Parmesan Reggiano Cheese",
+    "category": "pasta",
+    "price": "19",
+    "dietary_tags": []
+  },
+  {
+    "name": "Shrimp Spaghetti Puttanesca",
+    "description": "Saut\u00e9ed Shrimp with Garlic, Olive Oil, fresh diced Tomatoes, Capers, Black Olives, Onions, White Wine Tomato Sauce and fresh Basil",
+    "category": "pasta",
+    "price": "18",
+    "dietary_tags": []
+  },
+  {
+    "name": "Lobster Ravioli",
+    "description": "Ravioli filled with Lobster served with a Lobster Cream Sauce",
+    "category": "pasta",
+    "price": "20",
+    "dietary_tags": []
+  },
+  {
+    "name": "Tortellini Alla Panna",
+    "description": "Beef filled Tortellini with Pancetta and Peas in Cream Sauce",
+    "category": "pasta",
+    "price": "16",
+    "dietary_tags": []
+  },
+  {
+    "name": "Gamberi Arrabiata",
+    "description": "Saut\u00e9ed Shrimp in a spicy Marinara and served on a bed of Linguine Pasta",
+    "category": "pasta",
+    "price": "18",
+    "dietary_tags": []
+  },
+  {
+    "name": "Gnocchi Alla Genovese",
+    "description": "Potato Dumpling in a Pesto Basil Cream Sauce",
+    "category": "pasta",
+    "price": "15",
+    "dietary_tags": []
+  },
+  {
+    "name": "Chicken Primavera",
+    "description": "Saut\u00e9ed chunks of Chicken Breast with Broccoli, Carrots, Zucchini, Onions, Green Peas in a light Brandy Cream Sauce & Penne Pasta",
+    "category": "pasta",
+    "price": "16",
+    "dietary_tags": []
+  },
+  {
+    "name": "Chicken Parmesan",
+    "description": "Hand-breaded Chicken topped with Marinara Sauce and Cheese. Served over Spaghetti",
+    "category": "pasta",
+    "price": "17",
+    "dietary_tags": []
+  },
+  {
+    "name": "Chicken Piccata",
+    "description": "Chicken Breast saut\u00e9ed with Capers in a White Wine & Lemon Butter Sauce. Served with mashed Potatoes",
+    "category": "pasta",
+    "price": "17",
+    "dietary_tags": []
+  },
+  {
+    "name": "Chicken Cacciatora",
+    "description": "Saut\u00e9ed Chunks of Chicken Breast with Shiitake Mushrooms, Onions, Bell Peppers & Tomato over Angel Hair Pasta",
+    "category": "pasta",
+    "price": "16",
+    "dietary_tags": []
+  },
+  {
+    "name": "Tilapia Piccata",
+    "description": "Pan-seared Tilapia served with White Wine & Lemon Sauce with Capers and mashed Potatoes",
+    "category": "pasta",
+    "price": "17",
+    "dietary_tags": []
+  }
+]

@@ -6454,5 +6454,3180 @@
         "output_tokens": 1008
       }
     }
-  ]
+  ],
+  "A Taste of Italia.jpeg": {
+    "scan_id": "50df1e71-77ae-4664-95de-a30008d8821c",
+    "items": [
+      {
+        "name": "Garlic Bread",
+        "description": "With melted parmesan cheese and a special blend of herbs and spices",
+        "category": "starters",
+        "price": "4.25",
+        "common_ingredients": [
+          "parmesan cheese",
+          "herbs",
+          "spices"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Stuffed Mushrooms",
+        "description": "Parmesan, Romano and mozzarella cheese, clams and herb breadcrumbs baked in mushroom caps",
+        "category": "starters",
+        "price": "6.50",
+        "common_ingredients": [
+          "parmesan cheese",
+          "Romano cheese",
+          "mozzarella cheese",
+          "clams",
+          "breadcrumbs"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Calamari",
+        "description": "Lightly breaded and fried. Served with lemon wedges and marinara sauce",
+        "category": "starters",
+        "price": "8.25",
+        "common_ingredients": [
+          "calamari",
+          "lemon",
+          "marinara sauce"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Chicken Pancetta",
+        "description": "Sourdough, chicken, pancetta, tomato, fontina, watercress",
+        "category": "panini",
+        "price": "9",
+        "common_ingredients": [
+          "sourdough",
+          "chicken",
+          "pancetta",
+          "tomato",
+          "fontina",
+          "watercress"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Eggplant Mozzarella",
+        "description": "Tomato, basil, balsamic vinegar",
+        "category": "panini",
+        "price": "9",
+        "common_ingredients": [
+          "eggplant",
+          "mozzarella",
+          "tomato",
+          "basil",
+          "balsamic vinegar"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Umbria Turkey",
+        "description": "Turkey breast, avocado, tomato and organic spring mix",
+        "category": "panini",
+        "price": "9",
+        "common_ingredients": [
+          "turkey breast",
+          "avocado",
+          "tomato",
+          "spring mix"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Chicken Parmigiana",
+        "description": "Grilled chicken breast, parmesan, mozzarella, marinara",
+        "category": "panini",
+        "price": "11",
+        "common_ingredients": [
+          "chicken breast",
+          "parmesan",
+          "mozzarella",
+          "marinara"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Italian Sausage",
+        "description": "Spicy sausage, roasted red peppers, onions, marinara",
+        "category": "panini",
+        "price": "11",
+        "common_ingredients": [
+          "sausage",
+          "red peppers",
+          "onions",
+          "marinara"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Salami and Goat Cheese",
+        "description": "Spicy Calabrese salami, roasted red peppers and goat cheese spread",
+        "category": "panini",
+        "price": "10",
+        "common_ingredients": [
+          "salami",
+          "red peppers",
+          "goat cheese"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      }
+    ],
+    "ocr_text": "A TASTE OF\nITALIA\nStarters\nGARLIC BREAD 4.25\nWith melted parmesan cheese and a special blend of herbs and\nspices\nSTUFFED MUSHROOMS 6.50\nParmesan, Romano and mozzarella cheese, clams and herb\nbreadcrumbs baked in mushroom caps\nCALAMARI 8.25\nLightly breaded and fried. Served with lemon wedges and\nmarinara sauce\nPanini\nServed with mixed greens salad or cup of soup\nCHICKEN PANCETTA 9\nSourdough, chicken, pancetta, tomato, fontina, watercress\nEGGPLANT MOZZARELLA 9\nTomato, basil, balsamic vinegar\nUMBRIA TURKEY 9\nTurkey breast, avocado, tomato and organic spring mix\nCHICKEN PARMIGIANA 11\nGrilled chicken breast, parmesan, mozzarella, marinara\nITALIAN SAUSAGE 11\nSpicy sausage, roasted red peppers, onions, marinara\nSALAMI AND GOAT CHEESE 10\nSpicy Calabrese salami, roasted red peppers and goat cheese\nspread\n18% gratuity will be added to parties of 8 or more. $2 charge for split plates. Not\nall ingredients are listed. Alert your server of any food allergies.",
+    "latency_breakdown": {
+      "stage1_ocr": 664.1163330059499,
+      "openai_api": 14599.306749994867,
+      "total_pipeline": 15263.795624996419
+    },
+    "cost_usd": 0.0005938499999999999,
+    "wall_latency_ms": 16089.163791009923
+  },
+  "Benihana.jpg": {
+    "scan_id": "d52dc1ce-6b98-4b98-97f6-24dbfed00050",
+    "items": [
+      {
+        "name": "Edamame",
+        "description": "Served with crushed sea salt",
+        "category": "small dishes",
+        "price": "4.30",
+        "common_ingredients": [
+          "edamame",
+          "sea salt"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Spicy Edamame",
+        "description": null,
+        "category": "small dishes",
+        "price": "4.70",
+        "common_ingredients": [
+          "edamame"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Hibachi Chicken",
+        "description": null,
+        "category": "hot plates",
+        "price": "22.50",
+        "common_ingredients": [
+          "chicken"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Hibachi or Teriyaki Steak",
+        "description": "Served with lemon garlic chili sauce",
+        "category": "hot plates",
+        "price": "29.50",
+        "common_ingredients": [
+          "steak",
+          "lemon",
+          "garlic",
+          "chili"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Prawn Tempura",
+        "description": "Deep Fried prawn with light batter",
+        "category": "hot plates",
+        "price": "9.80",
+        "common_ingredients": [
+          "prawn",
+          "batter"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Filet Mignon",
+        "description": null,
+        "category": "hot plates",
+        "price": "34.50",
+        "common_ingredients": [
+          "filet mignon"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Hibachi Salmon",
+        "description": null,
+        "category": "hot plates",
+        "price": "25.50",
+        "common_ingredients": [
+          "salmon"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Pirikara Prawn",
+        "description": "Tempura Prawn pieces served with our spicy mayonnaise sauce",
+        "category": "hot plates",
+        "price": "10.80",
+        "common_ingredients": [
+          "prawn",
+          "tempura",
+          "mayonnaise"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Hibachi Prawn",
+        "description": null,
+        "category": "hot plates",
+        "price": "26.50",
+        "common_ingredients": [
+          "prawn"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Chicken Gyoza",
+        "description": "served with Gyoza sauce",
+        "category": "small dishes",
+        "price": "6.80",
+        "common_ingredients": [
+          "chicken",
+          "gyoza"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Vegetable Gyoza",
+        "description": "served with Gyoza sauce",
+        "category": "small dishes",
+        "price": "6.80",
+        "common_ingredients": [
+          "vegetables",
+          "gyoza"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Spring Rolls",
+        "description": "Served with sweet chili sauce",
+        "category": "small dishes",
+        "price": "6.50",
+        "common_ingredients": [
+          "spring rolls",
+          "chili sauce"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Natural Bites",
+        "description": "Plant-based goodness served with Wasabi Mayo",
+        "category": "small dishes",
+        "price": "6.90",
+        "common_ingredients": [
+          "plant-based",
+          "wasabi",
+          "mayo"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Sushi Combination",
+        "description": "2-Tuna, 2-Salmon, 1-Prawn, 1-Sea Bass",
+        "category": "sushi & sashimi combo",
+        "price": "10.50",
+        "common_ingredients": [
+          "tuna",
+          "salmon",
+          "prawn",
+          "sea bass"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Vegetable Delight",
+        "description": "Miso soup, Benihana Salad, Vegetarian spring rolls and Hibachi Vegetables",
+        "category": "benihana lunches",
+        "price": "19.50",
+        "common_ingredients": [
+          "miso soup",
+          "salad",
+          "spring rolls",
+          "vegetables"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Sashimi Combination",
+        "description": "2-Tuna, 3-Salmon, 2-Sea Bass",
+        "category": "sushi & sashimi combo",
+        "price": "15.00",
+        "common_ingredients": [
+          "tuna",
+          "salmon",
+          "sea bass"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Sushi & Sashimi Combination",
+        "description": "2-Tuna, 2-Salmon, 2-Prawn Sushi ; 3-Tuna, 3-Salmon, 2-Sea Bass",
+        "category": "sushi & sashimi combo",
+        "price": "22.00",
+        "common_ingredients": [
+          "tuna",
+          "salmon",
+          "prawn",
+          "sea bass"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Avocado Roll",
+        "description": null,
+        "category": "sushi rolls",
+        "price": null,
+        "common_ingredients": [
+          "avocado"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Deluxe Sushi Lunch",
+        "description": "2-Tuna; 2-Salmon; 1-Prawn; 6-Salmon Roll",
+        "category": "benihana lunches",
+        "price": "13.00",
+        "common_ingredients": [
+          "tuna",
+          "salmon",
+          "prawn"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Cucumber Roll",
+        "description": null,
+        "category": "sushi rolls",
+        "price": null,
+        "common_ingredients": [
+          "cucumber"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Tuna Roll",
+        "description": null,
+        "category": "sushi rolls",
+        "price": null,
+        "common_ingredients": [
+          "tuna"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Salmon Roll",
+        "description": null,
+        "category": "sushi rolls",
+        "price": null,
+        "common_ingredients": [
+          "salmon"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "California Roll",
+        "description": null,
+        "category": "sushi rolls",
+        "price": null,
+        "common_ingredients": [
+          "crab",
+          "avocado",
+          "cucumber"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Prawn Tempura Roll",
+        "description": null,
+        "category": "sushi rolls",
+        "price": null,
+        "common_ingredients": [
+          "prawn",
+          "tempura"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Nigiri Sushi",
+        "description": "Salmon or Prawn or Tobiko",
+        "category": "nigiri sushi",
+        "price": "3.50",
+        "common_ingredients": [
+          "salmon",
+          "prawn",
+          "tobiko"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Nigiri Sushi",
+        "description": "Tuna or Sea Bass",
+        "category": "nigiri sushi",
+        "price": "3.50",
+        "common_ingredients": [
+          "tuna",
+          "sea bass"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Nigiri Sushi",
+        "description": "Eel",
+        "category": "nigiri sushi",
+        "price": "6.00",
+        "common_ingredients": [
+          "eel"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Sashimi",
+        "description": "Chef's Choice",
+        "category": "sashimi",
+        "price": "7.00",
+        "common_ingredients": [
+          "fish"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      }
+    ],
+    "ocr_text": "TRADITIONAL\nHIBACHI LUNCHES\nTRADITIONAL LUNCHES include:\nSalad with Ginger Dressing\nPrawn Appetiser\nHibachi Vegetables\nHibachi Rice\nBENIHANA\u00ae\nSMALL DISHES\nEDAMAME (V)\nHOT PLATES\nServed with crushed sea salt\n4.30\nHIBACHI CHICKEN\n22.50\nSPICY EDAMAME (V)\n4.70\nHIBACHI or TERIYAKI STEAK\n29.50\nServed with lemon garlic chili sauce\nPRAWN TEMPURA\n9.80\nFILET MIGNON\n34.50\nDeep Fried prawn with light batter\nHIBACHI SALMON\n25.50\nPIRIKARA PRAWN\n10.80\nHIBACHI PRAWN\n26.50\nTempura Prawn pieces served with our spicy mayonnaise sauce\nCHICKEN GYOZA\n6.80\nSUSHI & HIBACHI STEAK\n31.50\nserved with Gyoza sauce\nVEGETABLE GYOZA(V)\n6.80\nHibachi Combination\nserved with Gyoza sauce\nHIBACHI CHICKEN & PRAWNS\n29.50\nSPRING ROLLS (V)\n6.50\nServed with sweet chili sauce\nHIBACHI STEAK & CHICKEN\n33.50\nNATURAL BITES (V)\n6.90\nHIBACHI STEAK & PRAWNS\n37.50\nPlant-based goodness served with Wasabi Mayo\nSUSHI & SASHIMI COMBO\nSUSHI COMBINATION\n10.50\nVEGETABLE DELIGHT\n19.50\n2-Tuna, 2-Salmon, 1-Prawn, 1-Sea Bass\nMiso soup, Benihana Salad, Vegetarian spring rolls and\nHibachi Vegetables\nSASHIMI COMBINATION\n15.00\n2-Tuna, 3-Salmon, 2-Sea Bass\nSUSHI & SASHIMI COMBINATION\n22.00\n2-Tuna, 2-Salmon, 2-Prawn Sushi ; 3-Tuna, 3-Salmon, 2-Sea Bass\nBENIHANA LUNCHES\nSUSHI ROLLS\nfrom the kitchen\nAVOCADO ROLL (V) (6PCS)\nDELUXE SUSHI LUNCH\n2-Tuna; 2-Salmon; 1-Prawn; 6-Salmon Roll\n13.00\nCUCUMBER ROLL (V) (6PCS)\nTUNA ROLL (6PCS)\nSUSHI & SASHIMI COMBO\n22.00\nSALMON ROLL (6PCS)\nCALIFORNIA ROLL (8PCS)\n2-Tuna; 2-Salmon; 2-Prawn Sushi, 3 - Tuna,\nSea Bass & Salmon Sashimi\nPRAWN TEMPURA ROLL (8PCS)\nDinner Menu Available During Lunch\n* Please ask a member of staff for any information on allergies or intolerances.\nA discretionary 12.5% service charge will be added to your bill.\nNIGIRI SUSHI (2 PIECES)\nSALMON OR PRAWN OR TOBIKO\nTUNA OR SEA BASS\nEEL\n3.50\n3.50\n6.00\n5.50\n6.90\n9.80\n5.50\n6.00\n6.80\nTUNA\nSALMON\nSEA BASS\nSASHIMI (3 PIECES)\nChef's Choice\nTE\n7.00\n6.00\n6.50\nPlease ask a member of staff for any information on allergies or intolerances.\n*\nA discretionary 12.5% service charge will be added to your bill.",
+    "latency_breakdown": {
+      "stage1_ocr": 901.3923749880632,
+      "openai_api": 23284.35091600113,
+      "total_pipeline": 24186.218291986734
+    },
+    "cost_usd": 0.0014720999999999998,
+    "wall_latency_ms": 25011.306667001918
+  },
+  "Brunch at Boujie.webp": {
+    "scan_id": "e6d7fcad-177c-4f90-bd40-6d859943985c",
+    "items": [
+      {
+        "name": "Roasted Octopus",
+        "description": "Harissa braised tomato, chickpea, sal secco olive, lemon, basil",
+        "category": "starters",
+        "price": "24",
+        "common_ingredients": [
+          "octopus",
+          "tomato",
+          "chickpea",
+          "olive",
+          "lemon",
+          "basil"
+        ],
+        "obscure_ingredient_notes": [
+          "harissa \u2013 a North African chili paste",
+          "sal secco olive \u2013 a type of dry-cured olive"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Crispy Chicken Wings",
+        "description": null,
+        "category": "starters",
+        "price": "18",
+        "common_ingredients": [
+          "chicken"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Caramel Apple French Toast",
+        "description": "Cinnamon streusel, candied pecans, maple whipped cream",
+        "category": "brunch",
+        "price": "18",
+        "common_ingredients": [
+          "apple",
+          "cinnamon",
+          "pecans",
+          "maple",
+          "cream"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "The Short Stack",
+        "description": "2 pancakes, maple syrup, butter",
+        "category": "brunch",
+        "price": "16",
+        "common_ingredients": [
+          "pancakes",
+          "maple syrup",
+          "butter"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Lemon Ricotta Pancakes",
+        "description": "Macerated blueberries, candied pecans, pumpkin seeds, orange, toasted coconut, fennel pollen",
+        "category": "brunch",
+        "price": "19",
+        "common_ingredients": [
+          "pancakes",
+          "blueberries",
+          "pecans",
+          "pumpkin seeds",
+          "orange",
+          "coconut"
+        ],
+        "obscure_ingredient_notes": [
+          "fennel pollen \u2013 a spice made from the flowers of the fennel plant"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Breakfast Sandwich",
+        "description": "Farm egg, lamb sausage, caramelized goat cheese, mint, fris\u00e9e, fresno chili aioli, brioche bun",
+        "category": "brunch",
+        "price": "18",
+        "common_ingredients": [
+          "egg",
+          "lamb sausage",
+          "goat cheese",
+          "mint",
+          "fris\u00e9e",
+          "chili",
+          "brioche"
+        ],
+        "obscure_ingredient_notes": [
+          "fresno chili \u2013 a type of chili pepper"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Smoked Salmon & Pita",
+        "description": "Herbed labneh, pickled red onion, cucumber, capers, herbs, sprouts, pita",
+        "category": "brunch",
+        "price": "20",
+        "common_ingredients": [
+          "salmon",
+          "labneh",
+          "onion",
+          "cucumber",
+          "capers",
+          "pita"
+        ],
+        "obscure_ingredient_notes": [
+          "labneh \u2013 a Middle Eastern strained yogurt"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Shakshuka",
+        "description": "Tomato, vadouvan, chili, lamb sausage, roasted cabbage, feta, pomegranate, two soft eggs, served with pita",
+        "category": "brunch",
+        "price": "20",
+        "common_ingredients": [
+          "tomato",
+          "chili",
+          "lamb sausage",
+          "cabbage",
+          "feta",
+          "pomegranate",
+          "eggs",
+          "pita"
+        ],
+        "obscure_ingredient_notes": [
+          "vadouvan \u2013 a French-influenced curry blend"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Harissa Benedict",
+        "description": "Grilled steak, bloomsdale spinach, avocado, sourdough, harissa hollandaise, country potatoes",
+        "category": "brunch",
+        "price": "22",
+        "common_ingredients": [
+          "steak",
+          "spinach",
+          "avocado",
+          "sourdough",
+          "potatoes"
+        ],
+        "obscure_ingredient_notes": [
+          "harissa \u2013 a North African chili paste",
+          "bloomsdale spinach \u2013 a variety of spinach"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Hummus & Fresh Pita",
+        "description": "Pickled vegetables, garlic chili oil",
+        "category": "starters",
+        "price": "13",
+        "common_ingredients": [
+          "hummus",
+          "pita",
+          "vegetables",
+          "garlic",
+          "chili"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Smoked Deviled Eggs",
+        "description": "Crispy prosciutto, pickled jalapeno, salsa verde",
+        "category": "starters",
+        "price": "10",
+        "common_ingredients": [
+          "eggs",
+          "prosciutto",
+          "jalapeno",
+          "salsa"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Steak & Eggs",
+        "description": "Dry aged ribeye, crispy garlic, sungold tomatoes, red wine porcini jus, avocado, country potatoes",
+        "category": "brunch",
+        "price": "42",
+        "common_ingredients": [
+          "ribeye",
+          "garlic",
+          "tomatoes",
+          "avocado",
+          "potatoes"
+        ],
+        "obscure_ingredient_notes": [
+          "sungold tomatoes \u2013 a variety of cherry tomato",
+          "porcini \u2013 a type of mushroom"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Market Quiche",
+        "description": "Pork lardon, spinach, tomato, summer squash, chevre, cheddar, spring onion, served with potatoes or salad",
+        "category": "brunch",
+        "price": "19",
+        "common_ingredients": [
+          "pork",
+          "spinach",
+          "tomato",
+          "squash",
+          "cheese",
+          "onion"
+        ],
+        "obscure_ingredient_notes": [
+          "lardon \u2013 small strips or cubes of pork fat",
+          "chevre \u2013 goat cheese"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "The Fausto Pizza",
+        "description": "Wild mushroom, fontina, garlic chili oil, lemon, thyme, farm egg, wild arugula",
+        "category": "pizza",
+        "price": "22",
+        "common_ingredients": [
+          "mushroom",
+          "fontina",
+          "garlic",
+          "lemon",
+          "thyme",
+          "egg",
+          "arugula"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Fennel Salsiccia and Fig Pizza",
+        "description": "Fiore di latte, provolone picante, fontina, calabrian chile, hot honey, garlic cream, black pepper",
+        "category": "pizza",
+        "price": "24",
+        "common_ingredients": [
+          "fennel",
+          "fig",
+          "cheese",
+          "chile",
+          "honey",
+          "garlic",
+          "pepper"
+        ],
+        "obscure_ingredient_notes": [
+          "salsiccia \u2013 Italian sausage",
+          "fiore di latte \u2013 a type of mozzarella cheese",
+          "provolone picante \u2013 a sharp provolone cheese",
+          "calabrian chile \u2013 a type of chili pepper"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Green Egg & Ham",
+        "description": "Pancetta, rapini, mozzarella, asiago, garlic, farm egg, asparagus cream",
+        "category": "pizza",
+        "price": "21",
+        "common_ingredients": [
+          "pancetta",
+          "rapini",
+          "mozzarella",
+          "asiago",
+          "garlic",
+          "egg",
+          "asparagus"
+        ],
+        "obscure_ingredient_notes": [
+          "rapini \u2013 a type of broccoli",
+          "asiago \u2013 a type of cheese"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Ezzo Pepperoni Pizza",
+        "description": "Tomato, garlic, chili, cilantro, chive, mozzarella, sesame seed crust",
+        "category": "pizza",
+        "price": "21",
+        "common_ingredients": [
+          "pepperoni",
+          "tomato",
+          "garlic",
+          "chili",
+          "cilantro",
+          "chive",
+          "mozzarella"
+        ],
+        "obscure_ingredient_notes": [
+          "ezzo \u2013 a brand of pepperoni"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Watermelon Salad",
+        "description": "Feta, kalamata olive, mint, dill, basil, aleppo, hazelnut, dukkha",
+        "category": "salads",
+        "price": "18",
+        "common_ingredients": [
+          "watermelon",
+          "feta",
+          "olive",
+          "mint",
+          "dill",
+          "basil",
+          "hazelnut"
+        ],
+        "obscure_ingredient_notes": [
+          "aleppo \u2013 a type of chili pepper",
+          "dukkha \u2013 an Egyptian spice blend"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Caesar Salad",
+        "description": "Market lettuces, crispy prosciutto, crouton, parmesan, anchovies",
+        "category": "salads",
+        "price": "17",
+        "common_ingredients": [
+          "lettuce",
+          "prosciutto",
+          "crouton",
+          "parmesan",
+          "anchovies"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Seasonal Fruit Plate",
+        "description": "Seasonal fruit, whipped vanilla mascarpone, almonds",
+        "category": "sides",
+        "price": "9",
+        "common_ingredients": [
+          "fruit",
+          "mascarpone",
+          "almonds"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Candied Bacon",
+        "description": "Slab bacon, maple",
+        "category": "sides",
+        "price": "9",
+        "common_ingredients": [
+          "bacon",
+          "maple"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Lebanese Homemade Tabouleh",
+        "description": "Mint, parsley, shallots, bulgur wheat, tomatoes",
+        "category": "sides",
+        "price": "10",
+        "common_ingredients": [
+          "mint",
+          "parsley",
+          "shallots",
+          "bulgur",
+          "tomatoes"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Chef's Seasonal Toast",
+        "description": "Chef's whim of spread and toppings",
+        "category": "sides",
+        "price": "12",
+        "common_ingredients": [
+          "bread"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Fries with Harissa Aioli",
+        "description": null,
+        "category": "sides",
+        "price": "8",
+        "common_ingredients": [
+          "fries",
+          "harissa",
+          "aioli"
+        ],
+        "obscure_ingredient_notes": [
+          "harissa \u2013 a North African chili paste"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Spicy Fried Chicken Sandwich",
+        "description": "Crunchy slaw, spicy aioli, pickles, seeded bun",
+        "category": "sandwiches",
+        "price": "19",
+        "common_ingredients": [
+          "chicken",
+          "slaw",
+          "aioli",
+          "pickles",
+          "bun"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Boujie Cheeseburger",
+        "description": "Brisket & short rib grind, crispy bacon, garlic aioli, pickled red onion, lettuce, cambozola, pan de mie bun",
+        "category": "sandwiches",
+        "price": "25",
+        "common_ingredients": [
+          "beef",
+          "bacon",
+          "aioli",
+          "onion",
+          "lettuce",
+          "cambozola",
+          "bun"
+        ],
+        "obscure_ingredient_notes": [
+          "cambozola \u2013 a type of cheese",
+          "pan de mie \u2013 a type of bread"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      }
+    ],
+    "ocr_text": "sweet\nbrunch at boujie\nwelcome to boujiemana! we are excited for you to\nexperience the results of three years of planning &\ncreating! we hope you feel a wonderful sense of\nbelonging, joy & blessing as we bring you the best of\nfood, drink & experiences! the wonderful memories\ncreated are all up to you... cheers!\nSamer\nsamer khouli, owner\ngreen garden squeeze {gf} 12\ncelery, green apple, kale, mint\ncold pressed citrus sunrise {gf} 12\norange, carrot, turmeric, pineapple\nroasted octopus {gf} 24\nharissa braised tomato, chickpea,\nsal secco olive, lemon, basil\ncrispy chicken wings 18\ncaramel apple french toast 18\ncinnamon streusel, candied pecans,\nmaple whipped cream\nthe short stack 16\n2 pancakes, maple syrup, butter\nlemon ricotta pancakes 19\nmacerated blueberries, candied pecans, pumpkin seeds,\norange, toasted coconut, fennel pollen\nbreakfast sandwich 18\nsavory\nfarm egg, lamb sausage, caramelized goat cheese,\nmint, fris\u00e9e, fresno chili aioli, brioche bun\nsmoked salmon & pita 20\nherbed labneh, pickled red onion, cucumber, capers,\nherbs, sprouts, pita\nshakshuka 20\ntomato, vadouvan, chili, lamb sausage, roasted cabbage,\nfeta, pomegranate, two soft eggs, served with pita\nharissa benedict 22\ngrilled steak, bloomsdale spinach, avocado, sourdough,\nharissa hollandaise, country potatoes\njuices (can be made vegetarian, sub wild mushrooms for steak)\nstarters\nfine herbs, lemon, garlic, labneh ranch, chili\nhummus & fresh pita 13\npickled vegetables, garlic chili oil\nsmoked deviled eggs {gf} 10\ncrispy prosciutto, pickled jalapeno, salsa\nverde\nsteak & eggs 42\ndry aged ribeye, crispy garlic, sungold tomatoes,\nred wine porcini jus, avocado, country potatoes\nmarket quiche 19\npork lardon, spinach, tomato, summer squash, chevre,\ncheddar, spring onion, served with potatoes or salad\nthe fausto pizza 22\npizzas\nwild mushroom, fontina, garlic chili oil, lemon, thyme,\nfarm egg, wild arugula\nfennel salsiccia and fig pizza 24\nfiore di latte, provolone picante, fontina, calabrian chile,\nhot honey, garlic cream, black pepper\ngreen egg & ham 21\npancetta, rapini, mozzarella, asiago, garlic, farm egg,\nasparagus cream\nezzo pepperoni pizza 21\ntomato, garlic, chili, cilantro, chive, mozzarella,\nsalads\nsesame seed crust\nwatermelon salad {gf} 18\nfeta, kalamata olive, mint, dill, basil, aleppo, hazelnut,\ndukkha\ncaesar salad 17\nmarket lettuces, crispy prosciutto, crouton, parmesan,\nanchovies\nadd ons:\ngrilled coastal shrimp +9\nchar-grilled herb chicken +7\nseasonal fruit plate {gf} 9\nsides\nseasonal fruit, whipped vanilla mascarpone, almonds\ncandied bacon {gf} 9\nslab bacon, maple\nlebanese homemade tabouleh {v} 10\nmint, parsley, shallots, bulgur wheat, tomatoes\nchef's seasonal toast 12\nchef's whim of spread and toppings\nsandwiches\nfries with harissa aioli 8\nspicy fried chicken sandwich 19\ncrunchy slaw, spicy aioli, pickles, seeded bun\nboujie cheeseburger 25\nbrisket & short rib grind, crispy bacon, garlic aioli,\npickled red onion, lettuce, cambozola, pan de mie bun\nconsuming raw or undercooked meats, poultry, seafood,\nshellfish or eggs may increase your risk of foodborne illness,\nespecially if you have certain medical conditions.\nboujie hearts\nalways give\nLove Does has been fighting for human rights, caring for the\nvulnerable and providing education in conflict zones since 2002.\nLove Does operates in 14 countries by partnering with local\nleaders who understand the true needs of their communities.\nTogether, we design and implement effective programs from\nschools and safe houses to food aid, refugee support, after school\nprograms, and women's resource centers. Simply put: Love Does.\nThis June, Boujiemana is proud to give 3% of its total sales to\nthe Love Does.\nLOVE\nDOES",
+    "latency_breakdown": {
+      "stage1_ocr": 1640.363000013167,
+      "openai_api": 27286.594458986656,
+      "total_pipeline": 28927.566209007637
+    },
+    "cost_usd": 0.0018799499999999998,
+    "wall_latency_ms": 29546.31624999456
+  },
+  "Cesarina.webp": {
+    "scan_id": "5163c01d-a218-4fd2-89a5-8c5d2ba2ebea",
+    "items": [
+      {
+        "name": "Gnocchi Salsiccia, Porcini e Tartufo",
+        "description": "Handmade Gnocchi, creamy truffle sauce, beef jus & Porcini mushroom served with a Parmigiano-gremolada crusted bone marrow",
+        "category": "pasta",
+        "price": "37",
+        "common_ingredients": [
+          "gnocchi",
+          "truffle sauce",
+          "beef jus",
+          "porcini mushroom",
+          "Parmigiano"
+        ],
+        "obscure_ingredient_notes": [
+          "gremolada \u2013 a chopped herb condiment classically made of lemon zest, garlic, and parsley"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Lumache Emiliane",
+        "description": "Homemade lumache with a brown butter and sage pumpkin sauce, provola affumicata, crispy speck, amaretto crumble and fried sage",
+        "category": "pasta",
+        "price": "34",
+        "common_ingredients": [
+          "lumache",
+          "brown butter",
+          "sage",
+          "pumpkin sauce",
+          "provola affumicata",
+          "speck",
+          "amaretto"
+        ],
+        "obscure_ingredient_notes": [
+          "provola affumicata \u2013 smoked provola cheese",
+          "speck \u2013 a type of cured, lightly smoked ham"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Lasagna alla Bolognese",
+        "description": "Hand-rolled egg-pasta sheets layered with Cesarina's delicious Bolognese, bechamel, mozzarella, oven-baked & served with fresh Parmigiano",
+        "category": "pasta",
+        "price": "36",
+        "common_ingredients": [
+          "egg-pasta",
+          "Bolognese",
+          "bechamel",
+          "mozzarella",
+          "Parmigiano"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Super Cioppino",
+        "description": "Grand soup of cod fish, mussels, clams, calamari, one whole wild caught langoustine, Kalamata olives, cherry tomatoes, served with homemade spaghetti \"al burro\" & cured egg yolk",
+        "category": "pasta",
+        "price": "49",
+        "common_ingredients": [
+          "cod fish",
+          "mussels",
+          "clams",
+          "calamari",
+          "langoustine",
+          "Kalamata olives",
+          "cherry tomatoes",
+          "spaghetti",
+          "egg yolk"
+        ],
+        "obscure_ingredient_notes": [
+          "langoustine \u2013 a type of crustacean similar to a small lobster"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Paccheri Vodka Scampi",
+        "description": "Paccheri, garlic, Peperoncino, Cesa's buonissima \"Crema di Scampi alla Vodka\", shrimp, parsley & one whole wild caught langoustine",
+        "category": "pasta",
+        "price": "43",
+        "common_ingredients": [
+          "paccheri",
+          "garlic",
+          "Peperoncino",
+          "shrimp",
+          "parsley",
+          "langoustine"
+        ],
+        "obscure_ingredient_notes": [
+          "Peperoncino \u2013 Italian chili pepper",
+          "langoustine \u2013 a type of crustacean similar to a small lobster"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Super Tagliata",
+        "description": "Espresso & Porcini dry rubbed Tagliata, mascarpone polenta, roasted portobello mushrooms & honey glazed carrots. Served with roasted bone marrow & creamy truffle gravy",
+        "category": "sides",
+        "price": "59",
+        "common_ingredients": [
+          "Tagliata",
+          "espresso",
+          "Porcini",
+          "mascarpone",
+          "polenta",
+          "portobello mushrooms",
+          "carrots",
+          "truffle gravy"
+        ],
+        "obscure_ingredient_notes": [
+          "Tagliata \u2013 Italian-style sliced steak"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Pollo Scarpariello",
+        "description": "Roasted bone-in chicken thighs, Pork \"Salsiccia\", Cesarina's Scarpariello with San Marzano tomatoes, Cremini mushroom, onion, bell peppers, Green olives & sweet Peperoncino",
+        "category": "sides",
+        "price": "44",
+        "common_ingredients": [
+          "chicken thighs",
+          "Pork Salsiccia",
+          "San Marzano tomatoes",
+          "Cremini mushroom",
+          "onion",
+          "bell peppers",
+          "Green olives",
+          "Peperoncino"
+        ],
+        "obscure_ingredient_notes": [
+          "Salsiccia \u2013 Italian sausage",
+          "Peperoncino \u2013 Italian chili pepper"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Orata of Limone",
+        "description": "Wild-caught Mediterranean Golden Seabream roasted with lemon & garlic, saffron-lemon jus, capers, Bottarga & citrus-aromatic \"Mollica Atturrata\"",
+        "category": "sides",
+        "price": "56",
+        "common_ingredients": [
+          "Seabream",
+          "lemon",
+          "garlic",
+          "saffron",
+          "capers",
+          "Bottarga"
+        ],
+        "obscure_ingredient_notes": [
+          "Bottarga \u2013 salted, cured fish roe",
+          "Mollica Atturrata \u2013 toasted breadcrumbs"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Caprese Tiepida",
+        "description": "Warm eggplant & cherry tomatoes \"al funghetto\", arugula, Vegan Mozzarella, e Pesto",
+        "category": "salads",
+        "price": "21",
+        "common_ingredients": [
+          "eggplant",
+          "cherry tomatoes",
+          "arugula",
+          "Vegan Mozzarella",
+          "Pesto"
+        ],
+        "obscure_ingredient_notes": [
+          "al funghetto \u2013 Italian style of cooking vegetables with garlic and parsley"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Cesarina",
+        "description": "Fennel, oranges, golden raisins, Kalamata olives, arugula, fris\u00e9e \"Vinaigrette agli agrumi\"",
+        "category": "salads",
+        "price": "19",
+        "common_ingredients": [
+          "fennel",
+          "oranges",
+          "golden raisins",
+          "Kalamata olives",
+          "arugula",
+          "fris\u00e9e"
+        ],
+        "obscure_ingredient_notes": [
+          "Vinaigrette agli agrumi \u2013 citrus vinaigrette"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Pomodoro Fresco",
+        "description": "Fresh tomato sauce, confit cherry tomatoes, vegan Mozzarella & the perfect drop of Pesto",
+        "category": "pasta",
+        "price": "26",
+        "common_ingredients": [
+          "tomato sauce",
+          "cherry tomatoes",
+          "vegan Mozzarella",
+          "Pesto"
+        ],
+        "obscure_ingredient_notes": [
+          "confit \u2013 a method of cooking food in fat, oil, or a water syrup at a low temperature"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Funghi Vegana",
+        "description": "Cesarina's signature creamy Cremini, Shiitake & Porcini mushroom sauce with bread & herb crumble, fresh parsley",
+        "category": "pasta",
+        "price": "28",
+        "common_ingredients": [
+          "Cremini",
+          "Shiitake",
+          "Porcini",
+          "bread",
+          "parsley"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Norma",
+        "description": "Fresh tomato sauce, eggplant, basil, vegan Mozzarella",
+        "category": "pasta",
+        "price": "27",
+        "common_ingredients": [
+          "tomato sauce",
+          "eggplant",
+          "basil",
+          "vegan Mozzarella"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Romesco and Vodka",
+        "description": "Homemade romesco sauce, green peas, Peperoncino, Vodka",
+        "category": "pasta",
+        "price": "32",
+        "common_ingredients": [
+          "romesco sauce",
+          "green peas",
+          "Peperoncino",
+          "Vodka"
+        ],
+        "obscure_ingredient_notes": [
+          "romesco \u2013 a nut and red pepper-based sauce from Catalonia"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      }
+    ],
+    "ocr_text": "BUONA BELLISSIMIL\nCera's Fame Pista-\nGNOCCHI SALSICCIA, PORCINI e TARTUFO\nHandmade Gnocchi, creamy truffle sauce,\nbeef jus & Porcini mushroom served with\na Parmigiano- gremolada crusted\nbone marrow 37\nLUMACHE EMILIANE\nHomemade lumache with a brown butter and sage\npumpkin sauce, provola affumicata, crispy speck,\namaretto crumble and fried sage 34\nLASAGNA alla BOLOGNESE\nHand-rolled egg-pasta sheets layered with\nCesarina's delicious Bolognese, bechamel,\nmozzarella, oven-baked & served with\nfresh Parmigiano 36\nInarestaurant.com ecesarinapasta\nSUPER CIOPPINO\nGrand soup of cod fish, mussels, clams, calamari,\none whole wild caught langoustine, Kalamata\nolives, cherry tomatoes, served with homemade\nspaghetti \"al burro\" & cured egg yolk 49\n* PACCHERI VODKA SCAMPI\nPaccheri, garlic, Peperoncino, Cesa's\nbuonissima \"Crema di Scampi alla Vodka\",\nshrimp, parsley & one whole wild caught\nlangoustine 43 BEWARE OF IMITATIONS!\nSUPER TAGLIATA\nEspresso & Porcini dry rubbed Tagliata,\nmascarpone polenta, roasted portobello\nmushrooms & honey glazed carrots. Served with\nroasted bone marrow & creamy truffle gravy 59\n- I Secondi\nPOLLO\nSCARPARIELLO\nRoasted bone-in chicken thighs, Pork \"Salsiccia\",\nCesarina's Scarpariello with San Marzano tomatoes,\nCremini mushroom, onion, bell peppers, Green\nolives & sweet Peperoncino 44\nORATA of LIMONE\nWild-caught Mediterranean Golden\nSeabream roasted with lemon & garlic,\nsaffron-lemon jus, capers, Bottarga &\ncitrus-aromatic \"Mollica Atturrata\" 56\nSUPER SEXY\nNEW!\n*All Secondi served with\nPatate Arrosto: Oven baked yukon gold potatoes with garlic & rosemary\nScarola Ripassata: Sauteed escarole with\nKalamata olives, capers & anchovies\nSHIRTS AND\nCAPRESE TIEPIDA\nWarm eggplant & cherry tomatoes \"al funghetto\",\narugula, Vegan Mozzarella, e Pesto 21\nPer VEGAN\nInsalate\nSOUP of the DAY\nAsk your server\nBELLISSIME ROOSTER PATE\nCESARINA\nAVAILABLE\nFOR PURCHASE\nFennel, oranges, golden raisins, Kalamata olives,\narugula, fris\u00e9e \"Vinaigrette agli agrumi\" 19\nVEGAN BAKED PASTA\nDAY\nVegan Lasagna, Cannelloni,\nPasta al Forno, Timballo, Etc.\nAsk your server!\nPOMODORO FRESCO\nFresh tomato sauce, confit\ncherry tomatoes, vegan Mozzarella\n& the perfect drop of Pesto 26\nCHOOSE\nPasta\nFAVOURITE SHAPE\nFrom the pasta selection on the other page\nCHOOSE your FAVOURITE Vegan SAUCE\nFUNGHI VEGANA\nCesarina's signature creamy Cremini,\nShiitake & Porcini mushroom sauce with\nbread & herb crumble, fresh parsley 28\nPOLPETTE VEGAN 8\nNORMA\nFresh tomato sauce, eggplant,\nbasil, vegan Mozzarella 27\nThe Focaccia\nthat you are\nabout to enjoy\nis baked daily\nbefore every\nlunch & dinner\nJe PANE\nservice to offer you the freshest\npossible taste. Our Focaccia and\n\"Salsa Mediterranea\" are vegan\nand always complementary.\nAsk your server for a Gluten Free\nbread alternative.\nROMESCO and VODKA\nHomemade romesco sauce, green\npeas, Peperoncino, Vodka 32\nHomemade, lentil & almond based\nROASTED GARLIC 2\nSauteed with EVOO\nVEGAN RICOTTA 6\nHomemade, almond based\nMOZZARELLA 5\nVegan\nBellissimi! benefits, and the continuous investment in knowledge, education, and wellbeing for our full-time famiglia.\nA 5% supplemental fee will be added to all guest checks to support competitive wages, comprehensive\nIF YOU WOULD LIKE THE FEE REMOVED, PLEASE DO NOT HESITATE TO LET US KNOW.\nvegan\ngluten free\n*Consuming raw or undercooked meats, poultry, seafood, shellfish or eggs may increase your risk\nof foodborne illness. Make sure to notify your server of any allergies or dietary restrictions",
+    "latency_breakdown": {
+      "stage1_ocr": 1171.0242920089513,
+      "openai_api": 24478.18366601132,
+      "total_pipeline": 25649.486124995747
+    },
+    "cost_usd": 0.0013356,
+    "wall_latency_ms": 26323.47837499401
+  },
+  "Italy in Town.jpg": {
+    "scan_id": "afe925a2-0a69-4dff-a17f-b1655e557f5c",
+    "items": [
+      {
+        "name": "Tomato Basil Soup",
+        "description": null,
+        "category": "appetizers",
+        "price": "6",
+        "common_ingredients": [
+          "tomato",
+          "basil"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "House Salad",
+        "description": "Spring Mix, Tomato, Onions, Mozzarella Cheese, Olives, Cucumbers, tossed with House Vinaigrette",
+        "category": "appetizers",
+        "price": "7",
+        "common_ingredients": [
+          "spring mix",
+          "tomato",
+          "onions",
+          "mozzarella cheese",
+          "olives",
+          "cucumbers"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Caesar Salad",
+        "description": null,
+        "category": "appetizers",
+        "price": "8",
+        "common_ingredients": [
+          "lettuce",
+          "parmesan",
+          "croutons"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Caprese",
+        "description": "Fresh Mozzarella & Tomato slices garnished with Fresh Basil & extra Virgin Olive Oil",
+        "category": "appetizers",
+        "price": "11",
+        "common_ingredients": [
+          "mozzarella",
+          "tomato",
+          "basil",
+          "olive oil"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Fried Calamari",
+        "description": "Lightly floured & deep fried Tubes and Tentacles, served with house-made Marinara Sauce",
+        "category": "appetizers",
+        "price": "11",
+        "common_ingredients": [
+          "calamari",
+          "marinara sauce"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Fried Cheese Ravioli",
+        "description": "Breaded Cheese filled Ravioli served with house-made Marinara",
+        "category": "appetizers",
+        "price": "10",
+        "common_ingredients": [
+          "cheese ravioli",
+          "marinara sauce"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Fettuccine Alfredo",
+        "description": null,
+        "category": "pasta",
+        "price": "14",
+        "common_ingredients": [
+          "fettuccine",
+          "alfredo sauce"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Cheese Ravioli with Marinara Sauce",
+        "description": null,
+        "category": "pasta",
+        "price": "14",
+        "common_ingredients": [
+          "cheese ravioli",
+          "marinara sauce"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Cannelloni",
+        "description": "Rolls of Pasta stuffed with Beef & Pork, topped with a Bolognese Bechamel Sauce",
+        "category": "pasta",
+        "price": "15",
+        "common_ingredients": [
+          "pasta",
+          "beef",
+          "pork",
+          "bolognese sauce",
+          "bechamel sauce"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Manicotti",
+        "description": "Ricotta filled Pasta Tubes in a Marinara Sauce",
+        "category": "pasta",
+        "price": "14",
+        "common_ingredients": [
+          "ricotta",
+          "pasta",
+          "marinara sauce"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Lasagna",
+        "description": "Layers of Egg Noodle Pasta baked in Beef Ragu and covered in Bechamel Sauce",
+        "category": "pasta",
+        "price": "15",
+        "common_ingredients": [
+          "egg noodle pasta",
+          "beef ragu",
+          "bechamel sauce"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Eggplant Parmesan",
+        "description": "Breaded Eggplant pan fried then baked in layers with Mozzarella & Marinara. Served with Spaghetti",
+        "category": "pasta",
+        "price": "16",
+        "common_ingredients": [
+          "eggplant",
+          "mozzarella",
+          "marinara sauce",
+          "spaghetti"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Fusili Mare Monte",
+        "description": "Corkscrew Pasta saut\u00e9ed with Shiitake Mushrooms, Shrimp, Asparagus & Saffron",
+        "category": "pasta",
+        "price": "18",
+        "common_ingredients": [
+          "fusili",
+          "shiitake mushrooms",
+          "shrimp",
+          "asparagus",
+          "saffron"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Penne Arrabiata",
+        "description": "Penne Pasta saut\u00e9ed in extra Virgin Olive Oil & Garlic with fresh diced Tomato in a spicy Marinara and fresh Basil",
+        "category": "pasta",
+        "price": "15",
+        "common_ingredients": [
+          "penne",
+          "olive oil",
+          "garlic",
+          "tomato",
+          "marinara sauce",
+          "basil"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Penne Alla Vodka",
+        "description": "Penne Pasta with Vodka in light Tomato Cream Sauce & fresh Basil",
+        "category": "pasta",
+        "price": "15",
+        "common_ingredients": [
+          "penne",
+          "vodka",
+          "tomato cream sauce",
+          "basil"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Spaghetti Chitarra",
+        "description": "Organic Egg Noodle Pasta tossed with saut\u00e9ed Shiitake Mushrooms in Parmesan Reggiano Cheese",
+        "category": "pasta",
+        "price": "19",
+        "common_ingredients": [
+          "egg noodle pasta",
+          "shiitake mushrooms",
+          "parmesan reggiano"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Shrimp Spaghetti Puttanesca",
+        "description": "Saut\u00e9ed Shrimp with Garlic, Olive Oil, fresh diced Tomatoes, Capers, Black Olives, Onions, White Wine Tomato Sauce and fresh Basil",
+        "category": "pasta",
+        "price": "18",
+        "common_ingredients": [
+          "shrimp",
+          "garlic",
+          "olive oil",
+          "tomatoes",
+          "capers",
+          "black olives",
+          "onions",
+          "white wine tomato sauce",
+          "basil"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Lobster Ravioli",
+        "description": "Ravioli filled with Lobster served with a Lobster Cream Sauce",
+        "category": "pasta",
+        "price": "20",
+        "common_ingredients": [
+          "lobster ravioli",
+          "lobster cream sauce"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Tortellini Alla Panna",
+        "description": "Beef filled Tortellini with Pancetta and Peas in Cream Sauce",
+        "category": "pasta",
+        "price": "16",
+        "common_ingredients": [
+          "beef tortellini",
+          "pancetta",
+          "peas",
+          "cream sauce"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Gamberi Arrabiata",
+        "description": "Saut\u00e9ed Shrimp in a spicy Marinara and served on a bed of Linguine Pasta",
+        "category": "pasta",
+        "price": "18",
+        "common_ingredients": [
+          "shrimp",
+          "marinara sauce",
+          "linguine"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Gnocchi Alla Genovese",
+        "description": "Potato Dumpling in a Pesto Basil Cream Sauce",
+        "category": "pasta",
+        "price": "15",
+        "common_ingredients": [
+          "gnocchi",
+          "pesto basil cream sauce"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Chicken Primavera",
+        "description": "Saut\u00e9ed chunks of Chicken Breast with Broccoli, Carrots, Zucchini, Onions, Green Peas in a light Brandy Cream Sauce & Penne Pasta",
+        "category": "pasta",
+        "price": "16",
+        "common_ingredients": [
+          "chicken breast",
+          "broccoli",
+          "carrots",
+          "zucchini",
+          "onions",
+          "green peas",
+          "brandy cream sauce",
+          "penne"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Chicken Parmesan",
+        "description": "Hand-breaded Chicken topped with Marinara Sauce and Cheese. Served over Spaghetti",
+        "category": "pasta",
+        "price": "17",
+        "common_ingredients": [
+          "chicken",
+          "marinara sauce",
+          "cheese",
+          "spaghetti"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Chicken Piccata",
+        "description": "Chicken Breast saut\u00e9ed with Capers in a White Wine & Lemon Butter Sauce. Served with mashed Potatoes",
+        "category": "pasta",
+        "price": "17",
+        "common_ingredients": [
+          "chicken breast",
+          "capers",
+          "white wine",
+          "lemon butter sauce",
+          "mashed potatoes"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Chicken Cacciatora",
+        "description": "Saut\u00e9ed Chunks of Chicken Breast with Shiitake Mushrooms, Onions, Bell Peppers & Tomato over Angel Hair Pasta",
+        "category": "pasta",
+        "price": "16",
+        "common_ingredients": [
+          "chicken breast",
+          "shiitake mushrooms",
+          "onions",
+          "bell peppers",
+          "tomato",
+          "angel hair pasta"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Tilapia Piccata",
+        "description": "Pan-seared Tilapia served with White Wine & Lemon Sauce with Capers and mashed Potatoes",
+        "category": "pasta",
+        "price": "17",
+        "common_ingredients": [
+          "tilapia",
+          "white wine",
+          "lemon sauce",
+          "capers",
+          "mashed potatoes"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      }
+    ],
+    "ocr_text": "ITALY IN TOWN\nTOMATO BASIL SOUP 6\nHOUSE SALAD 7\nby Chico\nANTIPASTI | APPETIZERS-\nSpring Mix, Tomato, Onions, Mozzarella Cheese,\nOlives, Cucumbers, tossed with House Vinaigrette\n\u2192 CAESAR SALAD 8\nCAPRESE 11\nFresh Mozzarella & Tomato slices garnished with\nFresh Basil & extra Virgin Olive Oil\nFRIED CALAMARI 11\nLightly floured & deep fried Tubes and Tentacles,\nserved with house-made Marinara Sauce\nFRIED CHEESE RAVIOLI 10\nBreaded Cheese filled Ravioli served with\nhouse-made Marinara\nADDITIONS TO ANY DISH\nGrilled Shrimp 4 ea 8\nGrilled Chicken 6\nSide House or Caesar Salad 4\nFETTUCCINE ALFREDO 14\nSECONDI | ENTREES\nCHEESE RAVIOLI WITH MARINARA SAUCE 14\nCANNELLONI 15\nRolls of Pasta stuffed with Beef & Pork, topped with a\nBolognese Bechamel Sauce\nMANICOTTI 14\nRicotta filled Pasta Tubes in a Marinara Sauce\nLASAGNA 15\nLayers of Egg Noodle Pasta baked in Beef Ragu and\ncovered in Bechamel Sauce\nEGGPLANT PARMESAN 16\nBreaded Eggplant pan fried then baked in layers with\nMozzarella & Marinara. Served with Spaghetti\nFUSILI MARE MONTE 18\nCorkscrew Pasta saut\u00e9ed with Shiitake Mushrooms,\nShrimp, Asparagus & Saffron\nPENNE ARRABIATA 15\nPenne Pasta saut\u00e9ed in extra Virgin Olive Oil & Garlic\nwith fresh diced Tomato in a spicy Marinara and fresh\nBasil\nPENNE ALLA VODKA 15\nPenne Pasta with Vodka in light Tomato Cream Sauce\n& fresh Basil\nSPAGHETTI\nYour Choice of:\n-Meatballs: Two hand rolled Meatballs 14\n-Bolognese: Classic Meat Sauce 14\n-Marinara: Tomato Sauce 12\n\u2192 SPAGHETTI CHITARRA 19\nOrganic Egg Noodle Pasta tossed with saut\u00e9ed\nShiitake Mushrooms in Parmesan Reggiano Cheese\nConsuming raw or undercooked meats, seafood, shellfish or eggs may increase your risk\nof food-bom illness. Please inform your server if anyone in your party has a food allergy.\nSHRIMP SPAGHETTI PUTTANESCA 18\nSaut\u00e9ed Shrimp with Garlic, Olive Oil, fresh diced\nTomatoes, Capers, Black Olives, Onions, White\nWine Tomato Sauce and fresh Basil\nLOBSTER RAVIOLI 20\nRavioli filled with Lobster served with a Lobster\nCream Sauce\nTORTELLINI ALLA PANNA 16\nBeef filled Tortellini with Pancetta and Peas in\nCream Sauce\nGAMBERI ARRABIATA 18\nSaut\u00e9ed Shrimp in a spicy Marinara and served on\na bed of Linguine Pasta\nGNOCCHI ALLA GENOVESE 15\nPotato Dumpling in a Pesto Basil Cream Sauce\nCHICKEN PRIMAVERA 16\nSaut\u00e9ed chunks of Chicken Breast with Broccoli,\nCarrots, Zucchini, Onions, Green Peas in a light\nBrandy Cream Sauce & Penne Pasta\n\u2192 CHICKEN PARMESAN 17\nHand-breaded Chicken topped with Marinara\nSauce and Cheese. Served over Spaghetti\n\u2192 CHICKEN PICCATA 17\nChicken Breast saut\u00e9ed with Capers in a White\nWine & Lemon Butter Sauce. Served with mashed\nPotatoes\nCHICKEN CACCIATORA 16\nSaut\u00e9ed Chunks of Chicken Breast with Shiitake\nMushrooms, Onions, Bell Peppers & Tomato over\nAngel Hair Pasta\n\u2756TILAPIA PICCATA 17\nPan-seared Tilapia served with White Wine &\nLemon Sauce with Capers and mashed Potatoes",
+    "latency_breakdown": {
+      "stage1_ocr": 1150.9240830055205,
+      "openai_api": 25319.26816700434,
+      "total_pipeline": 26471.192958997563
+    },
+    "cost_usd": 0.001692,
+    "wall_latency_ms": 26922.46320900449
+  },
+  "Juniper & Ivy.jpg": {
+    "scan_id": "90271308-4d9d-4c0f-af7f-50c76358296b",
+    "items": [
+      {
+        "name": "Our Buttermilk Biscuit",
+        "description": "Smoked Butter",
+        "category": "snacks",
+        "price": null,
+        "common_ingredients": [
+          "buttermilk",
+          "biscuit",
+          "butter"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Deviled Eggs",
+        "description": "Egg White Meringue / Yolk Mousse / Cured Ham",
+        "category": "snacks",
+        "price": "8",
+        "common_ingredients": [
+          "eggs",
+          "ham"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Sugar Snap Peas",
+        "description": "Charred / Espelette Dressing / Mint Cervantes Cotija",
+        "category": "snacks",
+        "price": null,
+        "common_ingredients": [
+          "sugar snap peas",
+          "mint",
+          "cotija"
+        ],
+        "obscure_ingredient_notes": [
+          "Espelette \u2013 a type of chili pepper",
+          "Cervantes \u2013 possibly a reference to a specific preparation or style"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "BBQ Octopus",
+        "description": "Eel Sauce / Green Papaya",
+        "category": "snacks",
+        "price": "13",
+        "common_ingredients": [
+          "octopus",
+          "eel sauce",
+          "papaya"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Lamb Leg",
+        "description": "French Dip Style",
+        "category": "snacks",
+        "price": "12",
+        "common_ingredients": [
+          "lamb"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "House Prosciutto",
+        "description": "Wood Smoked Green Beans / Currant Mostarda",
+        "category": "snacks",
+        "price": "7",
+        "common_ingredients": [
+          "prosciutto",
+          "green beans",
+          "currant"
+        ],
+        "obscure_ingredient_notes": [
+          "Mostarda \u2013 an Italian condiment made of candied fruit and a mustard-flavored syrup"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Roasted Garlic Sausage",
+        "description": "Ramp Kimchi BBQ / Kraut",
+        "category": "snacks",
+        "price": null,
+        "common_ingredients": [
+          "sausage",
+          "garlic",
+          "kimchi",
+          "kraut"
+        ],
+        "obscure_ingredient_notes": [
+          "Ramp \u2013 a type of wild onion"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Bone Marrow-Nara",
+        "description": "Rosemary Garganelli / Pork Neck / Lemon Gremolata",
+        "category": "pasta",
+        "price": "17",
+        "common_ingredients": [
+          "bone marrow",
+          "rosemary",
+          "pork",
+          "lemon"
+        ],
+        "obscure_ingredient_notes": [
+          "Garganelli \u2013 a type of pasta",
+          "Gremolata \u2013 a chopped herb condiment"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Linguini & Clams",
+        "description": "Sweet 100 Green Olive / French Beans Anchovy Vin",
+        "category": "pasta",
+        "price": "17",
+        "common_ingredients": [
+          "linguini",
+          "clams",
+          "olive",
+          "beans",
+          "anchovy"
+        ],
+        "obscure_ingredient_notes": [
+          "Vin \u2013 short for vinaigrette"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Baja Yellowtail",
+        "description": "Shark Sauce / Tostada",
+        "category": "raw",
+        "price": "13",
+        "common_ingredients": [
+          "yellowtail",
+          "tostada"
+        ],
+        "obscure_ingredient_notes": [
+          "Shark Sauce \u2013 possibly a house-made sauce"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Halibut Ceviche",
+        "description": "Pickled Jalapeno / Sesame Seed / Avocado Puree",
+        "category": "raw",
+        "price": null,
+        "common_ingredients": [
+          "halibut",
+          "jalapeno",
+          "sesame",
+          "avocado"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Albacore",
+        "description": "Ponzu Japanese Cucumber / Sea Bean / Pickled Red Onion",
+        "category": "raw",
+        "price": "9",
+        "common_ingredients": [
+          "albacore",
+          "ponzu",
+          "cucumber",
+          "onion"
+        ],
+        "obscure_ingredient_notes": [
+          "Sea Bean \u2013 a type of edible plant"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Beef Carpaccio",
+        "description": "Yuzu Kosho Aioli Zucchini / Summer Squash Crispy Rice",
+        "category": "raw",
+        "price": null,
+        "common_ingredients": [
+          "beef",
+          "zucchini",
+          "squash",
+          "rice"
+        ],
+        "obscure_ingredient_notes": [
+          "Yuzu Kosho \u2013 a Japanese condiment made from chili peppers, yuzu peel, and salt"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Pea Agnolotti",
+        "description": "Uni Butter / Red Chili / Pancetta / Lemon Butter",
+        "category": "pasta",
+        "price": "14 / 22",
+        "common_ingredients": [
+          "pea",
+          "butter",
+          "chili",
+          "pancetta",
+          "lemon"
+        ],
+        "obscure_ingredient_notes": [
+          "Agnolotti \u2013 a type of pasta",
+          "Uni \u2013 sea urchin"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": [
+          "invalid_price_format"
+        ]
+      },
+      {
+        "name": "Morels",
+        "description": "Burrata / Garlic Scape / Pickled Ramp / Baby Tomato",
+        "category": "toast",
+        "price": "16",
+        "common_ingredients": [
+          "morels",
+          "burrata",
+          "garlic",
+          "tomato"
+        ],
+        "obscure_ingredient_notes": [
+          "Ramp \u2013 a type of wild onion",
+          "Scape \u2013 the flower stalk of a plant"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Carne Cruda Asada",
+        "description": "Quail Egg / Cotija Jalapeno",
+        "category": "toast",
+        "price": "14",
+        "common_ingredients": [
+          "carne",
+          "egg",
+          "cotija",
+          "jalapeno"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Baja Stone Crab",
+        "description": "Spinach Artichoke Spread / Kewpie Mayo Baby Tomato",
+        "category": "toast",
+        "price": "15",
+        "common_ingredients": [
+          "crab",
+          "spinach",
+          "artichoke",
+          "mayo",
+          "tomato"
+        ],
+        "obscure_ingredient_notes": [
+          "Kewpie \u2013 a brand of Japanese mayonnaise"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "BBQ Pork Ribs",
+        "description": "Chermoula Rubbed Peach BBQ",
+        "category": "small plates",
+        "price": "38",
+        "common_ingredients": [
+          "pork ribs",
+          "peach",
+          "BBQ"
+        ],
+        "obscure_ingredient_notes": [
+          "Chermoula \u2013 a marinade used in Algerian, Libyan, Moroccan and Tunisian cooking"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Wild Onion Scones",
+        "description": "Monterey Jack Mushroom-Pork Belly Butter",
+        "category": "small plates",
+        "price": null,
+        "common_ingredients": [
+          "onion",
+          "scones",
+          "Monterey Jack",
+          "mushroom",
+          "pork belly"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Loaded Potatoes",
+        "description": "Cheddar Soubise Calcots / Pork Belly",
+        "category": "small plates",
+        "price": "12",
+        "common_ingredients": [
+          "potatoes",
+          "cheddar",
+          "pork belly"
+        ],
+        "obscure_ingredient_notes": [
+          "Soubise \u2013 a sauce made with onions and butter",
+          "Calcots \u2013 a type of green onion"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Roasted Baby Beets",
+        "description": "Sonora Grains / Raspberry / Sherry Vin / Pistachio Puree",
+        "category": "small plates",
+        "price": "12",
+        "common_ingredients": [
+          "beets",
+          "raspberry",
+          "pistachio"
+        ],
+        "obscure_ingredient_notes": [
+          "Sonora Grains \u2013 possibly a reference to a specific type of grain",
+          "Vin \u2013 short for vinaigrette"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Artichoke Panzanella",
+        "description": "Abby's Sourdough Soppressata SD Mac Nut / Basil Pesto Pickled Celery",
+        "category": "small plates",
+        "price": null,
+        "common_ingredients": [
+          "artichoke",
+          "sourdough",
+          "soppressata",
+          "basil",
+          "celery"
+        ],
+        "obscure_ingredient_notes": [
+          "Panzanella \u2013 a Tuscan chopped salad of bread and tomatoes",
+          "SD Mac Nut \u2013 possibly a reference to a specific type of nut"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "English Pea",
+        "description": "Feta Snow / Green Hummus Chickpea Mint",
+        "category": "small plates",
+        "price": "10",
+        "common_ingredients": [
+          "pea",
+          "feta",
+          "hummus",
+          "chickpea",
+          "mint"
+        ],
+        "obscure_ingredient_notes": [
+          "Feta Snow \u2013 possibly a reference to a specific preparation of feta"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Carmen Miranda Nectarines",
+        "description": "Mesquite Smoked Agave Ricotta Salata / Almond Tarragon Pesto",
+        "category": "small plates",
+        "price": "11",
+        "common_ingredients": [
+          "nectarines",
+          "agave",
+          "ricotta",
+          "almond",
+          "tarragon"
+        ],
+        "obscure_ingredient_notes": [
+          "Ricotta Salata \u2013 a variation of ricotta cheese that has been pressed, salted, and dried"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Almond Wood Grilled Carrots",
+        "description": "Pickled Apricot Puree Grilled Peanut Oil / Jalapeno Chimichurri",
+        "category": "small plates",
+        "price": "9",
+        "common_ingredients": [
+          "carrots",
+          "apricot",
+          "peanut oil",
+          "jalapeno"
+        ],
+        "obscure_ingredient_notes": [
+          "Chimichurri \u2013 a sauce used in cooking and as a table condiment for grilled meat"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Chicken Livers",
+        "description": "Pan Fried / Blue Cornmeal Cherry Mustard / Spring Vegetable Slaw Togarashi Cashews",
+        "category": "small plates",
+        "price": "13",
+        "common_ingredients": [
+          "chicken livers",
+          "cornmeal",
+          "cherry",
+          "mustard",
+          "cashews"
+        ],
+        "obscure_ingredient_notes": [
+          "Togarashi \u2013 a Japanese spice mixture"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Porchetta di Testa",
+        "description": "Crostini Fennel Pollen Lemon Oil / Pickled Jingle Bell Peppers",
+        "category": "small plates",
+        "price": "9",
+        "common_ingredients": [
+          "porchetta",
+          "crostini",
+          "fennel",
+          "lemon",
+          "peppers"
+        ],
+        "obscure_ingredient_notes": [
+          "Porchetta di Testa \u2013 a type of Italian cold cut made from the head of a pig"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Pork Belly",
+        "description": "Beet Char Siu Pork Belly Pickled Kumquat",
+        "category": "plates",
+        "price": "31",
+        "common_ingredients": [
+          "pork belly",
+          "beet",
+          "kumquat"
+        ],
+        "obscure_ingredient_notes": [
+          "Char Siu \u2013 a Cantonese style of barbecued pork"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Alaskan Halibut",
+        "description": "Orange Gazpacho / Sofrito Radish Salad / California Farro",
+        "category": "plates",
+        "price": "37",
+        "common_ingredients": [
+          "halibut",
+          "orange",
+          "radish",
+          "farro"
+        ],
+        "obscure_ingredient_notes": [
+          "Gazpacho \u2013 a cold soup made of raw, blended vegetables",
+          "Sofrito \u2013 a sauce used as a base in Spanish, Italian, Portuguese, and Latin American cooking"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Duck Breast",
+        "description": "Smoked Jalapeno Blackberry Japanese Potato Pink Turnip Grilled Scallion Mayo",
+        "category": "plates",
+        "price": "29",
+        "common_ingredients": [
+          "duck",
+          "jalapeno",
+          "blackberry",
+          "potato",
+          "turnip",
+          "scallion",
+          "mayo"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Spring Lamb",
+        "description": "Rib Chop / Date Sausage / Morels / Creamed Ramps Pistachio Crumble",
+        "category": "plates",
+        "price": "38",
+        "common_ingredients": [
+          "lamb",
+          "date",
+          "sausage",
+          "morels",
+          "pistachio"
+        ],
+        "obscure_ingredient_notes": [
+          "Ramps \u2013 a type of wild onion"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Garden & Grain",
+        "description": "Ancient Grains / Heirloom Vegetables",
+        "category": "plates",
+        "price": "19",
+        "common_ingredients": [
+          "grains",
+          "vegetables"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Bone In Prime Ribeye",
+        "description": "Grilled Over Almond & Oak Wood Austin's A2 / Sea H20 Potatoes / Pickled Onion Ring",
+        "category": "plates",
+        "price": "53",
+        "common_ingredients": [
+          "ribeye",
+          "potatoes",
+          "onion"
+        ],
+        "obscure_ingredient_notes": [
+          "Austin's A2 \u2013 possibly a reference to a specific preparation or seasoning",
+          "Sea H20 \u2013 possibly a reference to a specific preparation or seasoning"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Bay Scallop",
+        "description": "Young Broccoli / Butter Poached Onion / Pork Jus",
+        "category": "chef's tasting menu",
+        "price": "16",
+        "common_ingredients": [
+          "scallop",
+          "broccoli",
+          "butter",
+          "onion",
+          "pork"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      }
+    ],
+    "ocr_text": "\u4e2a\nSNACKS\nOUR BUTTERMILK BISCUIT\nSMOKED BUTTER\n+ FOIE GRAS BUTTER 8\nDEVILED EGGS\nEGG WHITE MERINGUE /\nYOLK MOUSSE / CURED HAM\n8\nSUGAR SNAP PEAS\nCHARRED / ESPELETTE DRESSING /\nMINT CERVANTES COTIJA\nBBQ OCTOPUS\n7\nEEL SAUCE / GREEN PAPAYA 13\nLAMB LEG\nFRENCH DIP STYLE 12\nHOUSE PROSCUITTO\nWOOD SMOKED GREEN BEANS /\nCURRANT MOSTARDA 7\nROASTED GARLIC SAUSAGE\nRAMP KIMCHI BBQ / KRAUT\nRAW\nPASTA\nBONE MARROW-NARA\nROSEMARY GARGANELLI /\nCHELSEA GEM OYSTERS\nRED WINE MIGNONETTE KIMCHI\nCOCKTAIL PEARLS / 1/2 DOZEN\n21\nPORK NECK / LEMON GREMOLATA 17\nAHI TUNA TARTARE\nLINGUNI & CLAMS\nSWEET 100 GREEN OLIVE /\nFRENCH BEANS ANCHOVY VIN\n17\nBRIOCHE CROUTON\nBAJA YELLOWTAIL\nSHARK SAUCE / TOSTADA 13\nHALIBUT CEVICHE\nPICKLED JALAPENO / SESAME SEED/\nAVOCADO PUREE\nALBACORE\n9\nPONZU JAPANESE CUCUMBER /\nSEA BEAN/ PICKLED RED ONION\nBEEF CARPACCIO\nYUZU KOSHO AIOLI ZUCCHINI /\nSUMMER SQUASH CRISPY RICE\nUNI BUTTER/RED CHILI /\nPEA AGNOLOTTI\n14 / 22\nPANCETTA / LEMON BUTTER\n14\nTOAST\nMORELS\nBURRATA / GARLIC SCAPE /\nPICKLED RAMP/BABY TOMATO 16\n12\nCARNE CRUDA ASADA\nQUAIL EGG / COTIJA JALAPENO 14\nBAJA STONE CRAB\nSPINACH ARTICHOKE SPREAD /\nKEWPIE MAYO BABY TOMATO 15\nJUNIPER AND IVY\nLEFT COAST\nIN THE KITCHEN:\nCHEF RICHARD BLAISJON SLOAN\nAT THE FLOOR: DAN PENA / TAMI WONG / LIBBY WINTER/RENALDO ROBINSONANCE/BRADLEY AUSTIN\nAT THE BAR: ERIC JOHNSON\nBBQ PORK RIBS\nCHERMOULA RUBBED PEACH BBQ\nFULL RACK\n38\nTRY THIS AT HOME\nSIGNED BY CHEF BLAIS\n30/COOKBOOK\n\u05d7\u05e8\nGRENACHE SYRAH /\nMOURVEDRE / CINSAULT\n2012 CHATEAU DE ST COSME\nGIGONDAS\n222 MAGNUM / BIN Q1\n7\nSMALL PLATES\nWILD ONION SCONES\nJL\nMONTEREY JACK MUSHROOM-PORK BELLY BUTTER\nLOADED POTATOES\nCHEDDAR SOUBISE CALCOTS / PORK BELLY 12\nROASTED BABY BEETS\nSONORA GRAINS/RASPBERRY / SHERRY VIN /\nPISTACHIO PUREE 12\nARTICHOKE PANZANELLA\nABBY'S SOURDOUGH SOPPRESSATA SD MAC NUT /\nBASIL PESTO PICKLED CELERY\nENGLISH PEA\n13\nFETA SNOW/GREEN HUMMUS CHICKPEA MINT 10\nCARMEN MIRANDA NECTARINES\nMESQUITE SMOKED AGAVE RICOTTA SALATA /\nALMOND TARRAGON PESTO 11\nALMOND WOOD GRILLED CARROTS\nPICKLED APRICOT PUREE GRILLED PEANUT OIL /\nJALAPENO CHIMICHURRI 9\nCHICKEN LIVERS\nPAN FRIED / BLUE CORNMEAL\nCHERRY MUSTARD /\n13\nSPRING VEGETABLE SLAW TOGARASHI CASHEWS\nPORCHETTA DI TESTA\nCROSTINI FENNEL POLLEN LEMON OIL /\nPICKLED JINGLE BELL PEPPERS 9\nPORK BELLY\nJL\nPLATES\nKING SALMON\n9\nBEET CHAR SIU PORK BELLY PICKLED KUMQUAT\n31\nALASKAN HALIBUT\nORANGE GAZPACHO / SOFRITO RADISH SALAD /\nCALIFORNIA FARRO\nDUCK BREAST\n37\nSMOKED JALAPENO BLACKBERRY JAPANESE POTATO\nPINK TURNIP GRILLED SCALLION MAYO 29\nSPRING LAMB\nRIB CHOP / DATE SAUSAGE / MORELS/\nCREAMED RAMPS PISTACHIO CRUMBLE 38\nGARDEN & GRAIN\nANCIENT GRAINS / HEIRLOOM VEGETABLES 19\nBONE IN PRIME RIBEYE\nGRILLED OVER ALMOND & OAK WOOD AUSTIN'S A2/\nSEA H20 POTATOES / PICKLED ONION RING 53\nW\nCHEF'S TASTING MENU\n7\nBAY SCALLOP YOUNG BROCCOLI /\nBUTTER POACHED ONION / PORK JUS 16\n\u2191\nDINE\n95\nWINE\n60\nTHURSDAYS AT 6PM\nLIMITED AVAILABILITY. INQUIRE FOR RESERVATIONS.\n\u2193\n9\nBEARS BEANIES CAN BE FREE FREE FR\n6 PERMISSIONS COHORT TO BE CAREF\nCARE FACIAL CARTOON CARD WORD FOR MORE IN\nJUNIPER & IVY COMPLIES WITH THE EMERGENCY WATER CONSERVATION REGULATION.\nWATER WILL ONLY BE SERVED UPON REQUEST. FOR MORE DETAILS. PLEASE INQUIRE WITH YOUR SERVER.",
+    "latency_breakdown": {
+      "stage1_ocr": 892.845499998657,
+      "openai_api": 62089.24158300215,
+      "total_pipeline": 62983.24000000139
+    },
+    "cost_usd": 0.0023241,
+    "wall_latency_ms": 63745.112000004156
+  },
+  "Morning Glory snippet.jpg": {
+    "scan_id": "674dcbe1-764b-4988-a919-e33ed329bf17",
+    "items": [
+      {
+        "name": "Morning Glory Ginger Fried Rice",
+        "description": "Pork Belly, Peas, Bok Choy, Sesame Seeds, Broccolini, Carrots, Onions, Scallions, Sunny Up Egg",
+        "category": "breakfast",
+        "price": "16",
+        "common_ingredients": [
+          "Pork Belly",
+          "Peas",
+          "Bok Choy",
+          "Sesame Seeds",
+          "Broccolini",
+          "Carrots",
+          "Onions",
+          "Scallions",
+          "Egg"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Breakfast Carbonara",
+        "description": "Bucatini, Crispy Pork Belly, Creamy Cheese Sauce, Soft-Poached Egg, Calabrian Chili Oil",
+        "category": "breakfast",
+        "price": "15",
+        "common_ingredients": [
+          "Bucatini",
+          "Pork Belly",
+          "Cheese Sauce",
+          "Egg",
+          "Chili Oil"
+        ],
+        "obscure_ingredient_notes": [
+          "Calabrian Chili Oil \u2013 a spicy oil made from Calabrian chili peppers"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Khachapuri",
+        "description": "Mozzarella, Feta, Garlic, Olive Oil, Egg, Butter",
+        "category": "breakfast",
+        "price": "161",
+        "common_ingredients": [
+          "Mozzarella",
+          "Feta",
+          "Garlic",
+          "Olive Oil",
+          "Egg",
+          "Butter"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "French Omelet",
+        "description": "Goat Cheese, Chives, Bistro Salad, Toast",
+        "category": "breakfast",
+        "price": "15",
+        "common_ingredients": [
+          "Goat Cheese",
+          "Chives",
+          "Salad",
+          "Toast"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "American Breakfast",
+        "description": "Two Eggs, Bacon or Sausage, Crispy Hash Brown, Toast",
+        "category": "breakfast",
+        "price": "14",
+        "common_ingredients": [
+          "Eggs",
+          "Bacon",
+          "Sausage",
+          "Hash Brown",
+          "Toast"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Quesabirria",
+        "description": "Corn Tortillas, Oaxaca Cheese, Beef, Avocado Salsa, Roasted Jalape\u00f1o, Radish, Red Onion, Cilantro, Consomm\u00e9",
+        "category": "breakfast",
+        "price": "24",
+        "common_ingredients": [
+          "Corn Tortillas",
+          "Oaxaca Cheese",
+          "Beef",
+          "Avocado Salsa",
+          "Jalape\u00f1o",
+          "Radish",
+          "Red Onion",
+          "Cilantro",
+          "Consomm\u00e9"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Turkish Eggs",
+        "description": "Garlic Herb Greek Yogurt, Poached Eggs, Roasted Cherry Tomatoes, Chili Garlic Oil, Dill & Mint, Olive Oil Toasted Levain Bread",
+        "category": "breakfast",
+        "price": "16",
+        "common_ingredients": [
+          "Greek Yogurt",
+          "Eggs",
+          "Cherry Tomatoes",
+          "Chili Garlic Oil",
+          "Dill",
+          "Mint",
+          "Levain Bread"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Chilaquiles",
+        "description": "Tomatillo Jalape\u00f1o Salsa, Corn Tortilla Chips, Crema, Cotija Cheese, Red Onion, Jalapeno, Radish, Sunny Up Egg",
+        "category": "breakfast",
+        "price": "16",
+        "common_ingredients": [
+          "Tomatillo Salsa",
+          "Corn Tortilla Chips",
+          "Crema",
+          "Cotija Cheese",
+          "Red Onion",
+          "Jalapeno",
+          "Radish",
+          "Egg"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      }
+    ],
+    "ocr_text": "a la\nBened\nMorning Glory Ginger Fried Rice\nPork Belly. Peas, Bok Choy, Sesame Seeds, Broccolini, Carrots, Onions\nScallions, Sunny Up Egg 16\nWe think this dish is an instant classic. Hopefully you'll order it and your server will have to tell you it's\nsold out. Not because we don't want you to try it, we just really want to be right about how good it is.\nBreakfast Carbonara\nBucatini, Crispy Pork Belly, Creamy Cheese Sauce, Soft-Poached Egg, Calabrian Chili Oil 15\nAn ode to our neighborhood that we think could become a sleeper hit. Spicy, lush, salty, and satisfying.\nPROTIP add Bacon 3\nKhachapuri\nMozzarella, Feta, Garlic, Olive Oil. Egg. Butter 161\nGeorgia's national dish (the country, not the state). Like an open-face breakfast calzone topped with\nmelting butter and a cracked egg. Order one for the table.\nFrench Omelet\nGoat Cheese, Chives, Bistro Salad, Toast 15\nEgg Salads\nScallions, Wonder B\nNo crusts, just an hom\ncrappiest cultural ex\nGranola\nA barely set, rolled-style caf\u00e9 omelet. Because top toques will tell you a chef should be judged\nby the caliber of their omelet. We're trying to be more vulnerable in 2020, so we're okay\nadmitting that on our worst day, our execution is less than perfect. If we blow it let us know.\nAmerican Breakfast\nTwo Eggs, Bacon or Sausage, Crispy Hash Brown, Toast 14 Because, America.\nQuesabirria\nCorn Tortillas, Oaxaca Cheese, Beef, Avocado Salsa, Roasted Jalape\u00f1o, Radish,\nRed Onion, Cilantro, Consomm\u00e9 24\nCrispy Cheese And Birria, Trust Us On This One.\nTurkish Eggs\nPeanut Butter, N\nDon't order it be\nSteak\nWagyu Flat\nToo bad you\nLobs\nButtere\nBoys in\nGarlic Herb Greek Yogurt, Poached Eggs, Roasted Cherry Tomatoes, Chili Garlic Oil,\nDill & Mint, Olive Oil Toasted Levain Bread 16\nOur attempt to stay relevant.\nChilaquiles\nPro Tip:\nAdd Bone Marrow 7\nCa\nSof\nCI\nTomatillo Jalape\u00f1o Salsa, Corn Tortilla Chips, Crema, Cotija Cheese, Red Onion,\nJalapeno, Radish, Sunny Up Egg 16",
+    "latency_breakdown": {
+      "stage1_ocr": 792.2493750083959,
+      "openai_api": 9745.126875001006,
+      "total_pipeline": 10537.741667008959
+    },
+    "cost_usd": 0.00068715,
+    "wall_latency_ms": 11093.177958988235
+  },
+  "Piccolo.jpg": {
+    "scan_id": "f04c13d3-3be4-481c-aecd-b302e2efc1e7",
+    "items": [
+      {
+        "name": "Soup Conchigliette",
+        "description": "Mini pasta shells in a spicy tomato based soup with a touch of cream and basil.",
+        "category": "starters",
+        "price": null,
+        "common_ingredients": [
+          "pasta shells",
+          "tomato",
+          "cream",
+          "basil"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Primo Risotto",
+        "description": "Seared King prawns, chilli, garlic, herbs, tomato with a rice style pasta.",
+        "category": "starters",
+        "price": null,
+        "common_ingredients": [
+          "King prawns",
+          "chilli",
+          "garlic",
+          "herbs",
+          "tomato"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Asparagus Milanese",
+        "description": "Asparagus tips, fried egg, parmigiana Reggiano, garlic, herbs, olive oil.",
+        "category": "starters",
+        "price": null,
+        "common_ingredients": [
+          "asparagus",
+          "egg",
+          "parmigiana Reggiano",
+          "garlic",
+          "herbs",
+          "olive oil"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Caprese Bruschetta",
+        "description": "Mozzarella, piccolo tomatoes, olive oil, balsamic glaze, fresh basil.",
+        "category": "starters",
+        "price": null,
+        "common_ingredients": [
+          "mozzarella",
+          "tomatoes",
+          "olive oil",
+          "balsamic glaze",
+          "basil"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Mushroom Crostini",
+        "description": "Mushrooms, butter, garlic, fresh spinach, tomatoes, hint of balsamic.",
+        "category": "starters",
+        "price": null,
+        "common_ingredients": [
+          "mushrooms",
+          "butter",
+          "garlic",
+          "spinach",
+          "tomatoes",
+          "balsamic"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Carbonara Rigatoni",
+        "description": "Prosciutto ham, oil, egg yolk, grated parmigiana, cracked pepper.",
+        "category": "pasta",
+        "price": null,
+        "common_ingredients": [
+          "prosciutto ham",
+          "oil",
+          "egg yolk",
+          "parmigiana",
+          "pepper"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "King Prawn Aglio Olio Linguini",
+        "description": "Fresh lemon, butter, garlic, olive oil, herbs, red chillies, cream and fresh basil.",
+        "category": "pasta",
+        "price": null,
+        "common_ingredients": [
+          "King prawns",
+          "lemon",
+          "butter",
+          "garlic",
+          "olive oil",
+          "herbs",
+          "chillies",
+          "cream",
+          "basil"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Chicken Cacciatore",
+        "description": "Tomato base, red wine, red chilli, chestnut mushrooms, fresh spinach, with pasta or mash.",
+        "category": "pasta",
+        "price": null,
+        "common_ingredients": [
+          "chicken",
+          "tomato",
+          "red wine",
+          "chilli",
+          "mushrooms",
+          "spinach"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Tuscan Steak",
+        "description": "Fillet of beef, wine, butter, mushrooms, asparagus tips, with creamed mash.",
+        "category": "pasta",
+        "price": "Supplement \u00a39",
+        "common_ingredients": [
+          "beef",
+          "wine",
+          "butter",
+          "mushrooms",
+          "asparagus",
+          "mash"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": [
+          "invalid_price_format"
+        ]
+      },
+      {
+        "name": "Vegetable Arrabiatta Pasta",
+        "description": "Tomato, chilli, chestnut mushrooms, fresh spinach, tomatoes.",
+        "category": "pasta",
+        "price": null,
+        "common_ingredients": [
+          "tomato",
+          "chilli",
+          "mushrooms",
+          "spinach"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Polpette Meatball Ragu",
+        "description": "Finest mincemeat, red wine, tomato, chilli, grated parmigiana.",
+        "category": "pasta",
+        "price": null,
+        "common_ingredients": [
+          "mincemeat",
+          "red wine",
+          "tomato",
+          "chilli",
+          "parmigiana"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Italian Rollatini",
+        "description": "Finest Buffalo mozzarella, wrapped with prosciutto ham, basil, oven baked.",
+        "category": "pasta",
+        "price": null,
+        "common_ingredients": [
+          "Buffalo mozzarella",
+          "prosciutto ham",
+          "basil"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Champagne Smoked Salmon Risotto",
+        "description": "Butter, garlic, cream, asparagus tips, fresh lemon.",
+        "category": "pasta",
+        "price": null,
+        "common_ingredients": [
+          "smoked salmon",
+          "butter",
+          "garlic",
+          "cream",
+          "asparagus",
+          "lemon"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Linguini by the Sea",
+        "description": "Scallops, king prawns, mussels, spicy tomato sauce, fresh basil.",
+        "category": "pasta",
+        "price": null,
+        "common_ingredients": [
+          "scallops",
+          "king prawns",
+          "mussels",
+          "tomato sauce",
+          "basil"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      }
+    ],
+    "ocr_text": "PICCOLO\nDINNER MENU\nTWO\nCOURSES \u00a333.95\nTHREE\nCOURSES \u00a339.95\nFirst Dishes\nSOUP CONCHIGLIETTE\nMini pasta shells in a spicy tomato based soup with a\ntouch of cream and basil.\nPRIMO RISOTTO\nSeared King prawns, chilli, garlic, herbs, tomato with a\nrice style pasta.\nASPARAGUS MILANESE\nAsparagus tips, fried egg, parmigiana Reggiano, garlic,\nherbs, olive oil.\nCAPRESE BRUSCHETTA\nMozzarella, piccolo tomatoes, olive oil, balsamic glaze,\nfresh basil.\nMUSHROOM CROSTINI\nMushrooms, butter, garlic, fresh spinach, tomatoes,\nhint of balsamic.\nSecond Dishes\nCARBONARA RIGATONI\nProsciutto ham, oil, egg yolk, grated parmigiana,\ncracked pepper.\nKING PRAWN AGLIO OLIO LINGUINI\nFresh lemon, butter, garlic, olive oil, herbs, red chillies,\ncream and fresh basil.\nCHICKEN CACCIATORE\nTomato base, red wine, red chilli, chestnut\nmushrooms, fresh spinach, with pasta or mash.\nTUSCAN STEAK\nFillet of beef, wine, butter, mushrooms, asparagus tips,\nwith creamed mash, Supplement \u00a39.\nVEGETABLE ARRABIATTA PASTA\nTomato, chilli, chestnut mushrooms, fresh spinach,\ntomatoes.\nPOLPETTE MEATBALL RAGU\nFinest mincemeat, red wine, tomato, chilli, grated\nparmigiana.\nITALIAN ROLLATINI\nFinest Buffalo mozzarella, wrapped with prosciutto\nham, basil, oven baked.\nCHAMPAGNE SMOKED SALMON RISOTTO\nButter, garlic, cream, asparagus tips, fresh lemon.\nLINGUINI BY THE SEA\nScallops, king prawns, mussels, spicy tomato sauce,\nfresh basil.\nSide Dishes\nBread\n\u00a32.95\nGarlic Bread\n\u00a33.95\nBread and Olives\n\u00a34.95\nAny allergy issues, please check with\nyour waiter.\nSpecials Board up-dated daily.",
+    "latency_breakdown": {
+      "stage1_ocr": 1816.289250011323,
+      "openai_api": 16499.63570800901,
+      "total_pipeline": 18316.74875000317
+    },
+    "cost_usd": 0.0009708,
+    "wall_latency_ms": 18886.16495799215
+  },
+  "The Pink Door.jpg": {
+    "scan_id": "5ba67f48-6339-4722-a0f2-7f1e3c03847a",
+    "items": [
+      {
+        "name": "Bruschetta",
+        "description": "Grilled ciabatta bread with the ripest organic summer heirloom tomatoes, basilico, really, really good olive oil and Sicilian sea salt",
+        "category": "antipasti",
+        "price": "16.",
+        "common_ingredients": [
+          "ciabatta bread",
+          "heirloom tomatoes",
+          "basil",
+          "olive oil",
+          "sea salt"
+        ],
+        "obscure_ingredient_notes": [
+          "basilico \u2013 Italian for basil"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": [
+          "invalid_price_format"
+        ]
+      },
+      {
+        "name": "Arancini",
+        "description": "Fried saffron rice balls stuffed with fontina cheese",
+        "category": "antipasti",
+        "price": "15.",
+        "common_ingredients": [
+          "saffron rice",
+          "fontina cheese"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": [
+          "invalid_price_format"
+        ]
+      },
+      {
+        "name": "Squid, Octopus, Prawn & Celery Salad",
+        "description": "Parsley, olive oil and lemon",
+        "category": "antipasti",
+        "price": "17.",
+        "common_ingredients": [
+          "squid",
+          "octopus",
+          "prawn",
+          "celery",
+          "parsley",
+          "olive oil",
+          "lemon"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": [
+          "invalid_price_format"
+        ]
+      },
+      {
+        "name": "Antipasto of the House",
+        "description": "Prosciutto, Tuscan bean salad, fresh mozzarella, tapanada, vegetables, salumi and more",
+        "category": "antipasti",
+        "price": "21. + half 14.",
+        "common_ingredients": [
+          "prosciutto",
+          "bean salad",
+          "mozzarella",
+          "tapanada",
+          "vegetables",
+          "salumi"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": [
+          "invalid_price_format"
+        ]
+      },
+      {
+        "name": "Cheese Board Deluxe",
+        "description": "Artisanal Italian cheeses, fig and chianti compote with a housemade cracker and walnuts",
+        "category": "antipasti",
+        "price": "20.",
+        "common_ingredients": [
+          "Italian cheeses",
+          "fig",
+          "chianti compote",
+          "cracker",
+          "walnuts"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": [
+          "invalid_price_format"
+        ]
+      },
+      {
+        "name": "Salumi Platter",
+        "description": "Capocolla, wild boar salame, mortadella, prosciutto, Tuscan chicken liver pat\u00e9 pickley things",
+        "category": "antipasti",
+        "price": "22.",
+        "common_ingredients": [
+          "capocolla",
+          "salame",
+          "mortadella",
+          "prosciutto",
+          "chicken liver pat\u00e9"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": [
+          "invalid_price_format"
+        ]
+      },
+      {
+        "name": "Fusilloni Gigante",
+        "description": "Burrata, summer tomato sauce and basil",
+        "category": "pasta",
+        "price": "21.",
+        "common_ingredients": [
+          "fusilloni",
+          "burrata",
+          "tomato sauce",
+          "basil"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": [
+          "invalid_price_format"
+        ]
+      },
+      {
+        "name": "Trofie with Basil & Arugula Pesto",
+        "description": "Pine nuts, potatoes and green beans from the farm",
+        "category": "pasta",
+        "price": "21.",
+        "common_ingredients": [
+          "trofie",
+          "basil",
+          "arugula pesto",
+          "pine nuts",
+          "potatoes",
+          "green beans"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": [
+          "invalid_price_format"
+        ]
+      },
+      {
+        "name": "Lasagna Pink Door",
+        "description": "Fresh spinach pasta layered with besciamella, pesto and topped with marinara sauce",
+        "category": "pasta",
+        "price": "20.",
+        "common_ingredients": [
+          "spinach pasta",
+          "besciamella",
+          "pesto",
+          "marinara sauce"
+        ],
+        "obscure_ingredient_notes": [
+          "besciamella \u2013 Italian white sauce"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": [
+          "invalid_price_format"
+        ]
+      },
+      {
+        "name": "Linguine alle Vongole",
+        "description": "Baby clams in their shell, pancetta, garlic, chilis and white wine",
+        "category": "pasta",
+        "price": "22.",
+        "common_ingredients": [
+          "linguine",
+          "clams",
+          "pancetta",
+          "garlic",
+          "chilis",
+          "white wine"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": [
+          "invalid_price_format"
+        ]
+      },
+      {
+        "name": "Rigatoni and Don & Joe's Grilled Italian Sausage or Mama's Meatballs",
+        "description": "With marinara sauce",
+        "category": "pasta",
+        "price": "20.",
+        "common_ingredients": [
+          "rigatoni",
+          "Italian sausage",
+          "meatballs",
+          "marinara sauce"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": [
+          "invalid_price_format"
+        ]
+      },
+      {
+        "name": "Pappardelle al Ragu Bolognese",
+        "description": "Slow-simmered meat sauce, fresh pasta",
+        "category": "pasta",
+        "price": "23.",
+        "common_ingredients": [
+          "pappardelle",
+          "meat sauce"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": [
+          "invalid_price_format"
+        ]
+      },
+      {
+        "name": "Summer Risotto",
+        "description": "Northwest dungeness crab, saffron and fresh corn",
+        "category": "pasta",
+        "price": "25.",
+        "common_ingredients": [
+          "risotto",
+          "dungeness crab",
+          "saffron",
+          "corn"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": [
+          "invalid_price_format"
+        ]
+      },
+      {
+        "name": "Seared Sea Scallops",
+        "description": "Preserved lemon & chervil sauce, semolina gnocchi, watercress salad",
+        "category": "pesce",
+        "price": "31.",
+        "common_ingredients": [
+          "sea scallops",
+          "lemon",
+          "chervil sauce",
+          "semolina gnocchi",
+          "watercress"
+        ],
+        "obscure_ingredient_notes": [
+          "chervil \u2013 a delicate herb related to parsley"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": [
+          "invalid_price_format"
+        ]
+      },
+      {
+        "name": "Penn Cove Mussels and Clams",
+        "description": "White vermouth, garlic, parsley and a touch of c",
+        "category": "pesce",
+        "price": null,
+        "common_ingredients": [
+          "mussels",
+          "clams",
+          "vermouth",
+          "garlic",
+          "parsley"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": []
+      },
+      {
+        "name": "Cioppino Pink Door",
+        "description": "Prawns, rock fish, mussels, clams and calamari in a spicy tomato and white wine broth",
+        "category": "pesce",
+        "price": "27.",
+        "common_ingredients": [
+          "prawns",
+          "rock fish",
+          "mussels",
+          "clams",
+          "calamari",
+          "tomato broth",
+          "white wine"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": [
+          "invalid_price_format"
+        ]
+      },
+      {
+        "name": "Lavender Glazed Lamb Porterhouse",
+        "description": "Pole beans, artichoke sformato",
+        "category": "carne",
+        "price": "32.",
+        "common_ingredients": [
+          "lamb",
+          "lavender glaze",
+          "pole beans",
+          "artichoke"
+        ],
+        "obscure_ingredient_notes": [
+          "sformato \u2013 Italian flan or custard"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": [
+          "invalid_price_format"
+        ]
+      },
+      {
+        "name": "Stuffed Chicken Breast",
+        "description": "Pistachios-ricotta orange zest stuffing, smashed herb potatoes",
+        "category": "carne",
+        "price": "29.",
+        "common_ingredients": [
+          "chicken breast",
+          "pistachios",
+          "ricotta",
+          "orange zest",
+          "potatoes"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": [
+          "invalid_price_format"
+        ]
+      },
+      {
+        "name": "Grilled Flank Steak Tagliata",
+        "description": "Arugula, cherry tomatoes, parmigiano",
+        "category": "carne",
+        "price": "30.",
+        "common_ingredients": [
+          "flank steak",
+          "arugula",
+          "cherry tomatoes",
+          "parmigiano"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": [
+          "invalid_price_format"
+        ]
+      },
+      {
+        "name": "Insalata Misticanza",
+        "description": "Farm fresh organic lettuces, carrots, radish and soft herbs",
+        "category": "salads",
+        "price": "small 10. large 13.",
+        "common_ingredients": [
+          "lettuces",
+          "carrots",
+          "radish",
+          "herbs"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": [
+          "invalid_price_format"
+        ]
+      },
+      {
+        "name": "Insalata Caprese Pink Door",
+        "description": "The finest ripest organic heirloom tomatoes, fresh mozzarella, torn basil, ricotta salata, first pressed olive oil and Sicilian sea salt",
+        "category": "salads",
+        "price": "small 13. large 16.",
+        "common_ingredients": [
+          "heirloom tomatoes",
+          "mozzarella",
+          "basil",
+          "ricotta salata",
+          "olive oil",
+          "sea salt"
+        ],
+        "obscure_ingredient_notes": [
+          "ricotta salata \u2013 salted ricotta cheese"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": [
+          "invalid_price_format"
+        ]
+      },
+      {
+        "name": "Pink Door Caesar",
+        "description": "With fennel dusted croutons",
+        "category": "salads",
+        "price": "11.",
+        "common_ingredients": [
+          "croutons",
+          "fennel"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": [
+          "invalid_price_format"
+        ]
+      },
+      {
+        "name": "La Fettunta",
+        "description": "Grilled garlic bread with the finest of olive oils",
+        "category": "sides",
+        "price": "7.",
+        "common_ingredients": [
+          "garlic bread",
+          "olive oil"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": [
+          "invalid_price_format"
+        ]
+      },
+      {
+        "name": "Three of Mama's Meatballs",
+        "description": "Marinara sauce",
+        "category": "sides",
+        "price": "15.",
+        "common_ingredients": [
+          "meatballs",
+          "marinara sauce"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": [
+          "invalid_price_format"
+        ]
+      },
+      {
+        "name": "Soft Stew of Summer Vegetables",
+        "description": "Potato, eggplant, tomatoes, peppers and Taggiasca olives",
+        "category": "sides",
+        "price": "10.",
+        "common_ingredients": [
+          "potato",
+          "eggplant",
+          "tomatoes",
+          "peppers",
+          "olives"
+        ],
+        "obscure_ingredient_notes": [
+          "Taggiasca olives \u2013 a variety of olives from Italy"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": [
+          "invalid_price_format"
+        ]
+      },
+      {
+        "name": "Tuscan Fries & Fried Herbs",
+        "description": "Aioli (No, we do not have ketchup!)",
+        "category": "sides",
+        "price": "11.",
+        "common_ingredients": [
+          "fries",
+          "herbs",
+          "aioli"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": [
+          "invalid_price_format"
+        ]
+      },
+      {
+        "name": "Artichoke Sformato",
+        "description": "A cooked custard flan",
+        "category": "sides",
+        "price": "11.",
+        "common_ingredients": [
+          "artichoke",
+          "custard"
+        ],
+        "obscure_ingredient_notes": [
+          "sformato \u2013 Italian flan or custard"
+        ],
+        "user_dietary_flags": [],
+        "validation_warnings": [
+          "invalid_price_format"
+        ]
+      },
+      {
+        "name": "Fresh Pole Beans from the Farm",
+        "description": null,
+        "category": "sides",
+        "price": "9.",
+        "common_ingredients": [
+          "pole beans"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": [
+          "invalid_price_format"
+        ]
+      },
+      {
+        "name": "Creamy Grilled Corn",
+        "description": null,
+        "category": "sides",
+        "price": "9.",
+        "common_ingredients": [
+          "corn"
+        ],
+        "obscure_ingredient_notes": [],
+        "user_dietary_flags": [],
+        "validation_warnings": [
+          "invalid_price_format"
+        ]
+      }
+    ],
+    "ocr_text": "BRUSCHETTA\nANTIPASTI\nour antipasti are generous & shareable!\ngrilled ciabatta bread with the ripest organic summer\nheirloom tomatoes, basilico, really, really good olive oil\nand Sicilian sea salt 16.\nARANCINI\nfried saffron rice balls stuffed with fontina cheese 15.\nSQUID, OCTOPUS, PRAWN & CELERY SALAD\nparsley, olive oil and lemon 17.\nANTIPASTO OF THE HOUSE\nD\nprosciutto, tuscan bean salad, fresh mozzarella,\ntapanada, vegetables, salumi and more 21. + half 14.\nCHEESE BOARD DELUXE!\nartisanal Italian cheeses, fig and chianti compote\nwith a housemade cracker and walnuts 20.\nSALUMI PLATTER\ncapocolla, wild boar salame, mortadella, prosciutto,\nTuscan chicken liver pat\u00e9 pickley things 22.\nPASTA & RISOTTO\n~\nFUSILLONI GIGANTE burrata, summer tomato sauce and basil 21.\nTROFIE W/ BASIL & ARUGULA PESTO pine nuts potatoes and green beans from the farm 21.\nLASAGNA PINK DOOR fresh spinach pasta layered with besciamella, pesto and topped with marinara sauce 20.\nLINGUINE ALLE VONGOLE baby clams in their shell, pancetta, garlic, chilis and white wine 22.\nRIGATONI AND DON & JOE'S GRILLED ITALIAN SAUSAGE OR MAMA'S MEATBALLS with marinara sauce 20.\nPAPPARDELLE AL RAGU BOLOGNESE slow-simmered meat sauce, fresh pasta 23.\nSUMMER RISOTTO northwest dungeness crab, saffron and fresh corn 25.\nPESCE\nSEARED SEA SCALLOPS preserved lemon & chervil sauce, semolina gnocchi, watercress salad 31.\ncream garlic toast 22.\nPENN COVE MUSSELS AND CLAMS white vermouth, garlic, parsley and a touch of c\nCIOPPINO PINK DOOR prawns, rock fish, mussels, clams and calamari in a spicy tomato and white wine broth 27.\nNORTHWEST FISH OF THE DAY Chef Stefano's summer creation MP\nCARNE\nLAVENDER GLAZED LAMB PORTERHOUSE pole beans\n~artichoke sformato 32.\n-\nSTUFFED CHICKEN BREAST pistachios-ricotta orange zest stuffing smashed herb potatoes 29.\nGRILLED FLANK STEAK TAGLIATA arugula, cherry tomatoes, parmigiano 30.\nINSALATA MISTICANZA\nfarm fresh organic lettuces,\ncarrots, radish and soft herbs\nsmall 10. large 13.\nINSALATE\nINSALATA CAPRESE PINK DOOR\nthe finest ripest organic heirloom\ntomatoes, fresh mozzarella, torn basil,\nricotta salata, first pressed olive oil\nand Sicilian sea salt\nsmall 13. large 16.\nPINK DOOR CAESAR\nwith fennel dusted croutons 11.\nwith N.W. Dungeness crab 22.\nwith grilled chicken 18.\nwith grilled prawns 20.\nCONTORNI\nLA FETTUNTA\ngrilled garlic bread with the finest of olive oils 7.\n+\ngluten-free option available add 1.\nTHREE OF MAMA'S MEATBALLS\nmarinara sauce 15.\nSOFT STEW OF SUMMER VEGETABLES\npotato, eggplant, tomatoes, peppers\nand Taggiasca olives 10.\nTUSCAN FRIES & FRIED HERBS\naiol! (No, we do not have ketchup!) 11.\nARTICHOKE SFORMATO\na cooked custard flan 11.\nFRESH POLE BEANS FROM THE FARM 9.\nCREAMY GRILLED CORN 9.\n*GLUTEN INTOLERANT? We offer BIONATURAE pasta just for you! 2. extra Also ask us about our gluten-free bread 3.\nOur Friends & Vendors\nButler Farms, Penn Cove Shellfish, Skagit Valley\nCheeses, Jeff LeBon-Fisherman, Snake River Farms,\nDraper Valley Organic Chicken, Silk Road Teas,\nMushroom Joe, Gabriele's Sardinian Cheeses,\nCattail Creek Lamb OR\nOne guest check per party\nCorkage charge: 30. per/750ml\nCake charge: 5. per person\nPlate split charge: 3.50\n+\nPARTIES OF SIX OR MORE: 20% GRATUITY INCLUDED\nPER THE HEALTH DEPARTMENT:\nConsuming raw egg and undercooked meat\nmay increase the risk of foodborne illness,\nespecially with some medical conditions.\nINSTAGRAM #THEPINKDOORRESTAURANT",
+    "latency_breakdown": {
+      "stage1_ocr": 809.464250007295,
+      "openai_api": 23397.84333400894,
+      "total_pipeline": 24208.296416996745
+    },
+    "cost_usd": 0.0019003499999999999,
+    "wall_latency_ms": 24837.372708992916
+  }
 }

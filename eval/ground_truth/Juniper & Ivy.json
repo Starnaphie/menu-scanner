@@ -1,0 +1,254 @@
+[
+  {
+    "name": "Our Buttermilk Biscuit",
+    "description": "Smoked Butter",
+    "category": "snacks",
+    "price": "5",
+    "dietary_tags": []
+  },
+  {
+    "name": "Deviled Eggs",
+    "description": "Egg White Meringue / Yolk Mousse / Cured Ham",
+    "category": "snacks",
+    "price": "8",
+    "dietary_tags": []
+  },
+  {
+    "name": "Sugar Snap Peas",
+    "description": "Charred / Espelette Dressing / Mint / Cervantes' Cotija",
+    "category": "snacks",
+    "price": "7",
+    "dietary_tags": []
+  },
+  {
+    "name": "BBQ Octopus",
+    "description": "Eel Sauce / Green Papaya",
+    "category": "snacks",
+    "price": "13",
+    "dietary_tags": []
+  },
+  {
+    "name": "Lamb Leg",
+    "description": "French Dip Style",
+    "category": "snacks",
+    "price": "12",
+    "dietary_tags": []
+  },
+  {
+    "name": "House Prosciutto",
+    "description": "Wood Smoked Green Beans / Currant Mostarda",
+    "category": "snacks",
+    "price": "7",
+    "dietary_tags": []
+  },
+  {
+    "name": "Roasted Garlic Sausage",
+    "description": "Ramp Kimchi BBQ / Kraut",
+    "category": "snacks",
+    "price": "9",
+    "dietary_tags": []
+  },
+  {
+    "name": "Bone Marrow-nara",
+    "description": "Rosemary Garganelli / Pork Neck / Lemon Gremolata",
+    "category": "pasta",
+    "price": "17",
+    "dietary_tags": []
+  },
+  {
+    "name": "Chelsea Gem Oysters",
+    "description": "Red Wine Mignonette / Kimchi Cocktail Pearls / 1/2 Dozen",
+    "category": "raw",
+    "price": "21",
+    "dietary_tags": []
+  },
+  {
+    "name": "Ahi Tuna Tartare",
+    "description": "Sweet 100 / Green Olive / French Beans Anchovy Vin",
+    "category": "raw",
+    "price": "17",
+    "dietary_tags": []
+  },
+  {
+    "name": "Linguni & Clams",
+    "description": "Uni Butter / Red Chili / Brioche Crouton",
+    "category": "pasta",
+    "price": "14 / 22",
+    "dietary_tags": []
+  },
+  {
+    "name": "Baja Yellowtail",
+    "description": "Shark Sauce / Tostada",
+    "category": "raw",
+    "price": "13",
+    "dietary_tags": []
+  },
+  {
+    "name": "Halibut Ceviche",
+    "description": "Pickled Jalapeno / Sesame Seed/ Avocado Puree",
+    "category": "raw",
+    "price": "9",
+    "dietary_tags": []
+  },
+  {
+    "name": "Albacore",
+    "description": "Ponzu / Japanese Cucumber / Sea Bean/ Pickled Red Onion",
+    "category": "raw",
+    "price": "12",
+    "dietary_tags": []
+  },
+  {
+    "name": "Beef Carpaccio",
+    "description": "Yuzu Kosho Aioli / Zucchini / Summer Squash / Crispy Rice",
+    "category": "raw",
+    "price": "11",
+    "dietary_tags": []
+  },
+  {
+    "name": "Pea Agnolotti",
+    "description": "Pancetta / Lemon Butter",
+    "category": "pasta",
+    "price": "14",
+    "dietary_tags": []
+  },
+  {
+    "name": "Morels",
+    "description": "Burrata / Garlic Scape / Pickled Ramp / Baby Tomato",
+    "category": "toast",
+    "price": "16",
+    "dietary_tags": []
+  },
+  {
+    "name": "Carne Cruda Asada",
+    "description": "Quail Egg / Cotija / Jalapeno",
+    "category": "toast",
+    "price": "14",
+    "dietary_tags": []
+  },
+  {
+    "name": "Baja Stone Crab",
+    "description": "Spinach Artichoke Spread / Kewpie Mayo / Baby Tomato",
+    "category": "toast",
+    "price": "15",
+    "dietary_tags": []
+  },
+  {
+    "name": "BBQ Pork Ribs",
+    "description": "Chermoula Rubbed / Peach BBQ",
+    "category": "small plates",
+    "price": "38",
+    "dietary_tags": []
+  },
+  {
+    "name": "Wild Onion Scones",
+    "description": "Monterey Jack / Mushroom-Pork Belly Butter",
+    "category": "small plates",
+    "price": "9",
+    "dietary_tags": []
+  },
+  {
+    "name": "Loaded Potatoes",
+    "description": "Cheddar Soubise / Calcots / Pork Belly",
+    "category": "small plates",
+    "price": "12",
+    "dietary_tags": []
+  },
+  {
+    "name": "Roasted Baby Beets",
+    "description": "Sonora Grains / Raspberry / Sherry Vin / Pistachio Puree",
+    "category": "small plates",
+    "price": "12",
+    "dietary_tags": []
+  },
+  {
+    "name": "Artichoke Panzanella",
+    "description": "Abby's Sourdough / Soppressata / SD Mac Nut / Basil Pesto / Pickled Celery",
+    "category": "small plates",
+    "price": "13",
+    "dietary_tags": []
+  },
+  {
+    "name": "English Pea",
+    "description": "Feta Snow / Green Hummus / Chickpea / Mint",
+    "category": "small plates",
+    "price": "10",
+    "dietary_tags": []
+  },
+  {
+    "name": "Carmen Miranda Nectarines",
+    "description": "Mesquite Smoked / Agave / Ricotta Salata / Almond-Tarragon Pesto",
+    "category": "small plates",
+    "price": "11",
+    "dietary_tags": []
+  },
+  {
+    "name": "Almond Wood Grilled Carrots",
+    "description": "Pickled Apricot Puree / Grilled Peanut Oil / Jalapeno Chimichurri",
+    "category": "small plates",
+    "price": "9",
+    "dietary_tags": []
+  },
+  {
+    "name": "Chicken Livers",
+    "description": "Pan Fried / Blue Cornmeal / Cherry Mustard / Spring Vegetable Slaw / Togarashi Cashews",
+    "category": "small plates",
+    "price": "13",
+    "dietary_tags": []
+  },
+  {
+    "name": "Porchetta di Testa",
+    "description": "Crostini / Fennel Pollen / Lemon Oil / Pickled Jingle Bell Peppers",
+    "category": "small plates",
+    "price": "9",
+    "dietary_tags": []
+  },
+  {
+    "name": "Pork Belly",
+    "description": "Bay Scallop / Young Broccoli / Butter Poached Onion / Pork Jus",
+    "category": "plates",
+    "price": "16",
+    "dietary_tags": []
+  },
+  {
+    "name": "King Salmon",
+    "description": "Beet Char Siu / Pork Belly / Pickled Kumquat",
+    "category": "plates",
+    "price": "31",
+    "dietary_tags": []
+  },
+  {
+    "name": "Alaskan Halibut",
+    "description": "Orange Gazpacho / Sofrito / Radish Salad / California Farro",
+    "category": "plates",
+    "price": "37",
+    "dietary_tags": []
+  },
+  {
+    "name": "Duck Breast",
+    "description": "Smoked Jalapeno / Blackberry / Japanese Potato Pink Turnip / Grilled Scallion Mayo",
+    "category": "plates",
+    "price": "29",
+    "dietary_tags": []
+  },
+  {
+    "name": "Spring Lamb",
+    "description": "Rib Chop / Date Sausage / Morels/ Creamed Ramps / Pistachio Crumble",
+    "category": "plates",
+    "price": "38",
+    "dietary_tags": []
+  },
+  {
+    "name": "Garden & Grain",
+    "description": "Ancient Grains / Heirloom Vegetables",
+    "category": "plates",
+    "price": "19",
+    "dietary_tags": []
+  },
+  {
+    "name": "Bone In Prime Ribeye",
+    "description": "Grilled Over Almond & Oak Wood / Austin's A2/ Sea H20 Potatoes / Pickled Onion Ring",
+    "category": "plates",
+    "price": "53",
+    "dietary_tags": []
+  }
+]

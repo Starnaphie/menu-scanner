@@ -1,0 +1,100 @@
+[
+  {
+    "name": "Gnocchi Salsiccia, Porcini e Tartufo",
+    "description": "Handmade Gnocchi, creamy truffle sauce, beef jus & Porcini mushroom served with a Parmigiano-gremolada crusted bone marrow",
+    "category": "pasta",
+    "price": "37",
+    "dietary_tags": []
+  },
+  {
+    "name": "Lumache Emiliane",
+    "description": "Homemade lumache with a brown butter and sage pumpkin sauce, provola affumicata, crispy speck, amaretto crumble and fried sage",
+    "category": "pasta",
+    "price": "34",
+    "dietary_tags": []
+  },
+  {
+    "name": "Lasagna alla Bolognese",
+    "description": "Hand-rolled egg-pasta sheets layered with Cesarina's delicious Bolognese, bechamel, mozzarella, oven-baked & served with fresh Parmigiano",
+    "category": "pasta",
+    "price": "36",
+    "dietary_tags": []
+  },
+  {
+    "name": "Super Cioppino",
+    "description": "Grand soup of cod fish, mussels, clams, calamari, one whole wild caught langoustine, Kalamata olives, cherry tomatoes, served with homemade spaghetti \"al burro\" & cured egg yolk",
+    "category": "pasta",
+    "price": "49",
+    "dietary_tags": []
+  },
+  {
+    "name": "Paccheri Vodka Scampi",
+    "description": "Paccheri, garlic, Peperoncino, Cesa's buonissima \"Crema di Scampi alla Vodka\", shrimp, parsley & one whole wild caught langoustine",
+    "category": "pasta",
+    "price": "43",
+    "dietary_tags": []
+  },
+  {
+    "name": "Super Tagliata",
+    "description": "Espresso & Porcini dry rubbed Tagliata, mascarpone polenta, roasted portobello mushrooms & honey glazed carrots. Served with roasted bone marrow & creamy truffle gravy",
+    "category": "sides",
+    "price": "59",
+    "dietary_tags": []
+  },
+  {
+    "name": "Pollo Scarpariello",
+    "description": "Roasted bone-in chicken thighs, Pork \"Salsiccia\", Cesarina's Scarpariello with San Marzano tomatoes, Cremini mushroom, onion, bell peppers, Green olives & sweet Peperoncino",
+    "category": "sides",
+    "price": "44",
+    "dietary_tags": []
+  },
+  {
+    "name": "Orata of Limone",
+    "description": "Wild-caught Mediterranean Golden Seabream roasted with lemon & garlic, saffron-lemon jus, capers, Bottarga & citrus-aromatic \"Mollica Atturrata\"",
+    "category": "sides",
+    "price": "56",
+    "dietary_tags": []
+  },
+  {
+    "name": "Caprese Tiepida",
+    "description": "Warm eggplant & cherry tomatoes \"al funghetto\", arugula, Vegan Mozzarella, e Pesto",
+    "category": "salads",
+    "price": "21",
+    "dietary_tags": []
+  },
+  {
+    "name": "Cesarina",
+    "description": "Fennel, oranges, golden raisins, Kalamata olives, arugula, fris\u00e9e \"Vinaigrette agli agrumi\"",
+    "category": "salads",
+    "price": "19",
+    "dietary_tags": []
+  },
+  {
+    "name": "Pomodoro Fresco",
+    "description": "Fresh tomato sauce, confit cherry tomatoes, vegan Mozzarella & the perfect drop of Pesto",
+    "category": "pasta",
+    "price": "26",
+    "dietary_tags": []
+  },
+  {
+    "name": "Funghi Vegana",
+    "description": "Cesarina's signature creamy Cremini, Shiitake & Porcini mushroom sauce with bread & herb crumble, fresh parsley",
+    "category": "pasta",
+    "price": "28",
+    "dietary_tags": []
+  },
+  {
+    "name": "Norma",
+    "description": "Fresh tomato sauce, eggplant, basil, vegan Mozzarella",
+    "category": "pasta",
+    "price": "27",
+    "dietary_tags": []
+  },
+  {
+    "name": "Romesco and Vodka",
+    "description": "Homemade romesco sauce, green peas, Peperoncino, Vodka",
+    "category": "pasta",
+    "price": "32",
+    "dietary_tags": []
+  }
+]

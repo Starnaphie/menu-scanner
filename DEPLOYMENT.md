@@ -30,8 +30,11 @@ In the Render dashboard under Environment, add:
 | Key | Value |
 |---|---|
 | `OPENAI_API_KEY` | Your OpenAI API key |
+| `GOOGLE_CREDENTIALS_JSON` | Full contents of your google-credentials.json file, pasted as a string |
 
 Do not add a `.env` file to the repo — Render injects env vars directly into the process.
+
+Do not add the credentials JSON file to the repo — use the environment variable on Render. Locally, GOOGLE_APPLICATION_CREDENTIALS pointing to the file still works and takes precedence.
 
 **4. Deploy**
 
